@@ -172,15 +172,16 @@ table {
   margin-bottom: 16pt;
   margin-top: 16pt;
   table-layout: fixed;
+  text-align: left;
   width: 100%;
 }
 caption {
-  text-align: left;
   font-family: 'Calibri', sans-serif;
   font-size: 12pt;
   font-weight: bold;
   line-height: 16pt;
   margin-bottom: 4pt;
+  text-align: left;
 }
 tr:nth-child(even) {
   background: #f0f6ff;
