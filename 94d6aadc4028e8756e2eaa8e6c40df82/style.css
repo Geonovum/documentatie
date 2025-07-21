@@ -256,7 +256,6 @@ nav {
   bottom: 0;
   left: 0;
   width: 22.5em;
-  overflow: auto;
   padding: 1.5em;
   background-color: #F7F8F9;
   z-index: 1;
@@ -287,8 +286,6 @@ nav a {
   color: inherit;
   font-weight: inherit;
   text-decoration: none;
-  display: block;
-  white-space: nowrap;
 }
 nav a:active {
   color: red;
