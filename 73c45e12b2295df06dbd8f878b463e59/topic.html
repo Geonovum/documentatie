@@ -1,0 +1,346 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Opbouw van een BOPA GML-bestand</title>
+      <link rel="stylesheet" type="text/css" href="style.css"><script type="application/ld+json">{
+  "@context": [
+    "http://schema.org",
+    {
+      "@vocab": "http://schema.org",
+      "@language": "nl",
+      "foaf": "http://xmlns.com/foaf/0.1"
+    }
+  ],
+  "@id": "https://https://geonovum.github.io/documentatie/73c45e12b2295df06dbd8f878b463e59/",
+  "@type": "TechArticle",
+  "headline": "Opbouw van een BOPA GML-bestand",
+  "inLanguage": "nl",
+  "license": "https://creativecommons.org/licenses/by-nd/4.0/",
+  "datePublished": "2025-07-21T07:39:23.3571145+02:00",
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Geonovum",
+    "url": "https://www.geonovum.nl/"
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Gerard Wolbers",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Geonovum",
+        "url": "https://www.geonovum.nl/"
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Geonovum",
+    "url": "https://www.geonovum.nl/"
+  },
+  "keywords": [
+    "DSO"
+  ],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "geen"
+    }
+  ]
+}
+</script></head>
+   <body>
+      <nav id="toc">
+         <p class="tocheading">Inhoudsopgave</p>
+         <ol class="toc">
+            <li class="tocline"><a class="tocxref" href="#d2e1/5ED54329"><span class="tocnumber">1</span>Handreiking BOPA GML-bestand</a><ol class="toc">
+                  <li class="tocline"><a class="tocxref" href="#d2e1/5BB2AC49"><span class="tocnumber">1.1</span>Introductie</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/542CF806"><span class="tocnumber">1.2</span>Achtergrondinformatie BOPA en publiceren</a><ol class="toc"></ol>
+                  </li>
+               </ol>
+            </li>
+            <li class="tocline"><a class="tocxref" href="#d2e1/3FF74E44"><span class="tocnumber">2</span>Correcte structuur van XML Schema Definition (XSD)</a><ol class="toc"></ol>
+            </li>
+            <li class="tocline"><a class="tocxref" href="#d2e1/7F2C0FCE"><span class="tocnumber">3</span>Opbouw per geometrie </a><ol class="toc">
+                  <li class="tocline"><a class="tocxref" href="#d2e1/194B2F49"><span class="tocnumber">3.1</span>ID genereren en invullen</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/65334255"><span class="tocnumber">3.2</span>Invullen attributen gml:id en srsName</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/545D96E0"><span class="tocnumber">3.3</span>Invullen element gml:posList (XY-coördinaten)</a><ol class="toc"></ol>
+                  </li>
+               </ol>
+            </li>
+            <li class="tocline"><a class="tocxref" href="#d2e1/23AC7463"><span class="tocnumber">4</span>Uitbreiden aantal polygonen</a><ol class="toc"></ol>
+            </li>
+            <li class="tocline"><a class="tocxref" href="#d2e1/4B0A99A6"><span class="tocnumber">5</span>BOPA-GML gereed</a><ol class="toc"></ol>
+            </li>
+            <li class="tocline"><a class="tocxref" href="#d2e1/25BE08B2"><span class="tocnumber">6</span>BOPA-template</a><ol class="toc"></ol>
+            </li>
+         </ol>
+      </nav>
+      <p class="title">Opbouw van een BOPA GML-bestand</p>
+      <section id="d2e1/d2e8">
+         <h1 id="d2e1/5ED54329" class="heading_1"><span class="number">1</span>Handreiking BOPA GML-bestand</h1>
+         <section id="d2e1/d2e13">
+            <h2 id="d2e1/5BB2AC49" class="heading_2"><span class="number">1.1</span>Introductie</h2>
+            <p id="d2e1/367E586F" class="Standaard space-after">Deze handreiking is enkel nodig wanneer het VTH-softwarepakket van een bevoegd gezag
+               het maken van BOPA GML-bestanden niet ondersteund. Dan kan een bevoegd gezag de BOPA
+               GML-bestanden zelf opstellen. Deze handreiking neemt aan dat een geo-expert het GML-bestand
+               opstelt en daarom is de handreiking geschreven voor een geo-expert.</p>
+            <p id="d2e1/16153A78" class="Standaard space-after">Deze handreiking gaat in op de technische stappen die gezet moeten worden om een GML-bestand
+               aan te leveren. Het bestand moet voldoen aan de GML-specificaties die in subparagraaf
+               3.1.4 van het Informatiemodel Omgevingswet zijn vastgelegd. Wanneer omgevingsvergunning
+               wordt verleend voor meerdere percelen, perceelsgedeelten of gebieden (geometrieën),
+               worden deze in één GML-bestand opgenomen.</p>
+            <p id="d2e1/66B3FBF7" class="Standaard space-after">Er is een template-gml beschikbaar om deze acties uit te voeren via een xml-editor,
+               zoals Oxygen of XMLSpy, of een tekst-editor, zoals Visual Studio Code of Notepad++.
+               Een xml-editor heeft de voorkeur omdat daarmee het bestand continu gevalideerd wordt.
+               Dit voorkomt fouten in een later stadium.</p>
+            <p id="d2e1/4D692D2A" class="Standaard">Tijdens het doorlopen van paragrafen 2.1-2.3 van deze handreiking kunt u geometrieën
+               toevoegen in de template aan de hand van het invullen van vier gegevens per geometrie:</p>
+            <p id="d2e1/56F68B0F" class="Standaard">2.1: ID (regel 30 in de template),</p>
+            <p id="d2e1/4B41A061" class="Standaard">2.2: gml:id (regel 38 in de template),</p>
+            <p id="d2e1/2FB29297" class="Standaard">2.2: srsName (regel 38 in de template),</p>
+            <p id="d2e1/70AE6D2A" class="Standaard space-after">2.3: gml:posList – dit zijn de XY-coördinaten (regel 48 in de template).</p>
+            <p id="d2e1/5F4244F6" class="Standaard">Wanneer een GML-bestand meerdere polygonen moet bevatten, voegt u een nieuw gml:surfaceMember
+               toe (hoofdstuk 3) en herhaalt u de stappen beschreven in paragrafen 2.2 en 2.3 in
+               de nieuwe gml:surfaceMember. </p>
+         </section>
+         <section id="d2e1/d2e50">
+            <h2 id="d2e1/542CF806" class="heading_2"><span class="number">1.2</span>Achtergrondinformatie BOPA en publiceren</h2>
+            <p id="d2e1/5C33DF10" class="Standaard space-after">Het publiceren van een buitenplanse omgevingsplanactiviteit (BOPA) gebeurt via de
+               webapplicatie DROP. Een kennisgeving van een BOPA gaat via het VTH-spoor en dus niet
+               via de omgeving van het omgevingsplan. Na aanlevering zorgt DROP automatisch voor
+               het zichtbaar worden van de kennisgeving in het Omgevingsloket én voor de publicatie
+               van de kennisgeving van de BOPA op officielebekendmakingen.nl. </p>
+            <p id="d2e1/439ABB86" class="Standaard space-after">Het <span class="hyperlink"><a href="https://geonovum.github.io/TPOD/TPOD%20Kennisgeving%20omgevingsvergunning%20buitenplanse%20omgevingsplanactiviteit/TPOD%20Kennisgeving%20omgevingsvergunning%20buitenplanse%20omgevingsplanactiviteit%20v1.0.0.pdf" target="_blank">Toepassingsprofiel kennisgeving BOPA</a></span> beschrijft de procedure en aan te leveren bestanden voor de kennisgeving met behulp
+               van DROP. </p>
+            <p id="d2e1/2CC0C278" class="Standaard">U kunt direct inloggen op DROP of (indien beschikbaar) gebruikmaken van de koppeling
+               naar DROP in uw VTH-software. In DROP of in uw software selecteert u dat het een BOPA
+               betreft, die zichtbaar moet zijn in het DSO. Vervolgens levert u de volgende stukken
+               aan: </p>
+            <ul>
+               <li>
+                  <p id="d2e1/349EBF41" class="Opsomming_bullets">de kennisgeving moet in DROP worden aangeleverd, met gebruikmaking van het voor dit
+                     type kennisgeving bedoelde documenttype ‘beschikking | afhandeling met planafwijking’
+                     (zakelijke weergave van de inhoud van de vergunning);</p>
+               </li>
+               <li>
+                  <p id="d2e1/4FC6186F" class="Opsomming_bullets">een GML-bestand: het bestand in GML-formaat waarin de geometrische begrenzing is vastgelegd
+                     van het perceel, perceelsgedeelte of gebied waarvoor de omgevingsvergunning is verleend;</p>
+               </li>
+               <li>
+                  <p id="d2e1/7DA445B1" class="Opsomming_bullets">een identificatienummer: de identificatie van de omgevingsvergunning zoals deze bekend
+                     is in het eigen systeem van het bevoegd gezag;</p>
+               </li>
+               <li>
+                  <p id="d2e1/2212A2AB" class="Opsomming_bullets">het IMRO-id (optioneel): de IMRO-identificatiecode van het ruimtelijk plan of de ruimtelijke
+                     plannen indien met de omgevingsvergunning wordt afgeweken van een ruimtelijk plan.
+                     Het IMRO-id is alleen nodig als de locatie waar de kennisgeving van de BOPA betrekking
+                     op heeft, gelegen is in het tijdelijk deel van het omgevingsplan. Dit geldt als voor
+                     de betreffende locatie het omgevingsplan van rechtswege nog niet volledig is vervangen
+                     door het integraal omgevingsplan. </p>
+               </li>
+            </ul>
+         </section>
+      </section>
+      <section id="d2e1/d2e95">
+         <h1 id="d2e1/3FF74E44" class="heading_1"><span class="number">2</span>Correcte structuur van XML Schema Definition (XSD)</h1>
+         <p id="d2e1/02495155" class="Standaard space-after">Een XSD beschrijft de structuur van een XML. Het bevat toegestane elementen, attributen
+            op een element, nesting van de elementen, het type van de elementen, of een element
+            vaker mag/kan voorkomen, of een element verplicht is of niet, enzovoorts. Gebruik
+            de basisgeometrie.xsd voor het maken van een kennisgeving omgevingsvergunning BOPA
+            GML-bestand en gebruik geen XSD-bestand uit IMRO of QGIS. Deze basisgeometrie.xsd
+            is te vinden op:</p>
+         <p id="d2e1/3FD57ADC" class="Standaard space-after"><span class="hyperlink"><a href="https://register.geostandaarden.nl/gmlapplicatieschema/basisgeometrie/1.0.0/basisgeometrie.xsd" target="_blank"><span>https://register.geostandaarden.nl/gmlapplicatieschema/basisgeometrie/1.0.0/basisgeometrie.xsd</span></a></span></p>
+         <p id="d2e1/0481642D" class="Standaard space-after">De eerste regel van het GML-bestand bevat een referentie naar de basisgeometrie.xsd:</p>
+         <div class="code">
+            <p id="d2e1/72ECBD6E" class="Standaard" style="margin-left: 0em;">&lt;FeatureCollectionGeometrie xsi:schemaLocation="http://www.geostandaarden.nl/basisgeometrie/1.0
+               https://register.geostandaarden.nl/gmlapplicatieschema/basisgeometrie/1.0.0/basisgeometrie.xsd"&gt;</p>
+         </div>
+      </section>
+      <section id="d2e1/d2e131">
+         <h1 id="d2e1/7F2C0FCE" class="heading_1"><span class="number">3</span>Opbouw per geometrie </h1>
+         <p id="d2e1/586752F0" class="Standaard">De FeatureCollectionGeometrie (regel 8 in de template) bestaat uit één of meerdere
+            featureMembers (regel 15 in de template). Plaats elke afzonderlijke gml:Polygon als
+            featureMember. De stappen voor het invullen van de 4 attributen per featureMember
+            worden hieronder beschreven. Daarna staat beschreven hoe u een nieuwe featureMember
+            per geometrie kunt aanmaken. </p>
+         <section id="d2e1/d2e139">
+            <h2 id="d2e1/194B2F49" class="heading_2"><span class="number">3.1</span>ID genereren en invullen</h2>
+            <p id="d2e1/7461D21E" class="Standaard">Elke Geometrie bevat een element ‘id’ en ‘geometrie’ (regel 30 van de template). Het
+               is nodig om één of meer geldige GUID te genereren. Hiervoor kunt u gebruik maken van
+               een online tool, bijvoorbeeld <span class="hyperlink"><a href="https://guidgenerator.com/" target="_blank">https://guidgenerator.com/</a></span>. Laat de weergave met streepjes aanstaan (<span class="hyperlink"><a href="#d2e1/d6e180">Figuur 1</a></span>).</p>
+            <figure id="d2e1/d6e180" style="width: 100%;"><img src="media/image1.png" alt="Afbeelding met tekst, schermopname, software, Webpagina"><figcaption><span class="number">Figuur 1</span>Voorbeeld van het genereren van een ID door een GUID generator</figcaption>
+            </figure>
+            <p id="d2e1/0817677E" class="Standaard">Voeg de ID uit de GUID-generator in de GML (regel 30 in de template), zoals in <span class="hyperlink"><a href="#d2e1/d6e226">Figuur 2</a></span>.</p>
+            <figure id="d2e1/d6e226" style="width: 100%;"><img src="media/image2.png" alt="Afbeelding met tekst, schermopname, software, nummer"><figcaption><span class="number">Figuur 2</span>Voorbeeld invullen element ‘id’</figcaption>
+            </figure>
+            <p id="d2e1/4440CC8D" class="Standaard space-after">Code uit <span class="hyperlink"><a href="#d2e1/d6e226">Figuur 2</a></span> als tekst:</p>
+            <div class="code">
+               <p id="d2e1/54681C2F" class="Standaard" style="margin-left: 7em;">&lt;featureMember&gt;<br>&lt;Geometrie&gt;<br>&lt;!-- Het is mogelijk om hier extra elementen als gml:boundedBy, gml:name toe te voegen.
+                  --&gt;<br>&lt;id&gt;6009ae06-d459-41d8-b21c-fccfb27d527f&lt;/id&gt;<br>&lt;geometrie&gt;</p>
+            </div>
+         </section>
+         <section id="d2e1/d2e280">
+            <h2 id="d2e1/65334255" class="heading_2"><span class="number">3.2</span>Invullen attributen gml:id en srsName</h2>
+            <p id="d2e1/7F132035" class="Standaard">Elk element ‘geometrie’ bevat een element ‘gml:MultiSurface’. Dit zal het meest voorkomende
+               type zijn, maar het kan ook een ander type zijn, bijvoorbeeld gml:MultiPoint of gml:MultiCurve.
+               De attributen ‘gml:id’ en ‘srsName’ zijn verplicht. U kunt het ID kopiëren van stap
+               2.1 en plakken bij gml:id (regel 40 in de template). </p>
+            <p id="d2e1/6F7C8A9F" class="Standaard">De srsName verwijst naar een CoordinateReferenceSystemType (CRS) in de gml. Deze is
+               altijd ‘EPSG:28992’, namelijk het Nederlands Rijksdriehoekscoördinaten, zie <span class="hyperlink"><a href="#d2e1/d6e321">Figuur 3</a></span>.</p>
+            <figure id="d2e1/d6e321" style="width: 100%;"><img src="media/image3.png" alt="Afbeelding met tekst, schermopname, software, nummer"><figcaption><span class="number">Figuur 3</span>Invullen van gml:id en srsName</figcaption>
+            </figure>
+            <p id="d2e1/588D42FA" class="Standaard space-after">Relevante code uit <span class="hyperlink"><a href="#d2e1/d6e321">Figuur 3</a></span> als tekst:</p>
+            <div class="code">
+               <p id="d2e1/3E4F49E9" class="Standaard" style="margin-left: 0em;">&lt;gml:MultiSurface gml:id="id-6009ae06-d459-41d8-b21c-fccfb27d527f-0" srsName="EPSG:28992"&gt;</p>
+            </div>
+            <div class="important">
+               <p id="d2e1/4679FC31" class="Standaard"><span>Drie belangrijke aandachtspunten:</span></p>
+               <ul>
+                  <li>
+                     <p id="d2e1/50CCBA7E" class="Standaard"><span>Element ‘gml:MultiSurface’ moet altijd de attributen ‘gml:id’ en ‘srsName’ bevatten.
+                           Attribuut ‘srsName’ is altijd ‘EPSG:28992’.</span></p>
+                  </li>
+                  <li>
+                     <p id="d2e1/591B53AE" class="Standaard"><span>Een gml:id moet altijd beginnen met een letter. Daarom begint gml:id in de template
+                           altijd met ‘id-’.</span></p>
+                  </li>
+                  <li>
+                     <p id="d2e1/0866273C" class="Standaard"><span>Een gml:id moet uniek zijn. Daarom krijgt in de template elk gml-id binnen element
+                           ‘gml:MultiSurface’ een volgnummer. GML-bestanden met een duplicate identificatie worden
+                           niet verwerkt in het DSO.</span></p>
+                  </li>
+               </ul>
+            </div>
+         </section>
+         <section id="d2e1/d2e405">
+            <h2 id="d2e1/545D96E0" class="heading_2"><span class="number">3.3</span>Invullen element gml:posList (XY-coördinaten)</h2>
+            <p id="d2e1/2571EF0F" class="Standaard">Als laatste voegen we de coördinaten toe. Deze horen in element gml:posList (regel
+               48 in de template). Deze bevat XY-coördinaatparen en deze moeten ‘gesnapt’ zijn naar
+               drie decimalen. De coördinaatparen kunt u kopiëren vanuit een andere GML (IMRO-GML,
+               QGIS-GML, enzovoorts). <span class="hyperlink"><a href="#d2e1/d6e443">Figuur 4</a></span> geeft een voorbeeld.</p>
+            <figure id="d2e1/d6e443" style="width: 100%;"><img src="media/image4.png" alt="Geen alternatieve tekst beschikbaar"><figcaption><span class="number">Figuur 4</span>Voorbeeld van een gml:posList met XY-coördinaten</figcaption>
+            </figure>
+            <p id="d2e1/389FBAA1" class="Standaard space-after">Code van de tweede gml:posList uit <span class="hyperlink"><a href="#d2e1/d6e443">Figuur 4</a></span> als tekst:</p>
+            <div class="code">
+               <p id="d2e1/4DEA1ECD" class="Standaard space-after" style="margin-left: 0em;">&lt;gml:posList&gt;248273.954 575424.132 248287.967 575424.964 248287.97 575424.918 248288.045
+                  575424.923 248295.162 575303.624 248301.823 575191.287 248301.807 575191.286 248301.81
+                  575191.234 248286.077 575190.317 248272.944 575424.075 248273.954 575424.132&lt;/gml:posList&gt;</p>
+            </div>
+            <p id="d2e1/6886D44E" class="Standaard">Mochten de coördinaatparen meer dan drie decimalen bevatten, dan is het handig om
+               eerst deze in de gml:posList te plaatsen en als laatste stap het definitieve GML-bestand
+               in bijvoorbeeld QGIS de bewerking ‘snap to grid’ uit te voeren. Dit is aangegeven
+               in hoofdstuk <span class="hyperlink"><a href="#d2e1/4B0A99A6">5</a></span> ‘BOPA-GML gereed’.</p>
+            <div class="important">
+               <p id="d2e1/44719A89" class="Standaard"><span>Twee belangrijke aandachtspunten:</span></p>
+               <ul>
+                  <li>
+                     <p id="d2e1/5C510721" class="Standaard"><span>De gml:posList mag alleen geldige XY-coördinaatparen bevatten.</span></p>
+                  </li>
+                  <li>
+                     <p id="d2e1/072FE3DB" class="Standaard"><span>Alle coördinaten moeten ‘gesnapt’ zijn naar drie decimalen.</span></p>
+                  </li>
+               </ul>
+            </div>
+         </section>
+      </section>
+      <section id="d2e1/d2e523">
+         <h1 id="d2e1/23AC7463" class="heading_1"><span class="number">4</span>Uitbreiden aantal polygonen</h1>
+         <p id="d2e1/29F9C019" class="Standaard">Wanneer de GML meerdere polygonen zou moeten bevatten, herhaalt u de stappen in een
+            nieuw element gml:surfaceMember. Dit element voegt u toe door regels 39 tot en met
+            52 (in de template) te kopiëren en te plakken in regel 53 (in de template). Na het
+            toevoegen van een nieuw surfacemember herhaalt u de stappen beschreven in 2.2 en 2.3.</p>
+         <figure id="d2e1/d6e556" style="width: 100%;"><img src="media/image5.png" alt="Geen alternatieve tekst beschikbaar"><figcaption><span class="number">Figuur 5</span>Voorbeeld uit de template</figcaption>
+         </figure>
+      </section>
+      <section id="d2e1/d2e564">
+         <h1 id="d2e1/4B0A99A6" class="heading_1"><span class="number">5</span>BOPA-GML gereed</h1>
+         <p id="d2e1/44EFE87E" class="Standaard">Als alles is ingevuld, sla dan de GML op met een duidelijke naam. Mochten de coördinaatparen
+            nog niet op drie decimalen zijn afgerond, dan kunt u dit nu in QGIS doen met de toolbox
+            (Ctrl-Alt-T), ‘snap to grid’. Let erop, dat de invoerlaag op ‘EPSG:28992’ staat en
+            X-rasterafstand en Y-rasterafstand op 0,001 meter (drie decimalen).</p>
+         <figure id="d2e1/d6e603" style="width: 100%;"><img src="media/image6.png" alt="Afbeelding met tekst, schermopname, software, Computerpictogram"><figcaption><span class="number">Figuur 6</span>Afronden op drie decimalen in QGIS met ‘snap to grid’</figcaption>
+         </figure>
+         <p id="d2e1/4216699E" class="Standaard">De BOPA-GML is nu gereed en kan gepubliceerd worden via DROP (of de testomgeving van
+            DROP). Bevoegd gezagen hebben hiervoor een licentie.</p>
+      </section>
+      <section id="d2e1/d2e613">
+         <h1 id="d2e1/25BE08B2" class="heading_1"><span class="number">6</span>BOPA-template</h1>
+         <p id="d2e1/13F58811" class="Standaard space-after">Bijgevoegd is de BOPA-template als bijlage.</p>
+         <div class="code">
+            <p id="d2e1/3FB4820D" class="Standaard" style="margin-left: 0em;">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</p>
+            <p id="d2e1/68CC307E" class="Standaard" style="margin-left: 0em;">&lt;!-- ============================================================================================</p>
+            <p id="d2e1/7C6D2EFB" class="Standaard" style="margin-left: 0em;">Template-gml ten behoeve van BOPA-GML-bestanden. Zie voor de onderliggende xsd:</p>
+            <p id="d2e1/03B051E4" class="Standaard" style="margin-left: 0em;">https://register.geostandaarden.nl/gmlapplicatieschema/basisgeometrie/1.0.0/basisgeometrie.xsd</p>
+            <p id="d2e1/7135B6A9" class="Standaard" style="margin-left: 0em;">=============================================================================================
+               --&gt;</p>
+            <p id="d2e1/34AD5A5F" class="Standaard" style="margin-left: 0em;">&lt;FeatureCollectionGeometrie xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geostandaarden.nl/basisgeometrie/1.0
+               https://register.geostandaarden.nl/gmlapplicatieschema/basisgeometrie/1.0.0/basisgeometrie.xsd"
+               xmlns="http://www.geostandaarden.nl/basisgeometrie/1.0"&gt;</p>
+            <p id="d2e1/5DBE2FC3" class="Standaard" style="margin-left: 0em;">&lt;!-- ============================================================================================</p>
+            <p id="d2e1/1B4846A0" class="Standaard" style="margin-left: 0em;">De FeatureCollectionGeometrie bestaat uit één of meer featureMembers.</p>
+            <p id="d2e1/3ECA1F7F" class="Standaard" style="margin-left: 0em;">Plaats elke afzonderlijke gml:Polygon als featureMember.</p>
+            <p id="d2e1/2C4F6886" class="Standaard" style="margin-left: 0em;">=============================================================================================
+               --&gt;</p>
+            <p id="d2e1/191E603B" class="Standaard" style="margin-left: 1em;">&lt;featureMember&gt;</p>
+            <p id="d2e1/73413825" class="Standaard" style="margin-left: 0em;">&lt;!-- ============================================================================================</p>
+            <p id="d2e1/16823286" class="Standaard" style="margin-left: 0em;">Elk feautureMember bevat één Geometrie.</p>
+            <p id="d2e1/7D69A13C" class="Standaard" style="margin-left: 0em;">=============================================================================================
+               --&gt;</p>
+            <p id="d2e1/480987BF" class="Standaard" style="margin-left: 2em;">&lt;Geometrie&gt;</p>
+            <p id="d2e1/12026973" class="Standaard" style="margin-left: 0em;">&lt;!-- ============================================================================================</p>
+            <p id="d2e1/0086DC9C" class="Standaard" style="margin-left: 0em;">Elke Geometrie bevat een id en geometrie.</p>
+            <p id="d2e1/50C9F6B5" class="Standaard" style="margin-left: 0em;">Voor het maken van een geldige GUID, zie bijvoorbeeld https://guidgenerator.com/.</p>
+            <p id="d2e1/7A3CA5F2" class="Standaard" style="margin-left: 0em;">Het is mogelijk om hier een element complexType gml:AbstractFeatureType toe te voegen,
+               bijvoorbeeld gml:naam en gml:boundedBy.</p>
+            <p id="d2e1/585B82B7" class="Standaard" style="margin-left: 0em;">=============================================================================================
+               --&gt;</p>
+            <p id="d2e1/1697E0DF" class="Standaard" style="margin-left: 3em;">&lt;id&gt;00000000-0000-0000-0000-000000000000&lt;/id&gt;</p>
+            <p id="d2e1/5B9A79D7" class="Standaard" style="margin-left: 3em;">&lt;geometrie&gt;</p>
+            <p id="d2e1/2FC74F90" class="Standaard" style="margin-left: 0em;">&lt;!-- ============================================================================================</p>
+            <p id="d2e1/3D85B505" class="Standaard" style="margin-left: 0em;">Op het bovenliggende element in de gml-namespace zijn de attributen gml:id en srsName="EPSG:28992"
+               verplicht.</p>
+            <p id="d2e1/49B29380" class="Standaard" style="margin-left: 0em;">=============================================================================================
+               --&gt;</p>
+            <p id="d2e1/26F1DFD6" class="Standaard" style="margin-left: 4em;">&lt;gml:MultiSurface gml:id="id-00000000-0000-0000-0000-000000000000-0" srsName="EPSG:28992"&gt;</p>
+            <p id="d2e1/2824D050" class="Standaard" style="margin-left: 5em;">&lt;gml:surfaceMember&gt;</p>
+            <p id="d2e1/2758500D" class="Standaard" style="margin-left: 6em;">&lt;gml:Polygon gml:id="id-00000000-0000-0000-0000-000000000000-1"&gt;</p>
+            <p id="d2e1/0203C50A" class="Standaard" style="margin-left: 7em;">&lt;gml:exterior&gt;</p>
+            <p id="d2e1/65AABA97" class="Standaard" style="margin-left: 8em;">&lt;gml:LinearRing&gt;</p>
+            <p id="d2e1/20C76E1C" class="Standaard" style="margin-left: 0em;">&lt;!-- ============================================================================================</p>
+            <p id="d2e1/0F639EB2" class="Standaard" style="margin-left: 0em;">Elke gml:posList bevat coördinaatparen (X Y) 'gesnapt' naar drie decimalen.</p>
+            <p id="d2e1/62D17A5A" class="Standaard" style="margin-left: 0em;">=============================================================================================
+               --&gt;</p>
+            <p id="d2e1/6EF9E1CB" class="Standaard" style="margin-left: 9em;">&lt;gml:posList&gt;&lt;/gml:posList&gt;</p>
+            <p id="d2e1/03581A7E" class="Standaard" style="margin-left: 8em;">&lt;/gml:LinearRing&gt;</p>
+            <p id="d2e1/65FCFD0F" class="Standaard" style="margin-left: 7em;">&lt;/gml:exterior&gt;</p>
+            <p id="d2e1/35850583" class="Standaard" style="margin-left: 6em;">&lt;/gml:Polygon&gt;</p>
+            <p id="d2e1/4B313CFE" class="Standaard" style="margin-left: 5em;">&lt;/gml:surfaceMember&gt;</p>
+            <p id="d2e1/0C4410AC" class="Standaard" style="margin-left: 0em;">&lt;!-- ============================================================================================</p>
+            <p id="d2e1/511B1FFA" class="Standaard" style="margin-left: 0em;">Wanneer de gml meerdere polygonen bevat, moet dit met een surfacemember worden toegevoegd.</p>
+            <p id="d2e1/194FBB45" class="Standaard" style="margin-left: 0em;">=============================================================================================
+               --&gt;</p>
+            <p id="d2e1/64303F2B" class="Standaard" style="margin-left: 5em;">&lt;gml:surfaceMember&gt;</p>
+            <p id="d2e1/29F43E46" class="Standaard" style="margin-left: 6em;">&lt;gml:Polygon gml:id="id-00000000-0000-0000-0000-000000000000-2"&gt;</p>
+            <p id="d2e1/1A05BB41" class="Standaard" style="margin-left: 7em;">&lt;gml:exterior&gt;</p>
+            <p id="d2e1/68ED6C73" class="Standaard" style="margin-left: 8em;">&lt;gml:LinearRing&gt;</p>
+            <p id="d2e1/77666EAF" class="Standaard" style="margin-left: 9em;">&lt;gml:posList&gt;&lt;/gml:posList&gt;</p>
+            <p id="d2e1/2FB139E5" class="Standaard" style="margin-left: 8em;">&lt;/gml:LinearRing&gt;</p>
+            <p id="d2e1/3D06C5A8" class="Standaard" style="margin-left: 7em;">&lt;/gml:exterior&gt;</p>
+            <p id="d2e1/47D9921A" class="Standaard" style="margin-left: 6em;">&lt;/gml:Polygon&gt;</p>
+            <p id="d2e1/00C6C1A5" class="Standaard" style="margin-left: 5em;">&lt;/gml:surfaceMember&gt;</p>
+            <p id="d2e1/63FF9461" class="Standaard" style="margin-left: 4em;">&lt;/gml:MultiSurface&gt;</p>
+            <p id="d2e1/5EEC4B58" class="Standaard" style="margin-left: 3em;">&lt;/geometrie&gt;</p>
+            <p id="d2e1/2A1348CF" class="Standaard" style="margin-left: 2em;">&lt;/Geometrie&gt;</p>
+            <p id="d2e1/40DCFEDF" class="Standaard" style="margin-left: 1em;">&lt;/featureMember&gt;</p>
+            <p id="d2e1/630D8A11" class="Standaard space-after" style="margin-left: 0em;">&lt;/FeatureCollectionGeometrie&gt;</p>
+         </div>
+      </section>
+   </body>
+</html>

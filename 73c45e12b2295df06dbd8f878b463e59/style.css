@@ -300,9 +300,9 @@ nav span.tocnumber {
   white-space: nowrap;
 }
 
-/* issue, note, example, blockquote */
+/* issue, note, example, blockquote, important */
 
-div.issue, div.note, div.example, div.blockquote {
+div.issue, div.note, div.example, div.blockquote, div.important {
   margin: 1em auto;
   padding: .5em;
   border: .5em;
@@ -347,6 +347,10 @@ div.note::before {
 }
 div.blockquote {
   border-color: #C0C0C0;
+}
+div.important {
+  border-color: #FF0000;
+  color: #FF0000;
 }
 
 /* code */
