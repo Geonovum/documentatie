@@ -172,15 +172,16 @@ table {
   margin-bottom: 16pt;
   margin-top: 16pt;
   table-layout: fixed;
+  text-align: left;
   width: 100%;
 }
 caption {
-  text-align: left;
   font-family: 'Calibri', sans-serif;
   font-size: 12pt;
   font-weight: bold;
   line-height: 16pt;
   margin-bottom: 4pt;
+  text-align: left;
 }
 tr:nth-child(even) {
   background: #f0f6ff;
@@ -255,7 +256,6 @@ nav {
   bottom: 0;
   left: 0;
   width: 22.5em;
-  overflow: auto;
   padding: 1.5em;
   background-color: #F7F8F9;
   z-index: 1;
@@ -268,45 +268,38 @@ nav p.tocheading {
   text-transform: lowercase;
   line-height: 24pt;
 }
-nav ol.toc {
+nav ol {
   list-style-type: none;
 }
-nav > ol.toc {
-  padding: 0pt 0mm 0pt 0mm;
+nav > ol {
+  padding: 0pt 0mm 0pt 4rem;
 }
-nav > ol.toc > li.toc_map {
+nav > ol > li {
   font-weight: bold;
   margin: 16pt 0mm 0pt 0mm;
 }
-nav li.toc_map {
-  cursor: pointer;
+nav li {
   font-weight: normal;
-  margin: 0pt 0mm 0pt 5mm;
-}
-nav li.toc_map > ol.toc {
-  display: none;
-}
-nav li.toc_map:hover > ol.toc {
-  display: block;
-}
-nav li.toc_topic {
-  font-weight: normal;
-  margin: 0pt 0mm 0pt 5mm;
+  margin: 0pt 0mm 0pt 0mm;
 }
 nav a {
   color: inherit;
   font-weight: inherit;
   text-decoration: none;
-  display: block;
-  white-space: nowrap;
 }
 nav a:active {
   color: red;
 }
+nav span.tocnumber {
+  float: left;
+  margin-left: -4em;
+  width: 4em;
+  white-space: nowrap;
+}
 
-/* issue, note, example, blockquote */
+/* issue, note, example, blockquote, important */
 
-div.issue, div.note, div.example, div.blockquote {
+div.issue, div.note, div.example, div.blockquote, div.important {
   margin: 1em auto;
   padding: .5em;
   border: .5em;
@@ -351,6 +344,10 @@ div.note::before {
 }
 div.blockquote {
   border-color: #C0C0C0;
+}
+div.important {
+  border-color: #FF0000;
+  color: #FF0000;
 }
 
 /* code */
