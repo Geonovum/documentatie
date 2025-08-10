@@ -256,8 +256,9 @@ nav {
   bottom: 0;
   left: 0;
   width: 22.5em;
-  padding: 1.5em;
+  padding: 0 1.5em;
   background-color: #F7F8F9;
+  overflow: auto;
   z-index: 1;
 }
 nav p.tocheading {
@@ -354,11 +355,12 @@ div.important {
 
 div.code {
   font-family: monospace;
-  font-size: 11pt;
+  font-size: 10pt;
+  margin: 1em auto;
   page-break-inside: avoid;
   hyphens: none;
 }
 span.code {
   font-family: monospace;
-  font-size: 11pt;
+  font-size: 10pt;
 }

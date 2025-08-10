@@ -18,7 +18,7 @@
   "headline": "Technische beschrijving van het beheerportaal",
   "inLanguage": "nl",
   "license": "https://creativecommons.org/licenses/by-nd/4.0/",
-  "datePublished": "2025-08-04T17:47:52.0438958+02:00",
+  "datePublished": "2025-08-10T11:26:39.7835364+02:00",
   "copyrightHolder": {
     "@type": "Organization",
     "name": "Geonovum",
@@ -88,252 +88,136 @@
             </li>
          </ol>
       </nav>
-      <p class="title">Technische beschrijving van het beheerportaal</p>
-      <section id="d2e1/d2e3">
-         <h1 id="d2e1/70A10379" class="heading_1"><span class="number">1</span>Opbouw van het beheerportaal</h1>
-         <p id="d2e1/4604F8FE" class="Standaard">Het beheerportaal is opgebouwd op basis van tegels.</p>
-         <figure id="d2e1/d6e16" style="width: 100%;"><img src="media/image1.jpg" alt="Afbeelding met tekst, schermopname, software, Webpagina"><figcaption><span class="number">Figuur 1</span>Opbouw met een tegel-pagina</figcaption>
-         </figure>
-         <p id="d2e1/4F2B4A7A" class="Standaard">Op de server zien we deze structuur terug in de bestandsopbouw.</p>
-         <figure id="d2e1/d6e51" style="width: 100%;"><img src="media/image2.png" alt="Afbeelding met tekst, schermopname, scherm, software"><figcaption><span class="number">Figuur 2</span>Bestandsindeling op de server</figcaption>
-         </figure>
-         <section id="d2e1/d2e78">
-            <h2 id="d2e1/6501E8BB" class="heading_2"><span class="number">1.1</span>Opbouw van een tegel</h2>
-            <p id="d2e1/0870442B" class="Standaard">Elke tegel wordt gedefinieerd door de bestanden in de map. Zo staan in de map ‘Algemeen’
-               de volgende bestanden:</p>
-            <ul>
-               <li>
-                  <p id="d2e1/0B090901" class="Opsomming_bullets">index.menu-item.json</p>
-               </li>
-               <li>
-                  <p id="d2e1/74AB268E" class="Opsomming_bullets">word-to-markdown.workflow.json</p>
-               </li>
-               <li>
-                  <p id="d2e1/64F30274" class="Opsomming_bullets">word-to-publicatie.workflow.json</p>
-               </li>
-               <li>
-                  <p id="d2e1/6FFCA862" class="Opsomming_bullets space-after">word-to-werkversie.workflow.json</p>
-               </li>
-            </ul>
-            <p id="d2e1/774C6D16" class="Standaard">De json-bestanden met ‘menu-item’ bevatten de opbouw van elke tegel, bestanden met
-               ‘workflow’ bevatten de opbouw van de workflow.</p>
-            <section id="d2e1/d2e112">
-               <h3 id="d2e1/01151426" class="heading_3"><span class="number">1.1.1</span>Opbouw van een menu-item</h3>
-               <p id="d2e1/20B2A011" class="Standaard space-after">Een menu-item gaat over de tegel waarin het bestand staat. In ons voorbeeld is dat
-                  tegel ‘Algemeen’. De opbouw is als volgt:</p>
-               <div class="code">
-                  <p id="d2e1/7FB370BC" class="Standaard" style="margin-left: 0em;">{</p>
-                  <p id="d2e1/21F8C95B" class="Standaard" style="margin-left: 1em;">‘label’: ‘Algemeen’,</p>
-                  <p id="d2e1/60517D40" class="Standaard" style="margin-left: 1em;">‘subtitle’: ‘Algemene workflows voor het beheren en publiceren van documenten.’,</p>
-                  <p id="d2e1/313EEE3F" class="Standaard" style="margin-left: 1em;">‘imageFilename’: ‘Tile algemeen.png’</p>
-                  <p id="d2e1/5646B33D" class="Standaard" style="margin-left: 0em;">}</p>
-               </div>
+      <main>
+         <p class="title">Technische beschrijving van het beheerportaal</p>
+         <section id="d2e1/d2e3">
+            <h1 id="d2e1/70A10379" class="heading_1"><span class="number">1</span>Opbouw van het beheerportaal</h1>
+            <p id="d2e1/4604F8FE" class="Standaard">Het beheerportaal is opgebouwd op basis van tegels.</p>
+            <figure id="d2e1/d6e16" style="width: 100%;"><img src="media/image1.jpg" alt="Afbeelding met tekst, schermopname, software, Webpagina"><figcaption><span class="number">Figuur 1</span>Opbouw met een tegel-pagina</figcaption>
+            </figure>
+            <p id="d2e1/4F2B4A7A" class="Standaard">Op de server zien we deze structuur terug in de bestandsopbouw.</p>
+            <figure id="d2e1/d6e51" style="width: 100%;"><img src="media/image2.png" alt="Afbeelding met tekst, schermopname, scherm, software"><figcaption><span class="number">Figuur 2</span>Bestandsindeling op de server</figcaption>
+            </figure>
+            <section id="d2e1/d2e78">
+               <h2 id="d2e1/6501E8BB" class="heading_2"><span class="number">1.1</span>Opbouw van een tegel</h2>
+               <p id="d2e1/0870442B" class="Standaard">Elke tegel wordt gedefinieerd door de bestanden in de map. Zo staan in de map ‘Algemeen’
+                  de volgende bestanden:</p>
+               <ul>
+                  <li>
+                     <p id="d2e1/0B090901" class="Opsomming_bullets">index.menu-item.json</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/74AB268E" class="Opsomming_bullets">word-to-markdown.workflow.json</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/64F30274" class="Opsomming_bullets">word-to-publicatie.workflow.json</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/6FFCA862" class="Opsomming_bullets space-after">word-to-werkversie.workflow.json</p>
+                  </li>
+               </ul>
+               <p id="d2e1/774C6D16" class="Standaard">De json-bestanden met ‘menu-item’ bevatten de opbouw van elke tegel, bestanden met
+                  ‘workflow’ bevatten de opbouw van de workflow.</p>
+               <section id="d2e1/d2e112">
+                  <h3 id="d2e1/01151426" class="heading_3"><span class="number">1.1.1</span>Opbouw van een menu-item</h3>
+                  <p id="d2e1/20B2A011" class="Standaard space-after">Een menu-item gaat over de tegel waarin het bestand staat. In ons voorbeeld is dat
+                     tegel ‘Algemeen’. De opbouw is als volgt:</p>
+                  <div class="code">
+                     <p id="d2e1/7FB370BC" class="Standaard" style="margin-left: 0em;">{</p>
+                     <p id="d2e1/21F8C95B" class="Standaard" style="margin-left: 1em;">‘label’: ‘Algemeen’,</p>
+                     <p id="d2e1/60517D40" class="Standaard" style="margin-left: 1em;">‘subtitle’: ‘Algemene workflows voor het beheren en publiceren van documenten.’,</p>
+                     <p id="d2e1/313EEE3F" class="Standaard" style="margin-left: 1em;">‘imageFilename’: ‘Tile algemeen.png’</p>
+                     <p id="d2e1/5646B33D" class="Standaard" style="margin-left: 0em;">}</p>
+                  </div>
+               </section>
+               <section id="d2e1/d2e165">
+                  <h3 id="d2e1/43A2976E" class="heading_3"><span class="number">1.1.2</span>Opzet van de workflows</h3>
+                  <p id="d2e1/03874CF8" class="Standaard">De json-bestanden met ‘workflow’ genereren een tegel en een workflow-pagina.</p>
+                  <figure id="d2e1/d6e185" style="width: 100%;"><img src="media/image3.jpg" alt="Afbeelding 1590607710"><figcaption><span class="number">Figuur 3</span>Weergave van een workflow</figcaption>
+                  </figure>
+                  <p id="d2e1/0E0F9970" class="Standaard space-after">Met de volgende informatie uit het workflow-bestand wordt in ons voorbeeld de tegel
+                     ‘Werkversie’ opgebouwd:</p>
+                  <div class="code">
+                     <p id="d2e1/2A559447" class="Standaard" style="margin-left: 0em;">{</p>
+                     <p id="d2e1/30263DA9" class="Standaard" style="margin-left: 1em;">‘name’: ‘Werkversie’,</p>
+                     <p id="d2e1/46185C61" class="Standaard" style="margin-left: 1em;">‘shortDescription’: ‘Deze workflow transformeert een Word-bestand naar een ReSpec-werkversie.’,</p>
+                     <p id="d2e1/2BEC7905" class="Standaard" style="margin-left: 1em;">‘imageFilename’: ‘Thumbnail Sociaal Domein PNG-01.png’,</p>
+                     <p id="d2e1/29EB7B67" class="Standaard" style="margin-left: 1em;">…</p>
+                  </div>
+               </section>
             </section>
-            <section id="d2e1/d2e165">
-               <h3 id="d2e1/43A2976E" class="heading_3"><span class="number">1.1.2</span>Opzet van de workflows</h3>
-               <p id="d2e1/03874CF8" class="Standaard">De json-bestanden met ‘workflow’ genereren een tegel en een workflow-pagina.</p>
-               <figure id="d2e1/d6e185" style="width: 100%;"><img src="media/image3.jpg" alt="Afbeelding 1590607710"><figcaption><span class="number">Figuur 3</span>Weergave van een workflow</figcaption>
-               </figure>
-               <p id="d2e1/0E0F9970" class="Standaard space-after">Met de volgende informatie uit het workflow-bestand wordt in ons voorbeeld de tegel
-                  ‘Werkversie’ opgebouwd:</p>
-               <div class="code">
-                  <p id="d2e1/2A559447" class="Standaard" style="margin-left: 0em;">{</p>
-                  <p id="d2e1/30263DA9" class="Standaard" style="margin-left: 1em;">‘name’: ‘Werkversie’,</p>
-                  <p id="d2e1/46185C61" class="Standaard" style="margin-left: 1em;">‘shortDescription’: ‘Deze workflow transformeert een Word-bestand naar een ReSpec-werkversie.’,</p>
-                  <p id="d2e1/2BEC7905" class="Standaard" style="margin-left: 1em;">‘imageFilename’: ‘Thumbnail Sociaal Domein PNG-01.png’,</p>
-                  <p id="d2e1/29EB7B67" class="Standaard" style="margin-left: 1em;">…</p>
-               </div>
+            <section id="d2e1/d2e265">
+               <h2 id="d2e1/0968899E" class="heading_2"><span class="number">1.2</span>Mappenstructuur op de server</h2>
+               <p id="d2e1/0A7427AD" class="Standaard">De mappenstructuur is in grote lijnen:</p>
+               <ul>
+                  <li>
+                     <p id="d2e1/2522D0F2" class="Opsomming_bullets">‘beheerportaal-api-files’ bevat alle bestanden die de api nodig heeft.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/43B69720" class="Opsomming_bullets">‘config’ bevat alle bestanden die de workflow en onderliggende stappen vastleggen.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/4ED07DD7" class="Opsomming_bullets">‘cmd-step’ bevat alle gekoppelde command-stappen.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/2F788B6E" class="Opsomming_bullets">‘xpath-step’ bevat alle gekoppelde xpath-stappen.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/3E89CB22" class="Opsomming_bullets">‘workflow’ bevat alle vastgelegde workflows. De opbouw is analoog aan de opbouw van
+                        de schermen in het beheerportaal.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/4742BED4" class="Opsomming_bullets">‘workflow-files’ bevat alle bestanden die door een workflow worden gegenereerd. Op
+                        deze map moet nog een aanpassing komen zodat na een bepaalde periode de gegenereerde
+                        bestanden worden gewist.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/71F970C7" class="Opsomming_bullets">‘beheerportaal-repos’ bevat alle repositories. De workflows gebruiken deze bestanden
+                        voor de uitvoering. Alle gebruikte libraries en eventuele licenties moeten in de repository
+                        meegeleverd zijn.</p>
+                  </li>
+               </ul>
             </section>
          </section>
-         <section id="d2e1/d2e265">
-            <h2 id="d2e1/0968899E" class="heading_2"><span class="number">1.2</span>Mappenstructuur op de server</h2>
-            <p id="d2e1/0A7427AD" class="Standaard">De mappenstructuur is in grote lijnen:</p>
-            <ul>
-               <li>
-                  <p id="d2e1/2522D0F2" class="Opsomming_bullets">‘beheerportaal-api-files’ bevat alle bestanden die de api nodig heeft.</p>
-               </li>
-               <li>
-                  <p id="d2e1/43B69720" class="Opsomming_bullets">‘config’ bevat alle bestanden die de workflow en onderliggende stappen vastleggen.</p>
-               </li>
-               <li>
-                  <p id="d2e1/4ED07DD7" class="Opsomming_bullets">‘cmd-step’ bevat alle gekoppelde command-stappen.</p>
-               </li>
-               <li>
-                  <p id="d2e1/2F788B6E" class="Opsomming_bullets">‘xpath-step’ bevat alle gekoppelde xpath-stappen.</p>
-               </li>
-               <li>
-                  <p id="d2e1/3E89CB22" class="Opsomming_bullets">‘workflow’ bevat alle vastgelegde workflows. De opbouw is analoog aan de opbouw van
-                     de schermen in het beheerportaal.</p>
-               </li>
-               <li>
-                  <p id="d2e1/4742BED4" class="Opsomming_bullets">‘workflow-files’ bevat alle bestanden die door een workflow worden gegenereerd. Op
-                     deze map moet nog een aanpassing komen zodat na een bepaalde periode de gegenereerde
-                     bestanden worden gewist.</p>
-               </li>
-               <li>
-                  <p id="d2e1/71F970C7" class="Opsomming_bullets">‘beheerportaal-repos’ bevat alle repositories. De workflows gebruiken deze bestanden
-                     voor de uitvoering. Alle gebruikte libraries en eventuele licenties moeten in de repository
-                     meegeleverd zijn.</p>
-               </li>
-            </ul>
-         </section>
-      </section>
-      <section id="d2e1/d2e323">
-         <h1 id="d2e1/0A8097CB" class="heading_1"><span class="number">2</span>Opbouw van een workflow</h1>
-         <p id="d2e1/6B6D9392" class="Standaard">Alle workflows volgen hetzelfde principe: ‘Je hebt een input, daar doe je wat mee
-            en dan komt er een output uit’. De workflow-pagina is volgens datzelfde principe opgebouwd:
-            ‘upload een input, voer de workflow uit, download de output’.</p>
-         <figure id="d2e1/d6e349" style="width: 100%;"><img src="media/image4.jpg" alt="Afbeelding met tekst, schermopname, software, Computerpictogram"><figcaption><span class="number">Figuur 4</span>Opbouw van een workflow-pagina</figcaption>
-         </figure>
-         <p id="d2e1/78B82AAF" class="Standaard">Het is echter niet zo dat je altijd een input of een output hoeft te hebben. Dit leg
-            je vast in een workflow-bestand. Hierin leg je vast of er een input moet zijn, wat
-            voor type bestand dit is, de stappen van de workflow, eventueel benodigde variabelen
-            enzovoorts.</p>
-         <p id="d2e1/5CE37F53" class="Alineakop">Hello World!</p>
-         <p id="d2e1/57647A22" class="Standaard space-after">Een eenvoudig voorbeeld van een workflow is ‘Hello World’.</p>
-         <div class="code">
-            <p id="d2e1/13E15B0D" class="Standaard" style="margin-left: 0em;">{</p>
-            <p id="d2e1/476EAB9C" class="Standaard" style="margin-left: 1em;">‘name’: ‘Hello World!’,</p>
-            <p id="d2e1/7BBA47C0" class="Standaard" style="margin-left: 1em;">‘shortDescription’: ‘Een simpel voorbeeld’,</p>
-            <p id="d2e1/345F86EA" class="Standaard" style="margin-left: 1em;">‘description’: [</p>
-            <p id="d2e1/3414F2FA" class="Standaard" style="margin-left: 2em;">‘De output zou in tekst: 'Hello World!' moeten zijn.’</p>
-            <p id="d2e1/22BA1F16" class="Standaard" style="margin-left: 1em;">],</p>
-            <p id="d2e1/594766A8" class="Standaard" style="margin-left: 1em;">‘imageFilename’: ‘Thumbnail Standaardisatie PNG-01.png’,</p>
-            <p id="d2e1/233A28CE" class="Standaard" style="margin-left: 1em;">‘private’: {</p>
-            <p id="d2e1/093C1E49" class="Standaard" style="margin-left: 2em;">‘comments’: [],</p>
-            <p id="d2e1/626299E1" class="Standaard" style="margin-left: 2em;">‘steps’: [</p>
-            <p id="d2e1/7BB631E3" class="Standaard" style="margin-left: 3em;">{</p>
-            <p id="d2e1/17A4D9E9" class="Standaard" style="margin-left: 4em;">‘type’: ‘cmd’,</p>
-            <p id="d2e1/2A4890A5" class="Standaard" style="margin-left: 4em;">‘command’: ‘echo \’Hello World!\’’</p>
-            <p id="d2e1/3CE1CAFB" class="Standaard" style="margin-left: 3em;">}</p>
-            <p id="d2e1/3D34CC23" class="Standaard" style="margin-left: 2em;">]</p>
-            <p id="d2e1/2D882319" class="Standaard" style="margin-left: 1em;">}</p>
-            <p id="d2e1/385FB532" class="Standaard space-after" style="margin-left: 0em;">}</p>
-         </div>
-         <p id="d2e1/0F618E99" class="Standaard">De workflow bevat informatie voor de bovenliggende tegel en de workflow-pagina.</p>
-         <figure id="d2e1/d6e565" style="width: 100%;"><img src="media/image5.jpg" alt="Afbeelding met tekst, schermopname, Webpagina, Website"><figcaption><span class="number">Figuur 5</span>Een simpel voorbeeld ‘Hello World!’</figcaption>
-         </figure>
-         <figure id="d2e1/d6e597" style="width: 100%;"><img src="media/image6.jpg" alt="Afbeelding met tekst, schermopname, software, Computerpictogram"><figcaption><span class="number">Figuur 6</span>Stap ‘echo’ geeft het resultaat ‘Hello World!’ weer</figcaption>
-         </figure>
-         <table id="d2e1/d6e631" class="Tabel" style="width: 100%;">
-            <caption><span class="number">Tabel 1</span>Eigenschappen en onderdelen van een workflow</caption>
-            <colgroup>
-               <col style="width: 25%;">
-               <col style="width: 75%;">
-            </colgroup>
-            <thead>
-               <tr>
-                  <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/79C10080" class="Standaard">Eigenschap, onderdeel</p>
-                  </th>
-                  <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/7C3D2568" class="Standaard">Omschrijving</p>
-                  </th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/74990215" class="Standaard">name</p>
-                  </td>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/2CF1DEDC" class="Standaard">Een leesbare naam van de workflow. Deze wordt gebruikt voor workflow-titel, foutmeldingen,
-                        enzovoorts. Als dit niet ingevuld is, wordt de bestandsnaam gebruikt.</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/415AEB46" class="Standaard">shortDescription</p>
-                  </td>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/5800C3E8" class="Standaard">Een beschrijving van wat de workflow doet. Deze wordt op de tegel van de workflow
-                        weergegeven.</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/317EE227" class="Standaard">description</p>
-                  </td>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/6BB6B7D9" class="Standaard">Een beschrijving van wat de workflow doet. Deze wordt zichtbaar op de pagina van de
-                        workflow. Deze beschrijving kan uitgespreid worden over meerdere regels door het niet
-                        als string maar als array van strings op te geven.</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/3C78EFEE" class="Standaard">imageFilename</p>
-                  </td>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/069960F8" class="Standaard">Een van de bestandnamen van de afbeeldingen in de media-folder. Deze wordt gebruikt
-                        in de tegel van de workflow.</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/049FCB2D" class="Standaard">repo_name</p>
-                  </td>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/01423267" class="Standaard">Alle benodigde bestanden voor het uitvoeren van een workflow worden op de server opgeslagen
-                        als een repository. Eigenschap repo_name bevat de naam van deze repository.</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/0A1CB27D" class="Standaard">repo_url</p>
-                  </td>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/09F808A1" class="Standaard">Een link naar de GitHub-repository die bij deze workflow hoort. Deze wordt alleen
-                        gebruikt om de gebruiker naar de informatie over de workflow te sturen.</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/5398A5C9" class="Standaard">input</p>
-                  </td>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/3DC79A1A" class="Standaard">Beschrijft de vereiste input voor de workflow. Laat je deze eigenschap weg, dan is
-                        er op de workflow-pagina geen mogelijkheid om bestanden te uploaden.</p>
-                     <p id="d2e1/2D6FBDA6" class="Standaard">Als input zijn er de volgende opties:</p>
-                     <ul>
-                        <li>
-                           <p id="d2e1/33958B07" class="Opsomming_bullets">‘files’ om vast te leggen hoeveel en welk type bestanden benodigd zijn. Onderliggende
-                              eigenschappen zijn ‘minFiles’, ‘maxFiles’, ‘validFileExtensions’, ‘uploadFileExtensions’.</p>
-                        </li>
-                        <li>
-                           <p id="d2e1/221CEFDB" class="Opsomming_bullets">‘externalPageForInput’ bevat een url naar een externe pagina die input-bestanden stuurt.</p>
-                        </li>
-                     </ul>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/21A61532" class="Standaard">output</p>
-                  </td>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/7B87D988" class="Standaard">Beschrijft de output van de workflow. Laat je deze eigenschap weg, dan is er op de
-                        workflow-page geen mogelijkheid om bestanden te downloaden. Onderliggende eigenschap
-                        is ‘type’. Deze kan de waarden ‘none’, ‘zip’ en ‘files’ bevatten.</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/0B3D0C35" class="Standaard"><b>private</b></p>
-                  </td>
-                  <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                     <p id="d2e1/400A1137" class="Standaard">De definitie van de volledige workflow is vereist. Deze blijft volledig server-side.
-                        Het bestaat uit twee onderdelen: ‘workflowVariables’ en ‘steps’. Deze worden in afzonderlijke
-                        tabellen behandeld.</p>
-                  </td>
-               </tr>
-            </tbody>
-         </table>
-         <section id="d2e1/d2e780">
-            <h2 id="d2e1/6BB97C12" class="heading_2"><span class="number">2.1</span>Onderdeel ‘input’</h2>
-            <p id="d2e1/197C0D13" class="Standaard">De meeste workflows zullen bestaan uit een invoerbestand, een transformatie, een uitvoerbestand.
-               Omdat dit niet voor alle workflows hoeft te gelden is dit onderdeel optioneel.</p>
-            <table id="d2e1/d6e808" class="Tabel" style="width: 100%;">
-               <caption><span class="number">Tabel 2</span>Eigenschappen en onderdelen van input</caption>
+         <section id="d2e1/d2e323">
+            <h1 id="d2e1/0A8097CB" class="heading_1"><span class="number">2</span>Opbouw van een workflow</h1>
+            <p id="d2e1/6B6D9392" class="Standaard">Alle workflows volgen hetzelfde principe: ‘Je hebt een input, daar doe je wat mee
+               en dan komt er een output uit’. De workflow-pagina is volgens datzelfde principe opgebouwd:
+               ‘upload een input, voer de workflow uit, download de output’.</p>
+            <figure id="d2e1/d6e349" style="width: 100%;"><img src="media/image4.jpg" alt="Afbeelding met tekst, schermopname, software, Computerpictogram"><figcaption><span class="number">Figuur 4</span>Opbouw van een workflow-pagina</figcaption>
+            </figure>
+            <p id="d2e1/78B82AAF" class="Standaard">Het is echter niet zo dat je altijd een input of een output hoeft te hebben. Dit leg
+               je vast in een workflow-bestand. Hierin leg je vast of er een input moet zijn, wat
+               voor type bestand dit is, de stappen van de workflow, eventueel benodigde variabelen
+               enzovoorts.</p>
+            <p id="d2e1/5CE37F53" class="Alineakop">Hello World!</p>
+            <p id="d2e1/57647A22" class="Standaard space-after">Een eenvoudig voorbeeld van een workflow is ‘Hello World’.</p>
+            <div class="code">
+               <p id="d2e1/13E15B0D" class="Standaard" style="margin-left: 0em;">{</p>
+               <p id="d2e1/476EAB9C" class="Standaard" style="margin-left: 1em;">‘name’: ‘Hello World!’,</p>
+               <p id="d2e1/7BBA47C0" class="Standaard" style="margin-left: 1em;">‘shortDescription’: ‘Een simpel voorbeeld’,</p>
+               <p id="d2e1/345F86EA" class="Standaard" style="margin-left: 1em;">‘description’: [</p>
+               <p id="d2e1/3414F2FA" class="Standaard" style="margin-left: 2em;">‘De output zou in tekst: 'Hello World!' moeten zijn.’</p>
+               <p id="d2e1/22BA1F16" class="Standaard" style="margin-left: 1em;">],</p>
+               <p id="d2e1/594766A8" class="Standaard" style="margin-left: 1em;">‘imageFilename’: ‘Thumbnail Standaardisatie PNG-01.png’,</p>
+               <p id="d2e1/233A28CE" class="Standaard" style="margin-left: 1em;">‘private’: {</p>
+               <p id="d2e1/093C1E49" class="Standaard" style="margin-left: 2em;">‘comments’: [],</p>
+               <p id="d2e1/626299E1" class="Standaard" style="margin-left: 2em;">‘steps’: [</p>
+               <p id="d2e1/7BB631E3" class="Standaard" style="margin-left: 3em;">{</p>
+               <p id="d2e1/17A4D9E9" class="Standaard" style="margin-left: 4em;">‘type’: ‘cmd’,</p>
+               <p id="d2e1/2A4890A5" class="Standaard" style="margin-left: 4em;">‘command’: ‘echo \’Hello World!\’’</p>
+               <p id="d2e1/3CE1CAFB" class="Standaard" style="margin-left: 3em;">}</p>
+               <p id="d2e1/3D34CC23" class="Standaard" style="margin-left: 2em;">]</p>
+               <p id="d2e1/2D882319" class="Standaard" style="margin-left: 1em;">}</p>
+               <p id="d2e1/385FB532" class="Standaard space-after" style="margin-left: 0em;">}</p>
+            </div>
+            <p id="d2e1/0F618E99" class="Standaard">De workflow bevat informatie voor de bovenliggende tegel en de workflow-pagina.</p>
+            <figure id="d2e1/d6e565" style="width: 100%;"><img src="media/image5.jpg" alt="Afbeelding met tekst, schermopname, Webpagina, Website"><figcaption><span class="number">Figuur 5</span>Een simpel voorbeeld ‘Hello World!’</figcaption>
+            </figure>
+            <figure id="d2e1/d6e597" style="width: 100%;"><img src="media/image6.jpg" alt="Afbeelding met tekst, schermopname, software, Computerpictogram"><figcaption><span class="number">Figuur 6</span>Stap ‘echo’ geeft het resultaat ‘Hello World!’ weer</figcaption>
+            </figure>
+            <table id="d2e1/d6e631" class="Tabel" style="width: 100%;">
+               <caption><span class="number">Tabel 1</span>Eigenschappen en onderdelen van een workflow</caption>
                <colgroup>
                   <col style="width: 25%;">
                   <col style="width: 75%;">
@@ -341,185 +225,116 @@
                <thead>
                   <tr>
                      <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                        <p id="d2e1/0238DBFA" class="Standaard">Eigenschap, onderdeel</p>
+                        <p id="d2e1/79C10080" class="Standaard">Eigenschap, onderdeel</p>
                      </th>
                      <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                        <p id="d2e1/5A5BA61D" class="Standaard">Omschrijving</p>
+                        <p id="d2e1/7C3D2568" class="Standaard">Omschrijving</p>
                      </th>
                   </tr>
                </thead>
                <tbody>
                   <tr>
                      <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                        <p id="d2e1/74F05889" class="Standaard">files</p>
+                        <p id="d2e1/74990215" class="Standaard">name</p>
                      </td>
                      <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                        <p id="d2e1/5D2FDD1B" class="Standaard">De volgende vereisten voor de input-bestanden worden gecontroleerd:</p>
+                        <p id="d2e1/2CF1DEDC" class="Standaard">Een leesbare naam van de workflow. Deze wordt gebruikt voor workflow-titel, foutmeldingen,
+                           enzovoorts. Als dit niet ingevuld is, wordt de bestandsnaam gebruikt.</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                        <p id="d2e1/415AEB46" class="Standaard">shortDescription</p>
+                     </td>
+                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                        <p id="d2e1/5800C3E8" class="Standaard">Een beschrijving van wat de workflow doet. Deze wordt op de tegel van de workflow
+                           weergegeven.</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                        <p id="d2e1/317EE227" class="Standaard">description</p>
+                     </td>
+                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                        <p id="d2e1/6BB6B7D9" class="Standaard">Een beschrijving van wat de workflow doet. Deze wordt zichtbaar op de pagina van de
+                           workflow. Deze beschrijving kan uitgespreid worden over meerdere regels door het niet
+                           als string maar als array van strings op te geven.</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                        <p id="d2e1/3C78EFEE" class="Standaard">imageFilename</p>
+                     </td>
+                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                        <p id="d2e1/069960F8" class="Standaard">Een van de bestandnamen van de afbeeldingen in de media-folder. Deze wordt gebruikt
+                           in de tegel van de workflow.</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                        <p id="d2e1/049FCB2D" class="Standaard">repo_name</p>
+                     </td>
+                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                        <p id="d2e1/01423267" class="Standaard">Alle benodigde bestanden voor het uitvoeren van een workflow worden op de server opgeslagen
+                           als een repository. Eigenschap repo_name bevat de naam van deze repository.</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                        <p id="d2e1/0A1CB27D" class="Standaard">repo_url</p>
+                     </td>
+                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                        <p id="d2e1/09F808A1" class="Standaard">Een link naar de GitHub-repository die bij deze workflow hoort. Deze wordt alleen
+                           gebruikt om de gebruiker naar de informatie over de workflow te sturen.</p>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                        <p id="d2e1/5398A5C9" class="Standaard">input</p>
+                     </td>
+                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                        <p id="d2e1/3DC79A1A" class="Standaard">Beschrijft de vereiste input voor de workflow. Laat je deze eigenschap weg, dan is
+                           er op de workflow-pagina geen mogelijkheid om bestanden te uploaden.</p>
+                        <p id="d2e1/2D6FBDA6" class="Standaard">Als input zijn er de volgende opties:</p>
                         <ul>
                            <li>
-                              <p id="d2e1/563DE564" class="Opsomming_bullets">minimaal aantal bestanden,</p>
+                              <p id="d2e1/33958B07" class="Opsomming_bullets">‘files’ om vast te leggen hoeveel en welk type bestanden benodigd zijn. Onderliggende
+                                 eigenschappen zijn ‘minFiles’, ‘maxFiles’, ‘validFileExtensions’, ‘uploadFileExtensions’.</p>
                            </li>
                            <li>
-                              <p id="d2e1/1F960106" class="Opsomming_bullets">maximaal aantal bestanden,</p>
-                           </li>
-                           <li>
-                              <p id="d2e1/58B218E5" class="Opsomming_bullets">maximale bestandsgrootte van individuele bestanden,</p>
-                           </li>
-                           <li>
-                              <p id="d2e1/4372019A" class="Opsomming_bullets">vereiste bestandsnamen,</p>
-                           </li>
-                           <li>
-                              <p id="d2e1/43817E79" class="Opsomming_bullets">toegestane bestandextensies.</p>
+                              <p id="d2e1/221CEFDB" class="Opsomming_bullets">‘externalPageForInput’ bevat een url naar een externe pagina die input-bestanden stuurt.</p>
                            </li>
                         </ul>
                      </td>
                   </tr>
                   <tr>
                      <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                        <p id="d2e1/70C3D90A" class="Standaard">externalPageForInput</p>
+                        <p id="d2e1/21A61532" class="Standaard">output</p>
                      </td>
                      <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                        <p id="d2e1/246A5942" class="Standaard">Deze eigenschap legt de url vast van een externe pagina, die invoerbestanden stuurt.
-                           In het onderdeel ‘Input’ van de workflow komt een knop om de pagina als popup te openen.
-                           Dit vervangt de dialoog voor het selecteren van een invoerbestand.</p>
+                        <p id="d2e1/7B87D988" class="Standaard">Beschrijft de output van de workflow. Laat je deze eigenschap weg, dan is er op de
+                           workflow-page geen mogelijkheid om bestanden te downloaden. Onderliggende eigenschap
+                           is ‘type’. Deze kan de waarden ‘none’, ‘zip’ en ‘files’ bevatten.</p>
                      </td>
                   </tr>
                   <tr>
                      <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                        <p id="d2e1/534FFAD3" class="Standaard">parameters</p>
+                        <p id="d2e1/0B3D0C35" class="Standaard"><b>private</b></p>
                      </td>
                      <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                        <p id="d2e1/3E566145" class="Standaard">Deze optie is (nog) niet geïmplementeerd. Hiermee kunnen web-formulieren gegevens
-                           in velden doorgeven als workflow-variabelen.</p>
+                        <p id="d2e1/400A1137" class="Standaard">De definitie van de volledige workflow is vereist. Deze blijft volledig server-side.
+                           Het bestaat uit twee onderdelen: ‘workflowVariables’ en ‘steps’. Deze worden in afzonderlijke
+                           tabellen behandeld.</p>
                      </td>
                   </tr>
                </tbody>
             </table>
-            <p id="d2e1/79825714" class="Alineakop">Voorbeeld</p>
-            <div class="code">
-               <p id="d2e1/13FDB118" class="Standaard" style="margin-left: 0em;">…</p>
-               <p id="d2e1/0AA2F20E" class="Standaard" style="margin-left: 0em;">‘input’: {</p>
-               <p id="d2e1/282CAE9F" class="Standaard" style="margin-left: 1em;">‘files’: {</p>
-               <p id="d2e1/5533D1B1" class="Standaard" style="margin-left: 2em;">‘maxFiles’: 20,</p>
-               <p id="d2e1/40005B87" class="Standaard" style="margin-left: 2em;">‘uploadFileExtensions’: [‘.xml’, ‘.zip’],</p>
-               <p id="d2e1/68C416EB" class="Standaard" style="margin-left: 2em;">‘validFileExtensions’: [‘.xml’],</p>
-               <p id="d2e1/45B01D26" class="Standaard" style="margin-left: 2em;">‘requireFilenames’: [‘opdracht.xml’]</p>
-               <p id="d2e1/105B043D" class="Standaard" style="margin-left: 1em;">}</p>
-               <p id="d2e1/1EC4035A" class="Standaard" style="margin-left: 0em;">},</p>
-               <p id="d2e1/553D2B4A" class="Standaard" style="margin-left: 0em;">…</p>
-            </div>
-         </section>
-         <section id="d2e1/d2e982">
-            <h2 id="d2e1/20ED6663" class="heading_2"><span class="number">2.2</span>Onderdeel ‘output’</h2>
-            <p id="d2e1/0B4AB761" class="Standaard">Veelal zal een workflow de uitvoerbestanden plaatsen in een repository of op een server.
-               Het is vaak wel handig om de uitvoebestanden te downloaden voor controle. Daarom is
-               er een optionele eigenschap ‘output’.</p>
-            <table id="d2e1/d6e1012" class="Tabel" style="width: 100%;">
-               <caption><span class="number">Tabel 3</span>Eigenschappen en onderdelen van output</caption>
-               <colgroup>
-                  <col style="width: 25%;">
-                  <col style="width: 75%;">
-               </colgroup>
-               <thead>
-                  <tr>
-                     <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                        <p id="d2e1/58F7B89D" class="Standaard">Eigenschap, onderdeel</p>
-                     </th>
-                     <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                        <p id="d2e1/327235E1" class="Standaard">Omschrijving</p>
-                     </th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                        <p id="d2e1/59A0091F" class="Standaard">type</p>
-                     </td>
-                     <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                        <p id="d2e1/6B8ACFDD" class="Standaard">De volgende typen zijn mogelijk:</p>
-                        <ul>
-                           <li>
-                              <p id="d2e1/370D0E62" class="Opsomming_bullets">‘none’ toont geen output in de website.</p>
-                           </li>
-                           <li>
-                              <p id="d2e1/0AED8EA9" class="Opsomming_bullets">‘zip’ toont een download-link waarmee de gebruiker de uitvoerbestanden als zip-bestand
-                                 kan downloaden.</p>
-                           </li>
-                           <li>
-                              <p id="d2e1/2285F197" class="Opsomming_bullets">‘files’ toont download-links waarmee de gebruiker de afzonderlijk uitvoerbestanden
-                                 kan downloaden.</p>
-                           </li>
-                        </ul>
-                     </td>
-                  </tr>
-               </tbody>
-            </table>
-            <p id="d2e1/34175F5D" class="Alineakop">Voorbeeld</p>
-            <div class="code">
-               <p id="d2e1/15EF2F7E" class="Standaard" style="margin-left: 0em;">…</p>
-               <p id="d2e1/040A8098" class="Standaard" style="margin-left: 0em;">‘output’: {</p>
-               <p id="d2e1/21F3E98A" class="Standaard" style="margin-left: 1em;">‘type’: ‘zip’</p>
-               <p id="d2e1/4B3D2C14" class="Standaard" style="margin-left: 0em;">},</p>
-               <p id="d2e1/66F1BDBB" class="Standaard" style="margin-left: 0em;">…</p>
-            </div>
-         </section>
-         <section id="d2e1/d2e1094">
-            <h2 id="d2e1/27D47F19" class="heading_2"><span class="number">2.3</span>Onderdeel ‘private’</h2>
-            <p id="d2e1/6E9C39AD" class="Standaard">De daadwerkelijke definitie van de workflow gebeurt in onderdeel ‘private’.</p>
-            <section id="d2e1/d2e1102">
-               <h3 id="d2e1/05071C4D" class="heading_3"><span class="number">2.3.1</span>Opmerkingen</h3>
-               <p id="d2e1/7CD5773B" class="Standaard">Je kunt eigen opmerkingen toevoegen om de workflow begrijpbaar te maken. Hiervoor
-                  is het optionele onderdeel ‘comments’.</p>
-               <p id="d2e1/244C1AA8" class="Alineakop">Voorbeeld</p>
-               <div class="code">
-                  <p id="d2e1/4435B7F0" class="Standaard" style="margin-left: 0em;">‘private’: {</p>
-                  <p id="d2e1/5BDE52EB" class="Standaard" style="margin-left: 1em;">‘comments’: [</p>
-                  <p id="d2e1/7B1FEE50" class="Standaard" style="margin-left: 2em;">‘Runs the DSO_overzicht ANT script.’,</p>
-                  <p id="d2e1/13067750" class="Standaard" style="margin-left: 2em;">‘Step 1: Test if ANT is available.’,</p>
-                  <p id="d2e1/7A1C0277" class="Standaard" style="margin-left: 2em;">‘Step 2: Run the DSO_overzicht ANT buildfile.’,</p>
-                  <p id="d2e1/1F97773C" class="Standaard" style="margin-left: 2em;">‘I had to adjust the xsl called by build.xml of DSO_overzicht.’,</p>
-                  <p id="d2e1/10C5F0C6" class="Standaard" style="margin-left: 2em;">‘the value passed to '-Dopdracht' was not capable of handling windows pathnames’,</p>
-                  <p id="d2e1/14B28358" class="Standaard" style="margin-left: 2em;">‘The overzicht.xsl script can't handle absolute paths outside REPO_DIR.’</p>
-                  <p id="d2e1/2D6287E6" class="Standaard" style="margin-left: 1em;">],</p>
-                  <p id="d2e1/5CD99C08" class="Standaard" style="margin-left: 0em;">…</p>
-               </div>
-            </section>
-            <section id="d2e1/d2e1211">
-               <h3 id="d2e1/402121BA" class="heading_3"><span class="number">2.3.2</span>Variabelen</h3>
-               <p id="d2e1/552A4A25" class="Standaard">Binnen het beheerportaal kennen we ‘omgevingsvariabelen’ en ‘workflow-variabelen’:</p>
-               <ul>
-                  <li>
-                     <p id="d2e1/7901E22B" class="Opsomming_bullets">Voor de hele omgeving staan omgevingsvariabelen in het .env-bestand.</p>
-                  </li>
-                  <li>
-                     <p id="d2e1/5644D576" class="Opsomming_bullets">In een workflow definieer je workflow-variabelen die in alle stappen gebruikt kunnen
-                        worden.</p>
-                  </li>
-                  <li>
-                     <p id="d2e1/7EA0D068" class="Opsomming_bullets space-after">In een stap kun je zowel omgevingsvariabelen als workflow-variabelen definiëren. Omgevingsvariabelen
-                        zijn alleen beschikbaar binnen de stap, workflow-variabelen ook binnen andere stappen
-                        in de workflow.</p>
-                  </li>
-               </ul>
-               <p id="d2e1/2502DC6E" class="Standaard">De schrijfwijze om een variabele aan te roepen is bijvoorbeeld ${REPO_DIR}. Bij het
-                  starten van een workflow worden altijd de volgende variabelen aangemaakt:</p>
-               <ul>
-                  <li>
-                     <p id="d2e1/5E33751F" class="Opsomming_bullets">ROOT_DIR is de root-folder die aangemaakt wordt voor de workflow.</p>
-                  </li>
-                  <li>
-                     <p id="d2e1/77210FE8" class="Opsomming_bullets">INPUT_DIR is de folder ${ROOT_DIR}/input. Deze folder bevat de bronbestanden.</p>
-                  </li>
-                  <li>
-                     <p id="d2e1/4A6C3BD4" class="Opsomming_bullets">OUTPUT_DIR is de folder ${ROOT_DIR}/output. Deze folder bevat de resultaatbestanden.</p>
-                  </li>
-                  <li>
-                     <p id="d2e1/24F79379" class="Opsomming_bullets">TEMP_DIR is een folder voor tijdelijke bestanden. Aan het einde van de workflow wordt
-                        deze leeggegooid.</p>
-                  </li>
-               </ul>
-               <table id="d2e1/d6e1289" class="Tabel" style="width: 100%;">
-                  <caption><span class="number">Tabel 4</span>Eigenschappen en onderdelen van workflowVariables</caption>
+            <section id="d2e1/d2e780">
+               <h2 id="d2e1/6BB97C12" class="heading_2"><span class="number">2.1</span>Onderdeel ‘input’</h2>
+               <p id="d2e1/197C0D13" class="Standaard">De meeste workflows zullen bestaan uit een invoerbestand, een transformatie, een uitvoerbestand.
+                  Omdat dit niet voor alle workflows hoeft te gelden is dit onderdeel optioneel.</p>
+               <table id="d2e1/d6e808" class="Tabel" style="width: 100%;">
+                  <caption><span class="number">Tabel 2</span>Eigenschappen en onderdelen van input</caption>
                   <colgroup>
                      <col style="width: 25%;">
                      <col style="width: 75%;">
@@ -527,221 +342,185 @@
                   <thead>
                      <tr>
                         <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                           <p id="d2e1/4E9AB1E1" class="Standaard">Eigenschap, onderdeel</p>
+                           <p id="d2e1/0238DBFA" class="Standaard">Eigenschap, onderdeel</p>
                         </th>
                         <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                           <p id="d2e1/1FA6D1FE" class="Standaard">Omschrijving</p>
+                           <p id="d2e1/5A5BA61D" class="Standaard">Omschrijving</p>
                         </th>
                      </tr>
                   </thead>
                   <tbody>
                      <tr>
                         <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                           <p id="d2e1/0FC8CBBE" class="Standaard"><b>key</b></p>
+                           <p id="d2e1/74F05889" class="Standaard">files</p>
                         </td>
                         <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                           <p id="d2e1/253CEAC0" class="Standaard">Unieke naam van de variabele. Deze mag alleen a-z, A-Z, 0-9 en _ bevatten.</p>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                           <p id="d2e1/7246D177" class="Standaard"><b>value</b></p>
-                        </td>
-                        <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                           <p id="d2e1/0088A266" class="Standaard">Dit kan een string zijn, maar voor het werken met paden zijn er onderliggende eigenschappen:</p>
+                           <p id="d2e1/5D2FDD1B" class="Standaard">De volgende vereisten voor de input-bestanden worden gecontroleerd:</p>
                            <ul>
                               <li>
-                                 <p id="d2e1/66880FCB" class="Opsomming_bullets">‘type’ geeft het type waarde aan. Optie ‘path’ is gedefineerd, default is ‘undefined’.</p>
+                                 <p id="d2e1/563DE564" class="Opsomming_bullets">minimaal aantal bestanden,</p>
                               </li>
                               <li>
-                                 <p id="d2e1/5019D1EB" class="Opsomming_bullets">‘path’ geeft het pad aan als string.</p>
+                                 <p id="d2e1/1F960106" class="Opsomming_bullets">maximaal aantal bestanden,</p>
                               </li>
                               <li>
-                                 <p id="d2e1/117443C2" class="Opsomming_bullets">‘separator’ geeft het scheidingsteken aan als string. Default is ‘undefined’.</p>
+                                 <p id="d2e1/58B218E5" class="Opsomming_bullets">maximale bestandsgrootte van individuele bestanden,</p>
                               </li>
                               <li>
-                                 <p id="d2e1/21DEB313" class="Opsomming_bullets">‘makeAbsolute’ geeft aan of de waarde als absoluut of relatief pad doorgegeven moet
-                                    worden. Default is ‘false’.</p>
+                                 <p id="d2e1/4372019A" class="Opsomming_bullets">vereiste bestandsnamen,</p>
+                              </li>
+                              <li>
+                                 <p id="d2e1/43817E79" class="Opsomming_bullets">toegestane bestandextensies.</p>
                               </li>
                            </ul>
                         </td>
                      </tr>
                      <tr>
                         <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                           <p id="d2e1/3B60F1AE" class="Standaard">hide</p>
+                           <p id="d2e1/70C3D90A" class="Standaard">externalPageForInput</p>
                         </td>
                         <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                           <p id="d2e1/11246B24" class="Standaard">Boolean-waarde om aan te geven of de waarde in de log-bestanden zichtbaar mag worden.</p>
+                           <p id="d2e1/246A5942" class="Standaard">Deze eigenschap legt de url vast van een externe pagina, die invoerbestanden stuurt.
+                              In het onderdeel ‘Input’ van de workflow komt een knop om de pagina als popup te openen.
+                              Dit vervangt de dialoog voor het selecteren van een invoerbestand.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                           <p id="d2e1/534FFAD3" class="Standaard">parameters</p>
+                        </td>
+                        <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                           <p id="d2e1/3E566145" class="Standaard">Deze optie is (nog) niet geïmplementeerd. Hiermee kunnen web-formulieren gegevens
+                              in velden doorgeven als workflow-variabelen.</p>
                         </td>
                      </tr>
                   </tbody>
                </table>
-               <p id="d2e1/099E1204" class="Alineakop">Voorbeeld</p>
+               <p id="d2e1/79825714" class="Alineakop">Voorbeeld</p>
                <div class="code">
-                  <p id="d2e1/211D3210" class="Standaard" style="margin-left: 0em;">‘private’: {</p>
-                  <p id="d2e1/78164A1B" class="Standaard" style="margin-left: 1em;">‘workflowVariables’: [</p>
-                  <p id="d2e1/21F13798" class="Standaard" style="margin-left: 2em;">{</p>
-                  <p id="d2e1/3DEE8C06" class="Standaard" style="margin-left: 3em;">‘key’: ‘REPO_OWNER’,</p>
-                  <p id="d2e1/037E98CD" class="Standaard" style="margin-left: 3em;">‘val’: ‘Geonovum’</p>
-                  <p id="d2e1/2AB8A30D" class="Standaard" style="margin-left: 2em;">},</p>
-                  <p id="d2e1/59C2C51C" class="Standaard" style="margin-left: 2em;">{</p>
-                  <p id="d2e1/20109A77" class="Standaard" style="margin-left: 3em;">‘key’: ‘ANT_BUILDFILE’,</p>
-                  <p id="d2e1/38029229" class="Standaard" style="margin-left: 3em;">‘val’: {</p>
-                  <p id="d2e1/55ADFAF2" class="Standaard" style="margin-left: 4em;">‘type’: ‘path’,</p>
-                  <p id="d2e1/0E80FDC5" class="Standaard" style="margin-left: 4em;">‘path’: ‘${REPO_DIR}/word2werkversie/build.xml’</p>
-                  <p id="d2e1/0594189B" class="Standaard" style="margin-left: 3em;">}</p>
-                  <p id="d2e1/202C0445" class="Standaard" style="margin-left: 2em;">},</p>
-                  <p id="d2e1/32BFABBC" class="Standaard" style="margin-left: 2em;">{</p>
-                  <p id="d2e1/7E2C0FA1" class="Standaard" style="margin-left: 3em;">‘key’: ‘INPUT_ABS’,</p>
-                  <p id="d2e1/7B608680" class="Standaard" style="margin-left: 3em;">‘val’: {</p>
-                  <p id="d2e1/4114D5CF" class="Standaard" style="margin-left: 4em;">‘type’: ‘path’,</p>
-                  <p id="d2e1/575B4309" class="Standaard" style="margin-left: 4em;">‘path’: ‘${INPUT_DIR}’,</p>
-                  <p id="d2e1/63278C21" class="Standaard" style="margin-left: 4em;">‘separator’: ‘/’,</p>
-                  <p id="d2e1/7F37C259" class="Standaard" style="margin-left: 4em;">‘makeAbsolute’: true</p>
-                  <p id="d2e1/1927D3E9" class="Standaard" style="margin-left: 3em;">}</p>
-                  <p id="d2e1/1DB82B56" class="Standaard" style="margin-left: 2em;">},</p>
-                  <p id="d2e1/18A508EB" class="Standaard" style="margin-left: 0em;">…</p>
+                  <p id="d2e1/13FDB118" class="Standaard" style="margin-left: 0em;">…</p>
+                  <p id="d2e1/0AA2F20E" class="Standaard" style="margin-left: 0em;">‘input’: {</p>
+                  <p id="d2e1/282CAE9F" class="Standaard" style="margin-left: 1em;">‘files’: {</p>
+                  <p id="d2e1/5533D1B1" class="Standaard" style="margin-left: 2em;">‘maxFiles’: 20,</p>
+                  <p id="d2e1/40005B87" class="Standaard" style="margin-left: 2em;">‘uploadFileExtensions’: [‘.xml’, ‘.zip’],</p>
+                  <p id="d2e1/68C416EB" class="Standaard" style="margin-left: 2em;">‘validFileExtensions’: [‘.xml’],</p>
+                  <p id="d2e1/45B01D26" class="Standaard" style="margin-left: 2em;">‘requireFilenames’: [‘opdracht.xml’]</p>
+                  <p id="d2e1/105B043D" class="Standaard" style="margin-left: 1em;">}</p>
+                  <p id="d2e1/1EC4035A" class="Standaard" style="margin-left: 0em;">},</p>
+                  <p id="d2e1/553D2B4A" class="Standaard" style="margin-left: 0em;">…</p>
                </div>
             </section>
-            <section id="d2e1/d2e1613">
-               <h3 id="d2e1/13C9004C" class="heading_3"><span class="number">2.3.3</span>Stappen</h3>
-               <p id="d2e1/1226EB10" class="Standaard">Er zijn twee typen stappen:</p>
-               <ul>
-                  <li>
-                     <p id="d2e1/7A147C42" class="Opsomming_bullets">‘cmd’: de stap bevat een command-line opdracht.</p>
-                  </li>
-                  <li>
-                     <p id="d2e1/7EEFD9B2" class="Opsomming_bullets space-after">‘xpath’: de stap bevat een xpath-expressie om een variabele op te halen uit een xml-bestand.</p>
-                  </li>
-               </ul>
-               <p id="d2e1/15A452F6" class="Standaard">Beide bovenstaande typen stappen worden binnen een workflow gedefinieerd. Het is ook
-                  mogelijk om ze in een afzonderlijk bestand te definiëren en vanuit de workflow hiernaar
-                  te koppelen. Dit is vooral handig bij veel voorkomende stappen. Er zijn in totaal
-                  vier type-aanduidingen: ‘cmd’, ‘xpath’, ‘linked-cmd’, ‘linked-xpath’. We nemen per
-                  type de eigenschappen door.</p>
-               <section id="d2e1/d2e1635">
-                  <h4 id="d2e1/3233FC93" class="heading_4"><span class="number">2.3.3.1</span>Command-line stap</h4>
-                  <p id="d2e1/4D49EC7A" class="Standaard">Meest gebruikt zal de command-line stap zijn. Deze voert een command-line uit zoals
-                     je gebruikelijk in een shell zou doen.</p>
-                  <table id="d2e1/d6e1678" class="Tabel" style="width: 100%;">
-                     <caption><span class="number">Tabel 5</span>Eigenschappen en onderdelen van step ‘cmd’</caption>
-                     <colgroup>
-                        <col style="width: 25%;">
-                        <col style="width: 75%;">
-                     </colgroup>
-                     <thead>
-                        <tr>
-                           <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/3AE6CA25" class="Standaard">Eigenschap, onderdeel</p>
-                           </th>
-                           <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/42E5C0FD" class="Standaard">Omschrijving</p>
-                           </th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/67FB6D96" class="Standaard"><b>type</b></p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/33A80EFA" class="Standaard">Type-aanduiding, in dit geval ‘cmd’.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/216B3909" class="Standaard">name</p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/2977CA24" class="Standaard">Een leesbare naam van de stap voor foutmeldingen. Als dit niet ingevuld is, wordt
-                                 automatisch een logische naam gekozen.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/0FCE6DD5" class="Standaard">description</p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/7D58463D" class="Standaard">Een beschrijving van wat de stap doet.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/0742D6D2" class="Standaard"><b>command</b></p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/70D49A44" class="Standaard">De command-line opdracht, bijvoorbeeld ‘echo Hello World!’.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/05332BF7" class="Standaard">cwd</p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/172A4580" class="Standaard">De Current Working Directory van waaruit de command-line opdracht gestart wordt. Default
-                                 is ‘${ROOT_DIR}’.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/55035CCE" class="Standaard">envVars</p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/7D0C3BC0" class="Standaard">Omgevingsvariabelen die alleen binnen de stap gebruikt kunnen worden.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/259867AF" class="Standaard">workflowVariables</p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/62CE67EF" class="Standaard">Workflow-variabelen die binnen alle stappen van de workflow gebruikt kunnen worden.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/0D89C68B" class="Standaard">continueOnError</p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/79926D34" class="Standaard">Een boolean-waarde om aan te geven of de workflow moet afbreken of doorgaan.</p>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <p id="d2e1/6170AA1C" class="Alineakop">Voorbeeld</p>
+            <section id="d2e1/d2e982">
+               <h2 id="d2e1/20ED6663" class="heading_2"><span class="number">2.2</span>Onderdeel ‘output’</h2>
+               <p id="d2e1/0B4AB761" class="Standaard">Veelal zal een workflow de uitvoerbestanden plaatsen in een repository of op een server.
+                  Het is vaak wel handig om de uitvoebestanden te downloaden voor controle. Daarom is
+                  er een optionele eigenschap ‘output’.</p>
+               <table id="d2e1/d6e1012" class="Tabel" style="width: 100%;">
+                  <caption><span class="number">Tabel 3</span>Eigenschappen en onderdelen van output</caption>
+                  <colgroup>
+                     <col style="width: 25%;">
+                     <col style="width: 75%;">
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                           <p id="d2e1/58F7B89D" class="Standaard">Eigenschap, onderdeel</p>
+                        </th>
+                        <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                           <p id="d2e1/327235E1" class="Standaard">Omschrijving</p>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                           <p id="d2e1/59A0091F" class="Standaard">type</p>
+                        </td>
+                        <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                           <p id="d2e1/6B8ACFDD" class="Standaard">De volgende typen zijn mogelijk:</p>
+                           <ul>
+                              <li>
+                                 <p id="d2e1/370D0E62" class="Opsomming_bullets">‘none’ toont geen output in de website.</p>
+                              </li>
+                              <li>
+                                 <p id="d2e1/0AED8EA9" class="Opsomming_bullets">‘zip’ toont een download-link waarmee de gebruiker de uitvoerbestanden als zip-bestand
+                                    kan downloaden.</p>
+                              </li>
+                              <li>
+                                 <p id="d2e1/2285F197" class="Opsomming_bullets">‘files’ toont download-links waarmee de gebruiker de afzonderlijk uitvoerbestanden
+                                    kan downloaden.</p>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <p id="d2e1/34175F5D" class="Alineakop">Voorbeeld</p>
+               <div class="code">
+                  <p id="d2e1/15EF2F7E" class="Standaard" style="margin-left: 0em;">…</p>
+                  <p id="d2e1/040A8098" class="Standaard" style="margin-left: 0em;">‘output’: {</p>
+                  <p id="d2e1/21F3E98A" class="Standaard" style="margin-left: 1em;">‘type’: ‘zip’</p>
+                  <p id="d2e1/4B3D2C14" class="Standaard" style="margin-left: 0em;">},</p>
+                  <p id="d2e1/66F1BDBB" class="Standaard" style="margin-left: 0em;">…</p>
+               </div>
+            </section>
+            <section id="d2e1/d2e1094">
+               <h2 id="d2e1/27D47F19" class="heading_2"><span class="number">2.3</span>Onderdeel ‘private’</h2>
+               <p id="d2e1/6E9C39AD" class="Standaard">De daadwerkelijke definitie van de workflow gebeurt in onderdeel ‘private’.</p>
+               <section id="d2e1/d2e1102">
+                  <h3 id="d2e1/05071C4D" class="heading_3"><span class="number">2.3.1</span>Opmerkingen</h3>
+                  <p id="d2e1/7CD5773B" class="Standaard">Je kunt eigen opmerkingen toevoegen om de workflow begrijpbaar te maken. Hiervoor
+                     is het optionele onderdeel ‘comments’.</p>
+                  <p id="d2e1/244C1AA8" class="Alineakop">Voorbeeld</p>
                   <div class="code">
-                     <p id="d2e1/5F5A186E" class="Standaard" style="margin-left: 0em;">‘steps’: [</p>
-                     <p id="d2e1/7CC01B46" class="Standaard" style="margin-left: 0em;">…</p>
-                     <p id="d2e1/4BB38ADC" class="Standaard" style="margin-left: 1em;">{</p>
-                     <p id="d2e1/3E154A54" class="Standaard" style="margin-left: 2em;">‘type’: ‘cmd’,</p>
-                     <p id="d2e1/54F93E89" class="Standaard" style="margin-left: 2em;">‘name’: ‘git init’,</p>
-                     <p id="d2e1/66B20263" class="Standaard" style="margin-left: 2em;">‘cwd’: ‘${GIT_DIR}’,</p>
-                     <p id="d2e1/1C7A499D" class="Standaard" style="margin-left: 2em;">‘command’: ‘git init -b main’</p>
-                     <p id="d2e1/73690F46" class="Standaard" style="margin-left: 1em;">},</p>
-                     <p id="d2e1/4EDF3C2F" class="Standaard" style="margin-left: 1em;">{</p>
-                     <p id="d2e1/6501FC1E" class="Standaard" style="margin-left: 2em;">‘type’: ‘cmd’,</p>
-                     <p id="d2e1/51E6A15E" class="Standaard" style="margin-left: 2em;">‘name’: ‘git add’,</p>
-                     <p id="d2e1/27528178" class="Standaard" style="margin-left: 2em;">‘cwd’: ‘${GIT_DIR}’,</p>
-                     <p id="d2e1/0EC29738" class="Standaard" style="margin-left: 2em;">‘command’: ‘git add --all’</p>
-                     <p id="d2e1/7C24583A" class="Standaard" style="margin-left: 1em;">},</p>
-                     <p id="d2e1/1D10B303" class="Standaard" style="margin-left: 1em;">{</p>
-                     <p id="d2e1/199F5982" class="Standaard" style="margin-left: 2em;">‘type’: ‘cmd’,</p>
-                     <p id="d2e1/69C89C2B" class="Standaard" style="margin-left: 2em;">‘name’: ‘git commit’,</p>
-                     <p id="d2e1/5EE53986" class="Standaard" style="margin-left: 2em;">‘cwd’: ‘${GIT_DIR}’,</p>
-                     <p id="d2e1/21B5A63C" class="Standaard" style="margin-left: 2em;">‘command’: ‘git commit -m 'automated commit'‘</p>
-                     <p id="d2e1/13174929" class="Standaard" style="margin-left: 1em;">},</p>
-                     <p id="d2e1/6510B613" class="Standaard" style="margin-left: 0em;">…</p>
-                     <p id="d2e1/1A3D71A5" class="Standaard" style="margin-left: 0em;">]</p>
+                     <p id="d2e1/4435B7F0" class="Standaard" style="margin-left: 0em;">‘private’: {</p>
+                     <p id="d2e1/5BDE52EB" class="Standaard" style="margin-left: 1em;">‘comments’: [</p>
+                     <p id="d2e1/7B1FEE50" class="Standaard" style="margin-left: 2em;">‘Runs the DSO_overzicht ANT script.’,</p>
+                     <p id="d2e1/13067750" class="Standaard" style="margin-left: 2em;">‘Step 1: Test if ANT is available.’,</p>
+                     <p id="d2e1/7A1C0277" class="Standaard" style="margin-left: 2em;">‘Step 2: Run the DSO_overzicht ANT buildfile.’,</p>
+                     <p id="d2e1/1F97773C" class="Standaard" style="margin-left: 2em;">‘I had to adjust the xsl called by build.xml of DSO_overzicht.’,</p>
+                     <p id="d2e1/10C5F0C6" class="Standaard" style="margin-left: 2em;">‘the value passed to '-Dopdracht' was not capable of handling windows pathnames’,</p>
+                     <p id="d2e1/14B28358" class="Standaard" style="margin-left: 2em;">‘The overzicht.xsl script can't handle absolute paths outside REPO_DIR.’</p>
+                     <p id="d2e1/2D6287E6" class="Standaard" style="margin-left: 1em;">],</p>
+                     <p id="d2e1/5CD99C08" class="Standaard" style="margin-left: 0em;">…</p>
                   </div>
                </section>
-               <section id="d2e1/d2e2003">
-                  <h4 id="d2e1/53CBFBD3" class="heading_4"><span class="number">2.3.3.2</span>Xpath stap</h4>
-                  <p id="d2e1/7717E80F" class="Standaard">In een workflow worden vaak gegevens gebruikt die in een eerste stap door een transformatie
-                     worden gegenereerd. Dit kan bijvoorbeeld door een config.xml mee te geven. Met de
-                     xpath stap kun je gegevens uit een xml-bestand lezen en in een workflow-variabele
-                     zetten.</p>
-                  <table id="d2e1/d6e2048" class="Tabel" style="width: 100%;">
-                     <caption><span class="number">Tabel 6</span>Eigenschappen en onderdelen van step ‘xpath’</caption>
+               <section id="d2e1/d2e1211">
+                  <h3 id="d2e1/402121BA" class="heading_3"><span class="number">2.3.2</span>Variabelen</h3>
+                  <p id="d2e1/552A4A25" class="Standaard">Binnen het beheerportaal kennen we ‘omgevingsvariabelen’ en ‘workflow-variabelen’:</p>
+                  <ul>
+                     <li>
+                        <p id="d2e1/7901E22B" class="Opsomming_bullets">Voor de hele omgeving staan omgevingsvariabelen in het .env-bestand.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/5644D576" class="Opsomming_bullets">In een workflow definieer je workflow-variabelen die in alle stappen gebruikt kunnen
+                           worden.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/7EA0D068" class="Opsomming_bullets space-after">In een stap kun je zowel omgevingsvariabelen als workflow-variabelen definiëren. Omgevingsvariabelen
+                           zijn alleen beschikbaar binnen de stap, workflow-variabelen ook binnen andere stappen
+                           in de workflow.</p>
+                     </li>
+                  </ul>
+                  <p id="d2e1/2502DC6E" class="Standaard">De schrijfwijze om een variabele aan te roepen is bijvoorbeeld ${REPO_DIR}. Bij het
+                     starten van een workflow worden altijd de volgende variabelen aangemaakt:</p>
+                  <ul>
+                     <li>
+                        <p id="d2e1/5E33751F" class="Opsomming_bullets">ROOT_DIR is de root-folder die aangemaakt wordt voor de workflow.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/77210FE8" class="Opsomming_bullets">INPUT_DIR is de folder ${ROOT_DIR}/input. Deze folder bevat de bronbestanden.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/4A6C3BD4" class="Opsomming_bullets">OUTPUT_DIR is de folder ${ROOT_DIR}/output. Deze folder bevat de resultaatbestanden.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/24F79379" class="Opsomming_bullets">TEMP_DIR is een folder voor tijdelijke bestanden. Aan het einde van de workflow wordt
+                           deze leeggegooid.</p>
+                     </li>
+                  </ul>
+                  <table id="d2e1/d6e1289" class="Tabel" style="width: 100%;">
+                     <caption><span class="number">Tabel 4</span>Eigenschappen en onderdelen van workflowVariables</caption>
                      <colgroup>
                         <col style="width: 25%;">
                         <col style="width: 75%;">
@@ -749,199 +528,422 @@
                      <thead>
                         <tr>
                            <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/3993BDFF" class="Standaard">Eigenschap, onderdeel</p>
+                              <p id="d2e1/4E9AB1E1" class="Standaard">Eigenschap, onderdeel</p>
                            </th>
                            <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/73ECB726" class="Standaard">Omschrijving</p>
+                              <p id="d2e1/1FA6D1FE" class="Standaard">Omschrijving</p>
                            </th>
                         </tr>
                      </thead>
                      <tbody>
                         <tr>
                            <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/09206D22" class="Standaard"><b>type</b></p>
+                              <p id="d2e1/0FC8CBBE" class="Standaard"><b>key</b></p>
                            </td>
                            <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/3C075492" class="Standaard">Type-aanduiding, in dit geval ‘xpath’.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/518F790D" class="Standaard">name</p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/0823D7BF" class="Standaard">Een leesbare naam van de stap voor foutmeldingen. Als dit niet ingevuld is, wordt
-                                 automatisch een logische naam gekozen.</p>
+                              <p id="d2e1/253CEAC0" class="Standaard">Unieke naam van de variabele. Deze mag alleen a-z, A-Z, 0-9 en _ bevatten.</p>
                            </td>
                         </tr>
                         <tr>
                            <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/5DD12DBE" class="Standaard">description</p>
+                              <p id="d2e1/7246D177" class="Standaard"><b>value</b></p>
                            </td>
                            <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/3CD4AA70" class="Standaard">Een beschrijving van wat de stap doet.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/775ACA78" class="Standaard"><b>xpath</b></p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/71164B10" class="Standaard">De command-line opdracht, bijvoorbeeld ‘echo Hello World!’.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/6A174553" class="Standaard"><b>inputFile</b></p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/19CB67BB" class="Standaard">Pad naar het json- of xml-bestand waar de xpath-query op uitgevoerd wordt.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/3C8E2E5B" class="Standaard"><b>toVariable</b></p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/35952FD4" class="Standaard">Naam van de variabele waarin het resultaat geplaatst wordt. Deze is daarna in de command-line
-                                 van vervolgstappen te gebruiken.</p>
+                              <p id="d2e1/0088A266" class="Standaard">Dit kan een string zijn, maar voor het werken met paden zijn er onderliggende eigenschappen:</p>
+                              <ul>
+                                 <li>
+                                    <p id="d2e1/66880FCB" class="Opsomming_bullets">‘type’ geeft het type waarde aan. Optie ‘path’ is gedefineerd, default is ‘undefined’.</p>
+                                 </li>
+                                 <li>
+                                    <p id="d2e1/5019D1EB" class="Opsomming_bullets">‘path’ geeft het pad aan als string.</p>
+                                 </li>
+                                 <li>
+                                    <p id="d2e1/117443C2" class="Opsomming_bullets">‘separator’ geeft het scheidingsteken aan als string. Default is ‘undefined’.</p>
+                                 </li>
+                                 <li>
+                                    <p id="d2e1/21DEB313" class="Opsomming_bullets">‘makeAbsolute’ geeft aan of de waarde als absoluut of relatief pad doorgegeven moet
+                                       worden. Default is ‘false’.</p>
+                                 </li>
+                              </ul>
                            </td>
                         </tr>
                         <tr>
                            <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/7FFE283F" class="Standaard">workflowVariables</p>
+                              <p id="d2e1/3B60F1AE" class="Standaard">hide</p>
                            </td>
                            <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/545AE54F" class="Standaard">Workflow-variabelen die binnen alle stappen van de workflow gebruikt kunnen worden.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/4DB6C7AB" class="Standaard">continueOnError</p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/7816C568" class="Standaard">Een boolean-waarde om aan te geven of de workflow moet afbreken of doorgaan.</p>
+                              <p id="d2e1/11246B24" class="Standaard">Boolean-waarde om aan te geven of de waarde in de log-bestanden zichtbaar mag worden.</p>
                            </td>
                         </tr>
                      </tbody>
                   </table>
-                  <p id="d2e1/1B6BC6D2" class="Alineakop">Voorbeeld</p>
+                  <p id="d2e1/099E1204" class="Alineakop">Voorbeeld</p>
                   <div class="code">
-                     <p id="d2e1/3A021713" class="Standaard" style="margin-left: 0em;">‘steps’: [</p>
-                     <p id="d2e1/7D3C07F8" class="Standaard" style="margin-left: 1em;">{</p>
-                     <p id="d2e1/030AB91F" class="Standaard" style="margin-left: 2em;">‘type’: ‘xpath’,</p>
-                     <p id="d2e1/4D6C8FD6" class="Standaard" style="margin-left: 2em;">‘xpath’: ‘config/item[2]/text()’,</p>
-                     <p id="d2e1/58D6D9B6" class="Standaard" style="margin-left: 2em;">‘inputFile’: ‘input/config.xml’,</p>
-                     <p id="d2e1/456B0B36" class="Standaard" style="margin-left: 2em;">‘toVariable’: ‘GET_ITEM’</p>
-                     <p id="d2e1/3699E644" class="Standaard" style="margin-left: 1em;">},</p>
-                     <p id="d2e1/49239BC4" class="Standaard" style="margin-left: 1em;">{</p>
-                     <p id="d2e1/16CDDC3D" class="Standaard" style="margin-left: 2em;">‘type’: ‘cmd’,</p>
-                     <p id="d2e1/24A7F20C" class="Standaard" style="margin-left: 2em;">‘command’: ‘echo \’Xpath result: ${GET_ITEM}\’’</p>
-                     <p id="d2e1/6CF12476" class="Standaard" style="margin-left: 1em;">}</p>
-                     <p id="d2e1/4858C483" class="Standaard" style="margin-left: 0em;">]</p>
+                     <p id="d2e1/211D3210" class="Standaard" style="margin-left: 0em;">‘private’: {</p>
+                     <p id="d2e1/78164A1B" class="Standaard" style="margin-left: 1em;">‘workflowVariables’: [</p>
+                     <p id="d2e1/21F13798" class="Standaard" style="margin-left: 2em;">{</p>
+                     <p id="d2e1/3DEE8C06" class="Standaard" style="margin-left: 3em;">‘key’: ‘REPO_OWNER’,</p>
+                     <p id="d2e1/037E98CD" class="Standaard" style="margin-left: 3em;">‘val’: ‘Geonovum’</p>
+                     <p id="d2e1/2AB8A30D" class="Standaard" style="margin-left: 2em;">},</p>
+                     <p id="d2e1/59C2C51C" class="Standaard" style="margin-left: 2em;">{</p>
+                     <p id="d2e1/20109A77" class="Standaard" style="margin-left: 3em;">‘key’: ‘ANT_BUILDFILE’,</p>
+                     <p id="d2e1/38029229" class="Standaard" style="margin-left: 3em;">‘val’: {</p>
+                     <p id="d2e1/55ADFAF2" class="Standaard" style="margin-left: 4em;">‘type’: ‘path’,</p>
+                     <p id="d2e1/0E80FDC5" class="Standaard" style="margin-left: 4em;">‘path’: ‘${REPO_DIR}/word2werkversie/build.xml’</p>
+                     <p id="d2e1/0594189B" class="Standaard" style="margin-left: 3em;">}</p>
+                     <p id="d2e1/202C0445" class="Standaard" style="margin-left: 2em;">},</p>
+                     <p id="d2e1/32BFABBC" class="Standaard" style="margin-left: 2em;">{</p>
+                     <p id="d2e1/7E2C0FA1" class="Standaard" style="margin-left: 3em;">‘key’: ‘INPUT_ABS’,</p>
+                     <p id="d2e1/7B608680" class="Standaard" style="margin-left: 3em;">‘val’: {</p>
+                     <p id="d2e1/4114D5CF" class="Standaard" style="margin-left: 4em;">‘type’: ‘path’,</p>
+                     <p id="d2e1/575B4309" class="Standaard" style="margin-left: 4em;">‘path’: ‘${INPUT_DIR}’,</p>
+                     <p id="d2e1/63278C21" class="Standaard" style="margin-left: 4em;">‘separator’: ‘/’,</p>
+                     <p id="d2e1/7F37C259" class="Standaard" style="margin-left: 4em;">‘makeAbsolute’: true</p>
+                     <p id="d2e1/1927D3E9" class="Standaard" style="margin-left: 3em;">}</p>
+                     <p id="d2e1/1DB82B56" class="Standaard" style="margin-left: 2em;">},</p>
+                     <p id="d2e1/18A508EB" class="Standaard" style="margin-left: 0em;">…</p>
                   </div>
                </section>
-               <section id="d2e1/d2e2286">
-                  <h4 id="d2e1/763990EF" class="heading_4"><span class="number">2.3.3.3</span>Gekoppelde stap</h4>
-                  <p id="d2e1/50269140" class="Standaard">De twee typen gekoppelde stappen zijn ‘linked-cmd’ en ‘linked-xpath’. Er zijn nu een
-                     aantal stappen gedefinieerd die vaak gebruikt worden: ‘ant-version.cmd-step.json’,
-                     ‘ant-buildfile.cmd-step.json’ en ‘xpath-query.xpath-step.json’.</p>
-                  <table id="d2e1/d6e2335" class="Tabel" style="width: 100%;">
-                     <caption><span class="number">Tabel 7</span>Eigenschappen en onderdelen van step ‘linked-cmd’ en ‘linked-xpath’</caption>
-                     <colgroup>
-                        <col style="width: 25%;">
-                        <col style="width: 75%;">
-                     </colgroup>
-                     <thead>
-                        <tr>
-                           <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/56C501FB" class="Standaard">Eigenschap, onderdeel</p>
-                           </th>
-                           <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/5EE9DD63" class="Standaard">Omschrijving</p>
-                           </th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/23D027EB" class="Standaard"><b>type</b></p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/03983911" class="Standaard">Type-aanduiding, in dit geval ‘linked-cmd’ of ‘linked-xpath’.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/6F8C51DD" class="Standaard"><b>linkedFilename</b></p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/752D7023" class="Standaard">Bestandsnaam van de gekoppelde stap, bijvoorbeeld ‘xpath-query.xpath-step.json’.</p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/42E5B92B" class="Standaard">overrideValues</p>
-                           </td>
-                           <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
-                              <p id="d2e1/01FD894E" class="Standaard">De opgegeven overrideValues vervangen properties van de gekoppelde stap.</p>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <p id="d2e1/1E2A464A" class="Alineakop">Voorbeeld</p>
-                  <div class="code">
-                     <p id="d2e1/382EBD51" class="Standaard" style="margin-left: 0em;">‘steps’: [</p>
-                     <p id="d2e1/74219614" class="Standaard" style="margin-left: 1em;">{</p>
-                     <p id="d2e1/47876C4F" class="Standaard" style="margin-left: 2em;">‘type’: ‘linked-cmd’,</p>
-                     <p id="d2e1/3152F408" class="Standaard" style="margin-left: 2em;">‘linkedFilename’: ‘ant-version.cmd-step.json’</p>
-                     <p id="d2e1/5668AEDF" class="Standaard" style="margin-left: 1em;">},</p>
-                     <p id="d2e1/0909844C" class="Standaard" style="margin-left: 1em;">{</p>
-                     <p id="d2e1/4D24FE92" class="Standaard" style="margin-left: 2em;">‘type’: ‘linked-cmd’,</p>
-                     <p id="d2e1/1F471244" class="Standaard" style="margin-left: 2em;">‘linkedFilename’: ‘ant-buildfile.cmd-step.json’</p>
-                     <p id="d2e1/04946B69" class="Standaard" style="margin-left: 1em;">},</p>
-                     <p id="d2e1/4CE9512B" class="Standaard" style="margin-left: 1em;">{</p>
-                     <p id="d2e1/2DDBB70A" class="Standaard" style="margin-left: 2em;">‘type’: ‘linked-xpath’,</p>
-                     <p id="d2e1/6109BAFF" class="Standaard" style="margin-left: 2em;">‘linkedFilename’: ‘xpath-query.xpath-step.json’,</p>
-                     <p id="d2e1/4D57A399" class="Standaard" style="margin-left: 2em;">‘overrideValues’: {</p>
-                     <p id="d2e1/362C120E" class="Standaard" style="margin-left: 3em;">‘xpath’: ‘//github/repository/text()’,</p>
-                     <p id="d2e1/53BD6506" class="Standaard" style="margin-left: 3em;">‘toVariable’: ‘REPO_NAME’</p>
-                     <p id="d2e1/23D96B07" class="Standaard" style="margin-left: 2em;">}</p>
-                     <p id="d2e1/66EBA8D5" class="Standaard" style="margin-left: 1em;">},</p>
-                     <p id="d2e1/79B8E38B" class="Standaard" style="margin-left: 0em;">…</p>
-                     <p id="d2e1/23A5613F" class="Standaard" style="margin-left: 0em;">]</p>
-                  </div>
+               <section id="d2e1/d2e1613">
+                  <h3 id="d2e1/13C9004C" class="heading_3"><span class="number">2.3.3</span>Stappen</h3>
+                  <p id="d2e1/1226EB10" class="Standaard">Er zijn twee typen stappen:</p>
+                  <ul>
+                     <li>
+                        <p id="d2e1/7A147C42" class="Opsomming_bullets">‘cmd’: de stap bevat een command-line opdracht.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/7EEFD9B2" class="Opsomming_bullets space-after">‘xpath’: de stap bevat een xpath-expressie om een variabele op te halen uit een xml-bestand.</p>
+                     </li>
+                  </ul>
+                  <p id="d2e1/15A452F6" class="Standaard">Beide bovenstaande typen stappen worden binnen een workflow gedefinieerd. Het is ook
+                     mogelijk om ze in een afzonderlijk bestand te definiëren en vanuit de workflow hiernaar
+                     te koppelen. Dit is vooral handig bij veel voorkomende stappen. Er zijn in totaal
+                     vier type-aanduidingen: ‘cmd’, ‘xpath’, ‘linked-cmd’, ‘linked-xpath’. We nemen per
+                     type de eigenschappen door.</p>
+                  <section id="d2e1/d2e1635">
+                     <h4 id="d2e1/3233FC93" class="heading_4"><span class="number">2.3.3.1</span>Command-line stap</h4>
+                     <p id="d2e1/4D49EC7A" class="Standaard">Meest gebruikt zal de command-line stap zijn. Deze voert een command-line uit zoals
+                        je gebruikelijk in een shell zou doen.</p>
+                     <table id="d2e1/d6e1678" class="Tabel" style="width: 100%;">
+                        <caption><span class="number">Tabel 5</span>Eigenschappen en onderdelen van step ‘cmd’</caption>
+                        <colgroup>
+                           <col style="width: 25%;">
+                           <col style="width: 75%;">
+                        </colgroup>
+                        <thead>
+                           <tr>
+                              <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/3AE6CA25" class="Standaard">Eigenschap, onderdeel</p>
+                              </th>
+                              <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/42E5C0FD" class="Standaard">Omschrijving</p>
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/67FB6D96" class="Standaard"><b>type</b></p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/33A80EFA" class="Standaard">Type-aanduiding, in dit geval ‘cmd’.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/216B3909" class="Standaard">name</p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/2977CA24" class="Standaard">Een leesbare naam van de stap voor foutmeldingen. Als dit niet ingevuld is, wordt
+                                    automatisch een logische naam gekozen.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/0FCE6DD5" class="Standaard">description</p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/7D58463D" class="Standaard">Een beschrijving van wat de stap doet.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/0742D6D2" class="Standaard"><b>command</b></p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/70D49A44" class="Standaard">De command-line opdracht, bijvoorbeeld ‘echo Hello World!’.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/05332BF7" class="Standaard">cwd</p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/172A4580" class="Standaard">De Current Working Directory van waaruit de command-line opdracht gestart wordt. Default
+                                    is ‘${ROOT_DIR}’.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/55035CCE" class="Standaard">envVars</p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/7D0C3BC0" class="Standaard">Omgevingsvariabelen die alleen binnen de stap gebruikt kunnen worden.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/259867AF" class="Standaard">workflowVariables</p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/62CE67EF" class="Standaard">Workflow-variabelen die binnen alle stappen van de workflow gebruikt kunnen worden.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/0D89C68B" class="Standaard">continueOnError</p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/79926D34" class="Standaard">Een boolean-waarde om aan te geven of de workflow moet afbreken of doorgaan.</p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p id="d2e1/6170AA1C" class="Alineakop">Voorbeeld</p>
+                     <div class="code">
+                        <p id="d2e1/5F5A186E" class="Standaard" style="margin-left: 0em;">‘steps’: [</p>
+                        <p id="d2e1/7CC01B46" class="Standaard" style="margin-left: 0em;">…</p>
+                        <p id="d2e1/4BB38ADC" class="Standaard" style="margin-left: 1em;">{</p>
+                        <p id="d2e1/3E154A54" class="Standaard" style="margin-left: 2em;">‘type’: ‘cmd’,</p>
+                        <p id="d2e1/54F93E89" class="Standaard" style="margin-left: 2em;">‘name’: ‘git init’,</p>
+                        <p id="d2e1/66B20263" class="Standaard" style="margin-left: 2em;">‘cwd’: ‘${GIT_DIR}’,</p>
+                        <p id="d2e1/1C7A499D" class="Standaard" style="margin-left: 2em;">‘command’: ‘git init -b main’</p>
+                        <p id="d2e1/73690F46" class="Standaard" style="margin-left: 1em;">},</p>
+                        <p id="d2e1/4EDF3C2F" class="Standaard" style="margin-left: 1em;">{</p>
+                        <p id="d2e1/6501FC1E" class="Standaard" style="margin-left: 2em;">‘type’: ‘cmd’,</p>
+                        <p id="d2e1/51E6A15E" class="Standaard" style="margin-left: 2em;">‘name’: ‘git add’,</p>
+                        <p id="d2e1/27528178" class="Standaard" style="margin-left: 2em;">‘cwd’: ‘${GIT_DIR}’,</p>
+                        <p id="d2e1/0EC29738" class="Standaard" style="margin-left: 2em;">‘command’: ‘git add --all’</p>
+                        <p id="d2e1/7C24583A" class="Standaard" style="margin-left: 1em;">},</p>
+                        <p id="d2e1/1D10B303" class="Standaard" style="margin-left: 1em;">{</p>
+                        <p id="d2e1/199F5982" class="Standaard" style="margin-left: 2em;">‘type’: ‘cmd’,</p>
+                        <p id="d2e1/69C89C2B" class="Standaard" style="margin-left: 2em;">‘name’: ‘git commit’,</p>
+                        <p id="d2e1/5EE53986" class="Standaard" style="margin-left: 2em;">‘cwd’: ‘${GIT_DIR}’,</p>
+                        <p id="d2e1/21B5A63C" class="Standaard" style="margin-left: 2em;">‘command’: ‘git commit -m 'automated commit'‘</p>
+                        <p id="d2e1/13174929" class="Standaard" style="margin-left: 1em;">},</p>
+                        <p id="d2e1/6510B613" class="Standaard" style="margin-left: 0em;">…</p>
+                        <p id="d2e1/1A3D71A5" class="Standaard" style="margin-left: 0em;">]</p>
+                     </div>
+                  </section>
+                  <section id="d2e1/d2e2003">
+                     <h4 id="d2e1/53CBFBD3" class="heading_4"><span class="number">2.3.3.2</span>Xpath stap</h4>
+                     <p id="d2e1/7717E80F" class="Standaard">In een workflow worden vaak gegevens gebruikt die in een eerste stap door een transformatie
+                        worden gegenereerd. Dit kan bijvoorbeeld door een config.xml mee te geven. Met de
+                        xpath stap kun je gegevens uit een xml-bestand lezen en in een workflow-variabele
+                        zetten.</p>
+                     <table id="d2e1/d6e2048" class="Tabel" style="width: 100%;">
+                        <caption><span class="number">Tabel 6</span>Eigenschappen en onderdelen van step ‘xpath’</caption>
+                        <colgroup>
+                           <col style="width: 25%;">
+                           <col style="width: 75%;">
+                        </colgroup>
+                        <thead>
+                           <tr>
+                              <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/3993BDFF" class="Standaard">Eigenschap, onderdeel</p>
+                              </th>
+                              <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/73ECB726" class="Standaard">Omschrijving</p>
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/09206D22" class="Standaard"><b>type</b></p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/3C075492" class="Standaard">Type-aanduiding, in dit geval ‘xpath’.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/518F790D" class="Standaard">name</p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/0823D7BF" class="Standaard">Een leesbare naam van de stap voor foutmeldingen. Als dit niet ingevuld is, wordt
+                                    automatisch een logische naam gekozen.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/5DD12DBE" class="Standaard">description</p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/3CD4AA70" class="Standaard">Een beschrijving van wat de stap doet.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/775ACA78" class="Standaard"><b>xpath</b></p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/71164B10" class="Standaard">De command-line opdracht, bijvoorbeeld ‘echo Hello World!’.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/6A174553" class="Standaard"><b>inputFile</b></p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/19CB67BB" class="Standaard">Pad naar het json- of xml-bestand waar de xpath-query op uitgevoerd wordt.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/3C8E2E5B" class="Standaard"><b>toVariable</b></p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/35952FD4" class="Standaard">Naam van de variabele waarin het resultaat geplaatst wordt. Deze is daarna in de command-line
+                                    van vervolgstappen te gebruiken.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/7FFE283F" class="Standaard">workflowVariables</p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/545AE54F" class="Standaard">Workflow-variabelen die binnen alle stappen van de workflow gebruikt kunnen worden.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/4DB6C7AB" class="Standaard">continueOnError</p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/7816C568" class="Standaard">Een boolean-waarde om aan te geven of de workflow moet afbreken of doorgaan.</p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p id="d2e1/1B6BC6D2" class="Alineakop">Voorbeeld</p>
+                     <div class="code">
+                        <p id="d2e1/3A021713" class="Standaard" style="margin-left: 0em;">‘steps’: [</p>
+                        <p id="d2e1/7D3C07F8" class="Standaard" style="margin-left: 1em;">{</p>
+                        <p id="d2e1/030AB91F" class="Standaard" style="margin-left: 2em;">‘type’: ‘xpath’,</p>
+                        <p id="d2e1/4D6C8FD6" class="Standaard" style="margin-left: 2em;">‘xpath’: ‘config/item[2]/text()’,</p>
+                        <p id="d2e1/58D6D9B6" class="Standaard" style="margin-left: 2em;">‘inputFile’: ‘input/config.xml’,</p>
+                        <p id="d2e1/456B0B36" class="Standaard" style="margin-left: 2em;">‘toVariable’: ‘GET_ITEM’</p>
+                        <p id="d2e1/3699E644" class="Standaard" style="margin-left: 1em;">},</p>
+                        <p id="d2e1/49239BC4" class="Standaard" style="margin-left: 1em;">{</p>
+                        <p id="d2e1/16CDDC3D" class="Standaard" style="margin-left: 2em;">‘type’: ‘cmd’,</p>
+                        <p id="d2e1/24A7F20C" class="Standaard" style="margin-left: 2em;">‘command’: ‘echo \’Xpath result: ${GET_ITEM}\’’</p>
+                        <p id="d2e1/6CF12476" class="Standaard" style="margin-left: 1em;">}</p>
+                        <p id="d2e1/4858C483" class="Standaard" style="margin-left: 0em;">]</p>
+                     </div>
+                  </section>
+                  <section id="d2e1/d2e2286">
+                     <h4 id="d2e1/763990EF" class="heading_4"><span class="number">2.3.3.3</span>Gekoppelde stap</h4>
+                     <p id="d2e1/50269140" class="Standaard">De twee typen gekoppelde stappen zijn ‘linked-cmd’ en ‘linked-xpath’. Er zijn nu een
+                        aantal stappen gedefinieerd die vaak gebruikt worden: ‘ant-version.cmd-step.json’,
+                        ‘ant-buildfile.cmd-step.json’ en ‘xpath-query.xpath-step.json’.</p>
+                     <table id="d2e1/d6e2335" class="Tabel" style="width: 100%;">
+                        <caption><span class="number">Tabel 7</span>Eigenschappen en onderdelen van step ‘linked-cmd’ en ‘linked-xpath’</caption>
+                        <colgroup>
+                           <col style="width: 25%;">
+                           <col style="width: 75%;">
+                        </colgroup>
+                        <thead>
+                           <tr>
+                              <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/56C501FB" class="Standaard">Eigenschap, onderdeel</p>
+                              </th>
+                              <th style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/5EE9DD63" class="Standaard">Omschrijving</p>
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/23D027EB" class="Standaard"><b>type</b></p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/03983911" class="Standaard">Type-aanduiding, in dit geval ‘linked-cmd’ of ‘linked-xpath’.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/6F8C51DD" class="Standaard"><b>linkedFilename</b></p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/752D7023" class="Standaard">Bestandsnaam van de gekoppelde stap, bijvoorbeeld ‘xpath-query.xpath-step.json’.</p>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/42E5B92B" class="Standaard">overrideValues</p>
+                              </td>
+                              <td style="border-top: 0.5pt solid #000000; border-left: 0.5pt solid #000000; border-bottom: 0.5pt solid #000000; border-right: 0.5pt solid #000000;">
+                                 <p id="d2e1/01FD894E" class="Standaard">De opgegeven overrideValues vervangen properties van de gekoppelde stap.</p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p id="d2e1/1E2A464A" class="Alineakop">Voorbeeld</p>
+                     <div class="code">
+                        <p id="d2e1/382EBD51" class="Standaard" style="margin-left: 0em;">‘steps’: [</p>
+                        <p id="d2e1/74219614" class="Standaard" style="margin-left: 1em;">{</p>
+                        <p id="d2e1/47876C4F" class="Standaard" style="margin-left: 2em;">‘type’: ‘linked-cmd’,</p>
+                        <p id="d2e1/3152F408" class="Standaard" style="margin-left: 2em;">‘linkedFilename’: ‘ant-version.cmd-step.json’</p>
+                        <p id="d2e1/5668AEDF" class="Standaard" style="margin-left: 1em;">},</p>
+                        <p id="d2e1/0909844C" class="Standaard" style="margin-left: 1em;">{</p>
+                        <p id="d2e1/4D24FE92" class="Standaard" style="margin-left: 2em;">‘type’: ‘linked-cmd’,</p>
+                        <p id="d2e1/1F471244" class="Standaard" style="margin-left: 2em;">‘linkedFilename’: ‘ant-buildfile.cmd-step.json’</p>
+                        <p id="d2e1/04946B69" class="Standaard" style="margin-left: 1em;">},</p>
+                        <p id="d2e1/4CE9512B" class="Standaard" style="margin-left: 1em;">{</p>
+                        <p id="d2e1/2DDBB70A" class="Standaard" style="margin-left: 2em;">‘type’: ‘linked-xpath’,</p>
+                        <p id="d2e1/6109BAFF" class="Standaard" style="margin-left: 2em;">‘linkedFilename’: ‘xpath-query.xpath-step.json’,</p>
+                        <p id="d2e1/4D57A399" class="Standaard" style="margin-left: 2em;">‘overrideValues’: {</p>
+                        <p id="d2e1/362C120E" class="Standaard" style="margin-left: 3em;">‘xpath’: ‘//github/repository/text()’,</p>
+                        <p id="d2e1/53BD6506" class="Standaard" style="margin-left: 3em;">‘toVariable’: ‘REPO_NAME’</p>
+                        <p id="d2e1/23D96B07" class="Standaard" style="margin-left: 2em;">}</p>
+                        <p id="d2e1/66EBA8D5" class="Standaard" style="margin-left: 1em;">},</p>
+                        <p id="d2e1/79B8E38B" class="Standaard" style="margin-left: 0em;">…</p>
+                        <p id="d2e1/23A5613F" class="Standaard" style="margin-left: 0em;">]</p>
+                     </div>
+                  </section>
                </section>
             </section>
          </section>
-      </section>
-      <section id="d2e1/d2e2562">
-         <h1 id="d2e1/00B2334D" class="heading_1"><span class="number">3</span>Werking van de API</h1>
-         <p id="d2e1/78CFE5FC" class="Standaard">Voor de werking van de website maakt het beheerportaal gebruik van een Postgres-database
-            en een API die de communicatie tussen frontend en backend regelt. Hiervoor zijn nu
-            de volgende endpoints in werking:</p>
-         <ul>
-            <li>
-               <p id="d2e1/30A43351" class="Opsomming_bullets">Voor het registreren en inloggen van gebruikers,</p>
-            </li>
-            <li>
-               <p id="d2e1/64971F72" class="Opsomming_bullets">Voor het ophalen van pagina’s,</p>
-            </li>
-            <li>
-               <p id="d2e1/5CD05EE7" class="Opsomming_bullets">Voor het uploaden van input-bestanden,</p>
-            </li>
-            <li>
-               <p id="d2e1/45A069CC" class="Opsomming_bullets">Voor het uitvoeren van workflows en workflow-stappen,</p>
-            </li>
-            <li>
-               <p id="d2e1/0F1A4E7A" class="Opsomming_bullets">Voor het terugkoppelen van log-informatie,</p>
-            </li>
-            <li>
-               <p id="d2e1/56F065D7" class="Opsomming_bullets space-after">Voor het downloaden van output-bestanden.</p>
-            </li>
-         </ul>
-         <p id="d2e1/2494B48E" class="Standaard space-after">Het inloggen en registreren van gebruikers wordt nu nog met een endpoint en registratie
-            in de database gedaan, maar wordt vervangen door een Azure inlog-procedure.</p>
-      </section>
+         <section id="d2e1/d2e2562">
+            <h1 id="d2e1/00B2334D" class="heading_1"><span class="number">3</span>Werking van de API</h1>
+            <p id="d2e1/78CFE5FC" class="Standaard">Voor de werking van de website maakt het beheerportaal gebruik van een Postgres-database
+               en een API die de communicatie tussen frontend en backend regelt. Hiervoor zijn nu
+               de volgende endpoints in werking:</p>
+            <ul>
+               <li>
+                  <p id="d2e1/30A43351" class="Opsomming_bullets">Voor het registreren en inloggen van gebruikers,</p>
+               </li>
+               <li>
+                  <p id="d2e1/64971F72" class="Opsomming_bullets">Voor het ophalen van pagina’s,</p>
+               </li>
+               <li>
+                  <p id="d2e1/5CD05EE7" class="Opsomming_bullets">Voor het uploaden van input-bestanden,</p>
+               </li>
+               <li>
+                  <p id="d2e1/45A069CC" class="Opsomming_bullets">Voor het uitvoeren van workflows en workflow-stappen,</p>
+               </li>
+               <li>
+                  <p id="d2e1/0F1A4E7A" class="Opsomming_bullets">Voor het terugkoppelen van log-informatie,</p>
+               </li>
+               <li>
+                  <p id="d2e1/56F065D7" class="Opsomming_bullets space-after">Voor het downloaden van output-bestanden.</p>
+               </li>
+            </ul>
+            <p id="d2e1/2494B48E" class="Standaard space-after">Het inloggen en registreren van gebruikers wordt nu nog met een endpoint en registratie
+               in de database gedaan, maar wordt vervangen door een Azure inlog-procedure.</p>
+         </section>
+      </main>
    </body>
 </html>
