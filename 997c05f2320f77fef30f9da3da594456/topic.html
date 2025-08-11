@@ -13,12 +13,12 @@
       "foaf": "http://xmlns.com/foaf/0.1"
     }
   ],
-  "@id": "https://https://geonovum.github.io/documentatie/ae104e68d43222a6b811c1009567d2b8/",
+  "@id": "https://https://geonovum.github.io/documentatie/997c05f2320f77fef30f9da3da594456/",
   "@type": "TechArticle",
   "headline": "Technische aspecten",
   "inLanguage": "nl",
   "license": "https://creativecommons.org/licenses/by-nd/4.0/",
-  "datePublished": "2025-08-10T23:10:41.8686053+02:00",
+  "datePublished": "2025-08-11T08:14:48.0931054+02:00",
   "copyrightHolder": {
     "@type": "Organization",
     "name": "Geonovum",
@@ -362,7 +362,7 @@
                      <p id="d2e1/1A333335" class="Opsomming_nummers_1">Controleer of de bestanden ‘symbolisatie.xml’ en ‘voorwaarden.xml’ beschikbaar zijn.
                         Deze zijn nodig om een suggestie te doen voor de beschikbare symboolcodes. Zo ja,
                         lees de bestanden in in variabelen ‘applicatie_symbolisatie’ en ‘applicatie_voorwaarden’.
-                        Geef de bestanden weer in tabblad ‘applicatie’</p>
+                        Geef de bestanden weer in tabblad ‘applicatie’.</p>
                   </li>
                   <li>
                      <p id="d2e1/479B83C5" class="Opsomming_nummers_1">Controleer of bestand ‘temp/mutaties.xml’ aanwezig is. Zo ja, lees de mutaties in.
@@ -421,7 +421,7 @@
                         <p id="d2e1/333043A5" class="Opsomming_tekens_1 space-after">Eventueel de nieuwe inhoud van het object in XML.</p>
                      </li>
                   </ul>
-                  <p id="d2e1/416823B6" class="Standaard">De gegevens ‘type’, ‘xpath’, ‘inhoud’ worden in workflow ‘Muteren’ omgezet naar een
+                  <p id="d2e1/416823B6" class="Standaard">De gegevens ‘type’, ‘xpath’, ‘inhoud’ worden in workflow ‘mutatie’ omgezet naar een
                      XSL-transformatie.</p>
                   <figure id="d2e1/d6e863" style="width: 100%;"><img src="media/image5.png" alt="In tabblad ‘mutatie’ zijn de benodigde gegevens goed te onderscheiden"><figcaption><span class="number">Figuur 5</span>In tabblad ‘mutatie’ zijn de benodigde gegevens goed te onderscheiden</figcaption>
                   </figure>
@@ -431,17 +431,18 @@
                      element ‘waarde/toelichting’ de tekst ‘Hello world!’ te plaatsen:</p>
                   <div class="code">
                      <p id="d2e1/47D75C5D" class="Code" style="margin-left: 0em;">&lt;mutatie type="vervang" xpath="waardelijsten//waarde/toelichting"&gt;</p>
+                     <p id="d2e1/32C1590B" class="Code" style="margin-left: 1em;">...</p>
                      <p id="d2e1/0B4FB5FF" class="Code" style="margin-left: 1em;">&lt;inhoud&gt;</p>
-                     <p id="d2e1/64A44B03" class="Code" style="margin-left: 2em;">&lt;toelichting&gt;Hello world!&lt;/vlak&gt;</p>
+                     <p id="d2e1/64A44B03" class="Code" style="margin-left: 2em;">&lt;toelichting&gt;Hello world!&lt;/toelichting&gt;</p>
                      <p id="d2e1/696F7C95" class="Code" style="margin-left: 1em;">&lt;/inhoud&gt;</p>
                      <p id="d2e1/60537EB0" class="Code space-after" style="margin-left: 0em;">&lt;/mutatie&gt;</p>
                   </div>
                   <p id="d2e1/65A0CB84" class="Standaard">Voor de release notes hebben we een mutatie niet alleen machineleesbaar nodig maar
                      ook mensleesbaar. In tabblad ‘formulier’ wordt dit weergegeven in veld ‘informatie’.
-                     Dit is een automatische procedure die vastgelegd is in functie maak_informatie. Deze
-                     heeft drie parameters: ‘type’, ‘xpath’, ‘inhoud’.</p>
+                     Dit is een automatische procedure die vastgelegd is in functie ‘maak_informatie’.
+                     Deze heeft drie parameters: ‘type’, ‘xpath’, ‘inhoud’.</p>
                </section>
-               <section id="d2e1/d2e911">
+               <section id="d2e1/d2e918">
                   <h3 id="d2e1/04277CB3" class="heading_3"><span class="number">1.3.2</span>Suggesties voor de symboolcode</h3>
                   <p id="d2e1/2B340C52" class="Standaard">Bij het toevoegen van een nieuwe waarde moeten ook symboolcodes toegevoegd worden
                      voor vlak, punt en lijn. De applicatie geeft hiervoor suggesties op basis van twee
@@ -460,16 +461,16 @@
                      zijn gebruikt, is dit redelijk eenvoudig maar als alle symboolcodes al een keer gebruikt
                      zijn, wordt het ingewikkelder omdat je dan ook rekening moet houden met het aantal
                      keer dat een symboolcode is gebruikt.</p>
-                  <figure id="d2e1/d6e957" style="width: 100%;"><img src="media/image6.png" alt="Code voor de selectie van een beschikbare symboolcode"><figcaption><span class="number">Figuur 6</span>Code voor de selectie van een beschikbare symboolcode</figcaption>
+                  <figure id="d2e1/d6e963" style="width: 100%;"><img src="media/image6.png" alt="Code voor de selectie van een beschikbare symboolcode"><figcaption><span class="number">Figuur 6</span>Code voor de selectie van een beschikbare symboolcode</figcaption>
                   </figure>
                   <p id="d2e1/3BF93DFD" class="Standaard">De voorgestelde symboolcode wordt als placeholder geplaatst en niet alvast in de velden
                      ingevuld om te zorgen dat het een bewuste keuze is.</p>
                </section>
-               <section id="d2e1/d2e969">
+               <section id="d2e1/d2e975">
                   <h3 id="d2e1/6E67B32E" class="heading_3"><span class="number">1.3.3</span>Functie van de PHP-scripts</h3>
                   <p id="d2e1/4E5DA34E" class="Standaard">Het webformulier gebruikt jQuery als XML Document Object Model (DOM). Met jQuery/AJAX
                      wordt de XML-data uitgewisseld met een viertal PHP-scripts, die de XML-data verwerkt
-                     en doorstuurt naar bestand of plaatst op repository ‘DSO_waardelijsten’.</p>
+                     en doorstuurt naar bestand of plaatst in repository ‘DSO_waardelijsten’.</p>
                   <div class="code">
                      <p id="d2e1/089F1DFB" class="Code space-after" style="margin-left: 0em;">&lt;?php</p>
                      <p id="d2e1/533F8A1A" class="Code" style="margin-left: 1em;">// ajax parameters</p>
@@ -491,12 +492,12 @@
                </section>
             </section>
          </section>
-         <section id="d2e1/d2e1109">
+         <section id="d2e1/d2e1115">
             <h1 id="d2e1/013E512A" class="heading_1"><span class="number">2</span>Workflow ‘mutatie’</h1>
             <p id="d2e1/35879817" class="Standaard">Alle XSLT’s voor het verwerken van de mutaties staan in repository ‘DSO_waardelijsten/mutatie’.</p>
-            <figure id="d2e1/d6e1146" style="width: 100%;"><img src="media/image7.png" alt="Overzicht van de bestanden die nodig zijn om mutaties door te voeren op de waardelijsten"><figcaption><span class="number">Figuur 7</span>Overzicht van de bestanden die nodig zijn om mutaties door te voeren op de waardelijsten</figcaption>
+            <figure id="d2e1/d6e1152" style="width: 100%;"><img src="media/image7.png" alt="Overzicht van de bestanden die nodig zijn om mutaties door te voeren op de waardelijsten"><figcaption><span class="number">Figuur 7</span>Overzicht van de bestanden die nodig zijn om mutaties door te voeren op de waardelijsten</figcaption>
             </figure>
-            <section id="d2e1/d2e1151">
+            <section id="d2e1/d2e1157">
                <h2 id="d2e1/3C37BAFA" class="heading_2"><span class="number">2.1</span>build.xml</h2>
                <p id="d2e1/5DEE24C8" class="Standaard">Voor de uitvoering van uitgebreidere workflows gebruiken we een ANT-script. De volgende
                   stappen worden uitgevoerd:</p>
@@ -537,7 +538,7 @@
                <p id="d2e1/52440046" class="Standaard">Het ANT-script ‘build.xml’ maakt gebruik van een library die niet standaard in de
                   ANT-library zit, namelijk xmltask.jar. Deze is toegevoegd in repository ‘DSO_waardelijsten/lib’.</p>
             </section>
-            <section id="d2e1/d2e1220">
+            <section id="d2e1/d2e1226">
                <h2 id="d2e1/00C15C50" class="heading_2"><span class="number">2.2</span>maak_mutatie.xsl</h2>
                <p id="d2e1/3180C7EF" class="Standaard">De transformatie ‘maak_mutatie.xsl’ zet bestand ‘mutaties.xml’ om in transformatie
                   ‘doe_mutatie.xsl’. Het generieke gedeelte van de transformatie staat in bestand ‘import.xsl’.
@@ -578,7 +579,7 @@
                   wordt ‘publicatiedatum’ gebruikt om de startdatum en einddatum geldigheid vast te
                   stellen in vervolgstappen.</p>
             </section>
-            <section id="d2e1/d2e1482">
+            <section id="d2e1/d2e1468">
                <h2 id="d2e1/73558597" class="heading_2"><span class="number">2.3</span>doe_mutatie.xsl</h2>
                <p id="d2e1/748BD9EB" class="Standaard">Het resultaat van transformatie ‘maak_mutatie.xsl’ is bestand ‘doe_mutatie.xsl’. Deze
                   transformatie wordt daarom steeds opnieuw gemaakt. Het generieke deel staat in transformatie
@@ -615,7 +616,8 @@
                <ul>
                   <li>
                      <p id="d2e1/311D3B12" class="Opsomming_tekens_1">‘bestaand_stap_1.xml’ bevat de bestaande versie van de waardelijsten aangevuld met
-                        processing instructions om extra informatie ten behoeve van de volgende stap.</p>
+                        processing instructions om extra informatie toe te voegen ten behoeve van de volgende
+                        stap.</p>
                   </li>
                   <li>
                      <p id="d2e1/716B0531" class="Opsomming_tekens_1 space-after">‘nieuw_stap_1.xml’ bevat de nieuwe versie van de waardelijsten, maar nog niet volledig.
@@ -628,7 +630,8 @@
                   gerealiseerd met attribuut ‘mode’ op xsl:template.</p>
                <p id="d2e1/15CE0866" class="Standaard">Hieronder is het resultaat van deze mutatie in bestand ‘nieuw_stap_1.xml’ weergegeven.
                   De waarde wordt voorafgegaan door een processing instruction. Merk op dat de informatie
-                  niet compleet is. Belangrijke eigenschappen als ‘term’ en ‘uri’ ontbreken.</p>
+                  in element ‘waarde’ niet compleet is. Belangrijke eigenschappen als ‘term’ en ‘uri’
+                  ontbreken.</p>
                <div class="code">
                   <p id="d2e1/114EB4BC" class="Code" style="margin-left: 0em;"><span style="color: #FF0000;">&lt;?voegtoe 2025-03-13?&gt;</span></p>
                   <p id="d2e1/1378462C" class="Code" style="margin-left: 0em;">&lt;waarde&gt;</p>
@@ -647,7 +650,7 @@
                   <p id="d2e1/307A7128" class="Code space-after" style="margin-left: 0em;">&lt;/waarde&gt;</p>
                </div>
             </section>
-            <section id="d2e1/d2e1878">
+            <section id="d2e1/d2e1836">
                <h2 id="d2e1/2C09D5AD" class="heading_2"><span class="number">2.4</span>check_waardelijsten_bestaand.xsl</h2>
                <p id="d2e1/7CFAD066" class="Standaard">In het tijdelijk bestand ‘bestaand_stap_1.xml’ worden processing instructions geplaatst,
                   bijvoorbeeld:</p>
@@ -659,10 +662,10 @@
                   dat wordt gekopieerd naar repository ‘DSO_waardelijsten/archief’. De huidige versie
                   van ‘waardelijsten [versie]’ wordt overschreven.</p>
             </section>
-            <section id="d2e1/d2e1896">
+            <section id="d2e1/d2e1854">
                <h2 id="d2e1/11477C14" class="heading_2"><span class="number">2.5</span>check_waardelijsten_nieuw.xsl</h2>
                <p id="d2e1/2599B08D" class="Standaard">In paragraaf <span class="hyperlink" style=""><a href="#d2e1/73558597">2.3</a></span> is aangegeven hoe een nieuw toegevoegde waarde er in bestand ‘nieuw_stap_1.xml’ uit
-                  ziet. Transformatie ‘check_waardelijsten_nieuw.xsl’ voert twee handelingen uit:</p>
+                  ziet. Transformatie ‘check_waardelijsten_nieuw.xsl’ voert drie handelingen uit:</p>
                <ul>
                   <li>
                      <p id="d2e1/771FED88" class="Opsomming_tekens_1">De eigenschappen ‘term’ en ‘uri’ worden automatisch afgeleid uit eigenschap ‘label’.</p>
@@ -692,10 +695,10 @@
                   <p id="d2e1/77E3023B" class="Code" style="margin-left: 2em;">&lt;punt id="pr114"&gt;pr114&lt;/punt&gt;</p>
                   <p id="d2e1/5AD99A40" class="Code" style="margin-left: 2em;">&lt;vlak id="vsg014"&gt;vsg014&lt;/vlak&gt;</p>
                   <p id="d2e1/68FF7D29" class="Code" style="margin-left: 1em;">&lt;/symboolcode&gt;</p>
-                  <p id="d2e1/2C718E06" class="Code" style="margin-left: 1em;">&lt;geldigheid&gt;</p>
-                  <p id="d2e1/1B6246E3" class="Code" style="margin-left: 2em;">&lt;startdatum&gt;2025-03-13&lt;/startdatum&gt;</p>
-                  <p id="d2e1/2446299D" class="Code" style="margin-left: 2em;">&lt;einddatum/&gt;</p>
-                  <p id="d2e1/32B739E3" class="Code" style="margin-left: 1em;">&lt;/geldigheid&gt;</p>
+                  <p id="d2e1/2C718E06" class="Code" style="margin-left: 1em;"><span style="background-color: yellow;">&lt;geldigheid&gt;</span></p>
+                  <p id="d2e1/1B6246E3" class="Code" style="margin-left: 2em;"><span style="background-color: yellow;">&lt;startdatum&gt;2025-03-13&lt;/startdatum&gt;</span></p>
+                  <p id="d2e1/2446299D" class="Code" style="margin-left: 2em;"><span style="background-color: yellow;">&lt;einddatum/&gt;</span></p>
+                  <p id="d2e1/32B739E3" class="Code" style="margin-left: 1em;"><span style="background-color: yellow;">&lt;/geldigheid&gt;</span></p>
                   <p id="d2e1/3A3488BD" class="Code" style="margin-left: 1em;">&lt;deprecated&gt;false&lt;/deprecated&gt;</p>
                   <p id="d2e1/3286AA13" class="Code space-after" style="margin-left: 0em;">&lt;/waarde&gt;</p>
                </div>
@@ -708,7 +711,7 @@
                <p id="d2e1/2B56F69B" class="Standaard">Alle uri’s in waardelijsten zijn opgebouwd conform de ‘<span class="hyperlink" style=""><a href="https://iplo.nl/publish/pages/162339/uri-strategie.pdf" target="_blank">URI-strategie 2.0</a></span>’. In de transformatie wordt dit als volgt samengesteld uit ‘domein’ en ‘term’. Merk
                   op dat niet de naam van de waardelijst wordt gebruikt.</p>
                <div class="code">
-                  <p id="d2e1/718B46B2" class="Code space-after" style="margin-left: 0em;">uri='http://standaarden.omgevingswet.overheid.nl/',<i>lower-case</i>(<b>$domein</b>),'/id/concept/',<b>$term</b>)</p>
+                  <p id="d2e1/718B46B2" class="Code space-after" style="margin-left: 0em;">uri='http://standaarden.omgevingswet.overheid.nl/',<i>lower-case</i>(<b>$domein</b>),'/id/concept/',<b>$term</b></p>
                </div>
                <p id="d2e1/26FEC4F0" class="Alineakop">specialisatie</p>
                <p id="d2e1/705E07E5" class="Standaard">In de eerste versies van de waardelijsten bestond waardelijst ‘thema’ uit twee niveaus:
@@ -746,13 +749,13 @@
                   <p id="d2e1/66255F7A" class="Code" style="margin-left: 1em;">&lt;/geldigheid&gt;</p>
                   <p id="d2e1/7AF3A925" class="Code space-after" style="margin-left: 0em;">&lt;/waarde&gt;</p>
                </div>
-               <p id="d2e1/7FD3DBB3" class="Standaard">Deze constructie wordt niet meer gebruikt, maar kan in de toekomst wel weer ingevoerd
+               <p id="d2e1/7FD3DBB3" class="Standaard">Deze constructie wordt niet meer gebruikt maar kan in de toekomst wel weer ingevoerd
                   worden. Daarom gaan alle transformaties nog wel uit van het gebruik van eigenschap
                   ‘specialisatie’. In het webformulier is geen veld ‘specialisatie’ opgenomen.</p>
             </section>
-            <section id="d2e1/d2e2316">
+            <section id="d2e1/d2e2284">
                <h2 id="d2e1/25B351A2" class="heading_2"><span class="number">2.6</span>maak_informatie.xsl</h2>
-               <p id="d2e1/755AA5E6" class="Standaard">In paragraaf  is de XML van een mutatie weergegeven. Een onderliggend element is ‘informatie’.</p>
+               <p id="d2e1/755AA5E6" class="Standaard">In paragraaf <span class="hyperlink" style=""><a href="#d2e1/00C15C50">2.2</a></span> is de XML van een mutatie weergegeven. Een onderliggend element is ‘informatie’.</p>
                <div class="code">
                   <p id="d2e1/51F286C9" class="Code space-after" style="margin-left: 0em;">&lt;informatie&gt;Voeg aan waardelijst met uri='http://standaarden.omgevingswet.overheid.nl/imow/id/waardelijst/Verkeergroep'
                      een waarde toe met label is 'wandelroute', definitie is 'Waarde voor attribuut groep
@@ -765,19 +768,19 @@
                   ‘informatie.txt’.</p>
             </section>
          </section>
-         <section id="d2e1/d2e2332">
+         <section id="d2e1/d2e2307">
             <h1 id="d2e1/4DB0438A" class="heading_1"><span class="number">3</span>Workflow ‘export’</h1>
             <p id="d2e1/765F15B3" class="Standaard space-after">Alle waardelijsten worden gepubliceerd op de <span class="hyperlink" style=""><a href="https://stelselcatalogus.omgevingswet.overheid.nl/waardelijsten/overview" target="_blank">stelselcatalogus</a></span>. In nauwe samenwerking is de opbouw van ons export-bestand vastgesteld en getest.
                Leveranciers gebruiken de API van de stelselcatalogus om data uit de waardelijsten
                op te vragen en in te voegen in eigen applicaties.</p>
             <p id="d2e1/446298EF" class="Standaard">De afgesproken werkwijze is, dat wij bestand ‘export.json’ plaatsen op de harvest-locatie
-               ‘<span class="hyperlink" style=""><a href="https://register.geostandaarden.nl/waardelijst/imow/" target="_blank">https://register.geostandaarden.nl/waardelijst/imow/</a></span>’. Als bestand ‘export.json’ niet bereikbaar is, krijgt de stelselcatalogus een foutmelding
+               ‘<span class="hyperlink" style=""><a href="https://register.geostandaarden.nl/waardelijst/imow/" target="_blank">https://register.geostandaarden.nl/waardelijst/imow/</a></span>’. Als bestand ‘export.json’ niet beschikbaar is, krijgt de stelselcatalogus een foutmelding
                en nemen ze contact met ons op. Plaatsen we een nieuwe versie van bestand ‘export.json’,
                dan wordt deze binnen twee uur ingeladen in de stelselcatalogus.</p>
-            <figure id="d2e1/d6e2404" style="width: 100%;"><img src="media/image8.png" alt="Index van de harvest-locatie"><figcaption><span class="number">Figuur 8</span>Index van de harvest-locatie</figcaption>
+            <figure id="d2e1/d6e2379" style="width: 100%;"><img src="media/image8.png" alt="Index van de harvest-locatie"><figcaption><span class="number">Figuur 8</span>Index van de harvest-locatie</figcaption>
             </figure>
             <p id="d2e1/64D1A6B3" class="Standaard">De transformaties voor workflow ‘export’ zijn gearchiveerd in repository ‘DSO_waardelijsten/export’.</p>
-            <section id="d2e1/d2e2395">
+            <section id="d2e1/d2e2370">
                <h2 id="d2e1/5526E789" class="heading_2"><span class="number">3.1</span>build.xml</h2>
                <p id="d2e1/1B19734C" class="Standaard">Voor de uitvoering van de workflow gebruiken we een ANT-script. De volgende stappen
                   worden uitgevoerd:</p>
@@ -803,7 +806,7 @@
                   </li>
                </ol>
             </section>
-            <section id="d2e1/d2e2427">
+            <section id="d2e1/d2e2402">
                <h2 id="d2e1/5F715AE6" class="heading_2"><span class="number">3.2</span>export.xsl</h2>
                <p id="d2e1/12D2EC7D" class="Standaard">Transformatie ‘export.xsl’ zet alle versies van de waardelijsten in repository ‘DSO_waardelijsten/archief’
                   om naar bestand ‘export.xml’. De opbouw volgt precies de structuur die de stelselcatalogus
@@ -838,10 +841,10 @@
                   <p id="d2e1/6C936B7C" class="Code" style="margin-left: 1em;">&lt;/xsl:element&gt;</p>
                   <p id="d2e1/703C486F" class="Code space-after" style="margin-left: 0em;">&lt;/xsl:template&gt;</p>
                </div>
-               <section id="d2e1/d2e2524">
+               <section id="d2e1/d2e2499">
                   <h3 id="d2e1/41E8479A" class="heading_3"><span class="number">3.2.1</span>catalogus:WaardelijstAsset</h3>
                   <p id="d2e1/5C76BCA4" class="Standaard">Het export-bestand bevat alle versies van de afzonderlijke waardelijsten.</p>
-                  <figure id="d2e1/d6e2584" style="width: 100%;"><img src="media/image9.png" alt="Screendump van alle geversioneerde waardelijsten"><figcaption><span class="number">Figuur 9</span>Screendump van alle geversioneerde waardelijsten</figcaption>
+                  <figure id="d2e1/d6e2559" style="width: 100%;"><img src="media/image9.png" alt="Screendump van alle geversioneerde waardelijsten"><figcaption><span class="number">Figuur 9</span>Screendump van alle geversioneerde waardelijsten</figcaption>
                   </figure>
                   <p id="d2e1/02481DBA" class="Standaard">De opbouw van een waardelijst is als volgt:</p>
                   <div class="code">
@@ -886,10 +889,10 @@
                   </div>
                   <p id="d2e1/17B1CA34" class="Standaard">In latere versie zijn de eigenschappen ‘versienotities’, ‘set’ en ‘deprecated’ toegevoegd.</p>
                </section>
-               <section id="d2e1/d2e2849">
+               <section id="d2e1/d2e2824">
                   <h3 id="d2e1/4376DD73" class="heading_3"><span class="number">3.2.2</span>dct:BibliographicResource</h3>
                   <p id="d2e1/3766AE72" class="Standaard">Het export-bestand bevat alle bronnen.</p>
-                  <figure id="d2e1/d6e2912" style="width: 100%;"><img src="media/image10.png" alt="Screendump van alle bronnen"><figcaption><span class="number">Figuur 10</span>Screendump van alle bronnen</figcaption>
+                  <figure id="d2e1/d6e2887" style="width: 100%;"><img src="media/image10.png" alt="Screendump van alle bronnen"><figcaption><span class="number">Figuur 10</span>Screendump van alle bronnen</figcaption>
                   </figure>
                   <p id="d2e1/2BA4FD27" class="Standaard">De opbouw van een bron is als volgt:</p>
                   <div class="code">
@@ -905,7 +908,7 @@
                      <p id="d2e1/27634A67" class="Code space-after" style="margin-left: 0em;">}</p>
                   </div>
                </section>
-               <section id="d2e1/d2e2954">
+               <section id="d2e1/d2e2929">
                   <h3 id="d2e1/03B5F716" class="heading_3"><span class="number">3.2.3</span>skos:Collection</h3>
                   <p id="d2e1/4BAC0ECF" class="Standaard">Het object met type ‘skos:Collection’ wordt gebruikt voor de symboolcodes.</p>
                   <div class="code">
@@ -936,7 +939,7 @@
                   </div>
                   <p id="d2e1/6FCFA5A5" class="Standaard">De afzonderlijke symboolcodes worden gedefinieerd als objecten van het type ‘skos:Concept’.</p>
                </section>
-               <section id="d2e1/d2e3125">
+               <section id="d2e1/d2e3100">
                   <h3 id="d2e1/23F58BD9" class="heading_3"><span class="number">3.2.4</span>skos:Concept</h3>
                   <p id="d2e1/208033F2" class="Standaard">Het type ‘skos:Concept’ wordt gebruikt voor alle symboolcodes en alle unieke waarden.
                      Daarbij wordt niet gekeken naar de uri van de waarde, maar naar de geversioneerde
@@ -970,7 +973,7 @@
                      is opgenomen als waarde in de objecten met type ‘catalogus:WaardelijstAsset’ en als
                      object met type ‘skos:Concept’.</p>
                </section>
-               <section id="d2e1/d2e3301">
+               <section id="d2e1/d2e3276">
                   <h3 id="d2e1/16C7C3F8" class="heading_3"><span class="number">3.2.5</span>skos:ConceptScheme</h3>
                   <p id="d2e1/20A1A7FF" class="Standaard">In het export-bestand worden domeinen gedefinieerd als objecten met type ‘skos:ConceptScheme’.
                      Let erop dat ook symboolcodes een eigenschap domein hebben.</p>
@@ -999,7 +1002,7 @@
                   </div>
                </section>
             </section>
-            <section id="d2e1/d2e3437">
+            <section id="d2e1/d2e3412">
                <h2 id="d2e1/317FD6B4" class="heading_2"><span class="number">3.3</span>json.xsl</h2>
                <p id="d2e1/7817B222" class="Standaard">In JSON bestaat de constructie ‘unnamed array’, een array van naamloze items. Deze
                   constructie bestaat niet in XML. Daarom wordt in het tijdelijk bestand ‘export.xml’
@@ -1007,15 +1010,15 @@
                   ‘json.xsl’ transformeert bestand ‘export.xml’ naar het uiteindelijke bestand ‘export.json’.</p>
             </section>
          </section>
-         <section id="d2e1/d2e3445">
+         <section id="d2e1/d2e3420">
             <h1 id="d2e1/093BCDB0" class="heading_1"><span class="number">4</span>Workflow ‘publicatie’</h1>
             <p id="d2e1/39C917D5" class="Standaard">Geonovum publiceert de waardelijsten ook als serviceproduct op de website. Leveranciers
                gebruiken het download-pakket om de waardelijsten te importeren in hun software. Het
-               zip-bestand bevat de nieuwe versie van de waardelijsten in diverse bestandsformaten,
+               ZIP-bestand bevat de nieuwe versie van de waardelijsten in diverse bestandsformaten,
                als XML-, JSON- en Excel-bestand. Daarnaast zijn de release notes opgenomen.</p>
-            <figure id="d2e1/d6e3521" style="width: 100%;"><img src="media/image11.png" alt="Overzicht van de serviceproducten"><figcaption><span class="number">Figuur 11</span>Overzicht van de serviceproducten</figcaption>
+            <figure id="d2e1/d6e3496" style="width: 100%;"><img src="media/image11.png" alt="Overzicht van de serviceproducten"><figcaption><span class="number">Figuur 11</span>Overzicht van de serviceproducten</figcaption>
             </figure>
-            <section id="d2e1/d2e3487">
+            <section id="d2e1/d2e3462">
                <h2 id="d2e1/4958F249" class="heading_2"><span class="number">4.1</span>build.xml</h2>
                <p id="d2e1/7A40BE63" class="Standaard">Voor de uitvoering van de workflow gebruiken we een ANT-script. De volgende stappen
                   worden uitgevoerd:</p>
@@ -1045,16 +1048,15 @@
                      <p id="d2e1/0880F27B" class="Opsomming_nummers_1 space-after">‘Publiceer waardelijsten’: Voeg alle bestanden toe als ZIP-bestand.</p>
                   </li>
                </ol>
-               <p id="d2e1/36FE42DB" class="Standaard">De workflow plaatst de waardelijsten in repository ‘TPOD-waardelijsten’.</p>
+               <p id="d2e1/36FE42DB" class="Standaard">De workflow plaatst de nieuwe versie van de waardelijsten in repository ‘TPOD-waardelijsten’.</p>
             </section>
-            <section id="d2e1/d2e3547">
+            <section id="d2e1/d2e3523">
                <h2 id="d2e1/5DD5B7E9" class="heading_2"><span class="number">4.2</span>indeling.xsl</h2>
-               <p id="d2e1/7C6824F7" class="Standaard">In de loop van de jaren is er informatie toegevoegd aan de waardelijsten, bijvoorbeeld
-                  symboolcodes, eigenschappen ‘set’ en ‘deprecated’. Om te voorkomen dat leveranciers
-                  hun import moeten aanpassen, zet transformatie ‘indeling.xsl’ de waardelijsten terug
-                  naar een oudere indeling.</p>
+               <p id="d2e1/7C6824F7" class="Standaard">Om te voorkomen dat leveranciers hun import moeten aanpassen, zet transformatie ‘indeling.xsl’
+                  de waardelijsten terug naar een oudere indeling. Op verzoek worden toevoegingen als
+                  symboolcodes, eigenschappen ‘set’ en ‘deprecated’ meegenomen in de transformatie.</p>
             </section>
-            <section id="d2e1/d2e3556">
+            <section id="d2e1/d2e3531">
                <h2 id="d2e1/0B4783DE" class="heading_2"><span class="number">4.3</span>json.xsl</h2>
                <p id="d2e1/12F14ACE" class="Standaard">Transformatie ‘json.xsl’ zet bestand ‘waardelijsten.xml’ om naar bestand ‘waardelijsten.json’.
                   Deze versie is in de oude indeling.</p>
@@ -1105,11 +1107,11 @@
                   <p id="d2e1/666E6E79" class="Code space-after" style="margin-left: 0em;">...</p>
                </div>
             </section>
-            <section id="d2e1/d2e4040">
+            <section id="d2e1/d2e4016">
                <h2 id="d2e1/39399773" class="heading_2"><span class="number">4.4</span>excel.xsl</h2>
                <p id="d2e1/1665C221" class="Standaard">Excel-bestanden zijn in feite XML-bestanden in een ZIP-bestand. Verander je van Excel-bestand
                   ‘template.xlsx’ de extensie ‘xlsx’ in ‘zip’, dan kun je deze uitpakken.</p>
-               <figure id="d2e1/d6e4126" style="width: 100%;"><img src="media/image12.png" alt="Indeling van een Excel-bestand"><figcaption><span class="number">Figuur 12</span>Indeling van een Excel-bestand</figcaption>
+               <figure id="d2e1/d6e4101" style="width: 100%;"><img src="media/image12.png" alt="Indeling van een Excel-bestand"><figcaption><span class="number">Figuur 12</span>Indeling van een Excel-bestand</figcaption>
                </figure>
                <p id="d2e1/4D1D57D8" class="Standaard">De transformatie past de volgende bestanden aan:</p>
                <ul>
@@ -1199,16 +1201,16 @@
                   Hiervoor moet nog een goede xslt-routine komen. Daarom is het nog nodig om het bestand
                   te testen. Excel herstelt na het openen het bestand ‘table1’. Uiteraard is hier een
                   betere oplossing voor nodig.</p>
-               <figure id="d2e1/d6e4554" style="width: 100%;"><img src="media/image13.png" alt="Het is nog nodig om bestand ‘waardelijsten.xlsx’ te testen"><figcaption><span class="number">Figuur 13</span>Het is nog nodig om bestand ‘waardelijsten.xlsx’ te testen</figcaption>
+               <figure id="d2e1/d6e4529" style="width: 100%;"><img src="media/image13.png" alt="Het is nog nodig om bestand ‘waardelijsten.xlsx’ te testen"><figcaption><span class="number">Figuur 13</span>Het is nog nodig om bestand ‘waardelijsten.xlsx’ te testen</figcaption>
                </figure>
             </section>
          </section>
-         <section id="d2e1/d2e4510">
+         <section id="d2e1/d2e4485">
             <h1 id="d2e1/0DE81975" class="heading_1"><span class="number">5</span>Workflow ‘symbolisatie’</h1>
             <p id="d2e1/5C3EC4EA" class="Standaard">Aanpassingen aan de waardelijsten hebben ook consequenties voor andere serviceproducten
                van Geonovum, voornamelijk de weergave van de symbolenbibliotheek. Daarom is deze
                laatste workflow toegevoegd aan het hele werkproces.</p>
-            <section id="d2e1/d2e4519">
+            <section id="d2e1/d2e4494">
                <h2 id="d2e1/37BF43DF" class="heading_2"><span class="number">5.1</span>build.xml</h2>
                <p id="d2e1/35D03644" class="Standaard">Voor de uitvoering van de workflow gebruiken we een ANT-script. De volgende stappen
                   worden uitgevoerd:</p>
@@ -1229,7 +1231,7 @@
                   </li>
                </ol>
             </section>
-            <section id="d2e1/d2e4551">
+            <section id="d2e1/d2e4527">
                <h2 id="d2e1/3FF5BE85" class="heading_2"><span class="number">5.2</span>applicatie.xsl</h2>
                <p id="d2e1/7D962895" class="Standaard">Het webformulier ‘Muteren waardelijsten’ heeft twee bestanden nodig om suggesties
                   voor symboolcodes te genereren. Beide bestanden worden weergegeven in tabblad ‘applicatie’.
@@ -1237,13 +1239,13 @@
                   naar bestand ‘symbolisatie.xml’. De symbolenbibliotheek bestaat uit vier SLD-bestanden.
                   SLD staat voor ‘Styled Layer Descriptor’, een XML-formaat voor het definiëren van
                   de weergave van kaartlagen.</p>
-               <figure id="d2e1/d6e4644" style="width: 100%;"><img src="media/image14.png" alt="Screendump van tabblad ‘applicatie’"><figcaption><span class="number">Figuur 14</span>Screendump van tabblad ‘applicatie’</figcaption>
+               <figure id="d2e1/d6e4619" style="width: 100%;"><img src="media/image14.png" alt="Screendump van tabblad ‘applicatie’"><figcaption><span class="number">Figuur 14</span>Screendump van tabblad ‘applicatie’</figcaption>
                </figure>
                <p id="d2e1/2ECF151F" class="Standaard">Het is niet nodig om bij elke versie van de waardelijsten de bestanden ‘symbolisatie.xml’
                   en ‘voorwaarden.xml’ te vervangen. Het is alleen nodig als er wijzigingen in de symbolenbibliotheek
                   zijn.</p>
             </section>
-            <section id="d2e1/d2e4596">
+            <section id="d2e1/d2e4571">
                <h2 id="d2e1/3D2CF5A6" class="heading_2"><span class="number">5.3</span>symbolisatie.xsl</h2>
                <p id="d2e1/2E422FDD" class="Standaard">Transformatie ‘symbolisatie.xsl’ transformeert alle symboolcodes in de symbolenbibliotheek
                   naar bestand ‘symbolisatie.xhtml’. De transformatie heeft de volgende bestanden nodig
@@ -1259,7 +1261,7 @@
                      <p id="d2e1/2A1DFC37" class="Opsomming_tekens_1">Stylesheet ‘symbolisatie.css’ bevat de verwijzingen naar alle PNG-bestanden.</p>
                   </li>
                </ul>
-               <figure id="d2e1/d6e4706" style="width: 100%;"><img src="media/image15.png" alt="Map ‘png’ bevat de weergave van de symboolcodes"><figcaption><span class="number">Figuur 15</span>Map ‘png’ bevat de weergave van de symboolcodes</figcaption>
+               <figure id="d2e1/d6e4681" style="width: 100%;"><img src="media/image15.png" alt="Map ‘png’ bevat de weergave van de symboolcodes"><figcaption><span class="number">Figuur 15</span>Map ‘png’ bevat de weergave van de symboolcodes</figcaption>
                </figure>
                <p id="d2e1/275D06E4" class="Alineakop">Symbolenbibliotheek 1.3.1</p>
                <p id="d2e1/2A1629B6" class="Standaard">De symbolenbibliotheek bevat SLD-bestanden voor lijnen, punten, vlakken en normwaarden.
@@ -1297,7 +1299,7 @@
                   <p id="d2e1/6AD8ABC8" class="Code space-after" style="margin-left: 0em;">}</p>
                </div>
             </section>
-            <section id="d2e1/d2e4819">
+            <section id="d2e1/d2e4794">
                <h2 id="d2e1/5C66049F" class="heading_2"><span class="number">5.4</span>waardelijsten.xsl</h2>
                <p id="d2e1/008D7179" class="Standaard">Transformatie ‘waardelijsten.xsl’ transformeert de nieuwe versie van de waardelijsten
                   naar bestand ‘waardelijsten.xhtml’. Een punt van aandacht is, dat aan waardelijst
@@ -1306,7 +1308,7 @@
                   is als reeks. Dit is omdat de normwaarde vaak verschillende gradaties kent. Bijvoorbeeld
                   normwaarde ‘aandeel sociale woningbouw’ zal een procentuele gradatie hebben met elk
                   een symboolcode uit de reeks.</p>
-               <figure id="d2e1/d6e4917" style="width: 100%;"><img src="media/image16.png" alt="De detailinformatie wordt weergegeven met een popup"><figcaption><span class="number">Figuur 16</span>De detailinformatie wordt weergegeven met een popup</figcaption>
+               <figure id="d2e1/d6e4892" style="width: 100%;"><img src="media/image16.png" alt="De detailinformatie wordt weergegeven met een popup"><figcaption><span class="number">Figuur 16</span>De detailinformatie wordt weergegeven met een popup</figcaption>
                </figure>
             </section>
          </section>
