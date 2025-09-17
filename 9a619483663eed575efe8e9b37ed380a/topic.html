@@ -1,0 +1,1317 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Technische aspecten</title>
+      <link rel="stylesheet" type="text/css" href="style.css"><script type="application/ld+json">{
+  "@context": [
+    "http://schema.org",
+    {
+      "@vocab": "http://schema.org",
+      "@language": "nl",
+      "foaf": "http://xmlns.com/foaf/0.1"
+    }
+  ],
+  "@id": "https://https://geonovum.github.io/documentatie/9a619483663eed575efe8e9b37ed380a/",
+  "@type": "TechArticle",
+  "headline": "Technische aspecten",
+  "inLanguage": "nl",
+  "license": "https://creativecommons.org/licenses/by-nd/4.0/",
+  "datePublished": "2025-09-17T11:34:21.9085289+02:00",
+  "copyrightHolder": {
+    "@type": "Organization",
+    "name": "Geonovum",
+    "url": "https://www.geonovum.nl/"
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Gerard Wolbers",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Geonovum",
+        "url": "https://www.geonovum.nl/"
+      }
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Geonovum",
+    "url": "https://www.geonovum.nl/"
+  },
+  "keywords": [
+    "waardelijsten"
+  ],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Waardelijsten"
+    }
+  ]
+}
+</script></head>
+   <body>
+      <nav id="toc">
+         <p class="tocheading">Inhoudsopgave</p>
+         <ol class="toc">
+            <li class="tocline"><a class="tocxref" href="#d2e1/45988AC1"><span class="tocnumber">1</span>Webformulier ‘Muteren waardelijsten’</a><ol class="toc">
+                  <li class="tocline"><a class="tocxref" href="#d2e1/2EB4DB43"><span class="tocnumber">1.1</span>Benodigde bestanden</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/0FF36BA1"><span class="tocnumber">1.2</span>Opbouw van het webformulier</a><ol class="toc">
+                        <li class="tocline"><a class="tocxref" href="#d2e1/1FF45822"><span class="tocnumber">1.2.1</span>div.tab-content</a><ol class="toc"></ol>
+                        </li>
+                        <li class="tocline"><a class="tocxref" href="#d2e1/7207BC80"><span class="tocnumber">1.2.2</span>div.container</a><ol class="toc"></ol>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/39C52885"><span class="tocnumber">1.3</span>Werking van de scripts</a><ol class="toc">
+                        <li class="tocline"><a class="tocxref" href="#d2e1/7D15AE34"><span class="tocnumber">1.3.1</span>Hoe wordt een mutatie vastgelegd?</a><ol class="toc"></ol>
+                        </li>
+                        <li class="tocline"><a class="tocxref" href="#d2e1/04277CB3"><span class="tocnumber">1.3.2</span>Suggesties voor de symboolcode</a><ol class="toc"></ol>
+                        </li>
+                        <li class="tocline"><a class="tocxref" href="#d2e1/6E67B32E"><span class="tocnumber">1.3.3</span>Functie van de PHP-scripts</a><ol class="toc"></ol>
+                        </li>
+                     </ol>
+                  </li>
+               </ol>
+            </li>
+            <li class="tocline"><a class="tocxref" href="#d2e1/013E512A"><span class="tocnumber">2</span>Workflow ‘mutatie’</a><ol class="toc">
+                  <li class="tocline"><a class="tocxref" href="#d2e1/3C37BAFA"><span class="tocnumber">2.1</span>build.xml</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/00C15C50"><span class="tocnumber">2.2</span>maak_mutatie.xsl</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/73558597"><span class="tocnumber">2.3</span>doe_mutatie.xsl</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/2C09D5AD"><span class="tocnumber">2.4</span>check_waardelijsten_bestaand.xsl</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/11477C14"><span class="tocnumber">2.5</span>check_waardelijsten_nieuw.xsl</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/25B351A2"><span class="tocnumber">2.6</span>maak_informatie.xsl</a><ol class="toc"></ol>
+                  </li>
+               </ol>
+            </li>
+            <li class="tocline"><a class="tocxref" href="#d2e1/4DB0438A"><span class="tocnumber">3</span>Workflow ‘export’</a><ol class="toc">
+                  <li class="tocline"><a class="tocxref" href="#d2e1/5526E789"><span class="tocnumber">3.1</span>build.xml</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/5F715AE6"><span class="tocnumber">3.2</span>export.xsl</a><ol class="toc">
+                        <li class="tocline"><a class="tocxref" href="#d2e1/41E8479A"><span class="tocnumber">3.2.1</span>catalogus:WaardelijstAsset</a><ol class="toc"></ol>
+                        </li>
+                        <li class="tocline"><a class="tocxref" href="#d2e1/4376DD73"><span class="tocnumber">3.2.2</span>dct:BibliographicResource</a><ol class="toc"></ol>
+                        </li>
+                        <li class="tocline"><a class="tocxref" href="#d2e1/03B5F716"><span class="tocnumber">3.2.3</span>skos:Collection</a><ol class="toc"></ol>
+                        </li>
+                        <li class="tocline"><a class="tocxref" href="#d2e1/23F58BD9"><span class="tocnumber">3.2.4</span>skos:Concept</a><ol class="toc"></ol>
+                        </li>
+                        <li class="tocline"><a class="tocxref" href="#d2e1/16C7C3F8"><span class="tocnumber">3.2.5</span>skos:ConceptScheme</a><ol class="toc"></ol>
+                        </li>
+                     </ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/317FD6B4"><span class="tocnumber">3.3</span>json.xsl</a><ol class="toc"></ol>
+                  </li>
+               </ol>
+            </li>
+            <li class="tocline"><a class="tocxref" href="#d2e1/093BCDB0"><span class="tocnumber">4</span>Workflow ‘publicatie’</a><ol class="toc">
+                  <li class="tocline"><a class="tocxref" href="#d2e1/4958F249"><span class="tocnumber">4.1</span>build.xml</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/5DD5B7E9"><span class="tocnumber">4.2</span>indeling.xsl</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/0B4783DE"><span class="tocnumber">4.3</span>json.xsl</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/39399773"><span class="tocnumber">4.4</span>excel.xsl</a><ol class="toc"></ol>
+                  </li>
+               </ol>
+            </li>
+            <li class="tocline"><a class="tocxref" href="#d2e1/0DE81975"><span class="tocnumber">5</span>Workflow ‘symbolisatie’</a><ol class="toc">
+                  <li class="tocline"><a class="tocxref" href="#d2e1/37BF43DF"><span class="tocnumber">5.1</span>build.xml</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/3FF5BE85"><span class="tocnumber">5.2</span>applicatie.xsl</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/3D2CF5A6"><span class="tocnumber">5.3</span>symbolisatie.xsl</a><ol class="toc"></ol>
+                  </li>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/5C66049F"><span class="tocnumber">5.4</span>waardelijsten.xsl</a><ol class="toc"></ol>
+                  </li>
+               </ol>
+            </li>
+         </ol>
+      </nav>
+      <main>
+         <p class="title">Technische aspecten</p>
+         <p id="d2e1/3AAA6AA7" class="Standaard">Geonovum voert het beheer uit op de waardelijsten. Hiervoor is een uitgebreid werkproces
+            ingericht met meerdere applicaties en workflows.</p>
+         <figure id="d2e1/d6e14" style="width: 100%;"><img src="media/image1.png" alt="Schematisch overzicht van het totale werkproces"><figcaption><span class="number">Figuur 1</span>Schematisch overzicht van het totale werkproces</figcaption>
+         </figure>
+         <p id="d2e1/30247E86" class="Standaard">Het volledige werkproces bestaat uit één applicatie en vier workflows:</p>
+         <ol>
+            <li>
+               <p id="d2e1/46AF8ED6" class="Opsomming_nummers_1">Invoer van mutaties met behulp van een webformulier met als resultaat bestand ‘mutaties.xml’;</p>
+            </li>
+            <li>
+               <p id="d2e1/3FB08A4F" class="Opsomming_nummers_1">Een workflow voor de transformatie van bestand ‘mutaties.xml’ naar de benodigde bestanden
+                  voor de volgende workflows;</p>
+            </li>
+            <li>
+               <p id="d2e1/730B7A9F" class="Opsomming_nummers_1">Een workflow die alle waardelijsten in archief transformeert naar het exportbestand
+                  ‘export.json’;</p>
+            </li>
+            <li>
+               <p id="d2e1/67133D0B" class="Opsomming_nummers_1">Een workflow die de nieuwe versie van de waardelijsten en de bijbehorende release
+                  notes transformeert naar een publicatie voor de website;</p>
+            </li>
+            <li>
+               <p id="d2e1/514B7291" class="Opsomming_nummers_1 space-after">Een workflow die de symboolcodes in de nieuwe versie van de waardelijsten transformeert
+                  naar twee overzichten ten behoeve van de symbolenbibliotheek.</p>
+            </li>
+         </ol>
+         <p id="d2e1/1DE99CE7" class="Standaard">De workflows staan allemaal op het beheerportaal. Het webformulier staat nu nog op
+            de Synology NAS maar zal uiteindelijk ook verhuizen naar het beheerportaal.</p>
+         <section id="d2e1/d2e76">
+            <h1 id="d2e1/45988AC1" class="heading_1"><span class="number">1</span>Webformulier ‘Muteren waardelijsten’</h1>
+            <p id="d2e1/2834C0BE" class="Standaard">Oorspronkelijk heeft de stelselcatalogus een invoerportaal gebouwd waarmee Geonovum
+               hun database kon vullen. Helaas was de invoer zeer tijdrovend en met een heel groot
+               risico op fouten, omdat alle velden zonder enige vorm van controle moesten worden
+               ingevuld. Daarom is besloten om een eigen werkproces op te zetten met de volgende
+               uitgangspunten:</p>
+            <ul>
+               <li>
+                  <p id="d2e1/30B0627A" class="Opsomming_tekens_1">Geonovum werkt met een eigen intern XML-datamodel voor de waardelijsten. Dit datamodel
+                     moet alle benodigde informatie bevatten om exact aan te sluiten op de structuur van
+                     de stelselcatalogus, maar moet ook andere (toekomstige) toepassingen mogelijk maken.</p>
+               </li>
+               <li>
+                  <p id="d2e1/01888C2B" class="Opsomming_tekens_1">Het webformulier moet het voor een gebruiker eenvoudig maken om een nieuwe versie
+                     van de waardelijsten samen te stellen:</p>
+                  <ul>
+                     <li>
+                        <p id="d2e1/06AB3378" class="Opsomming_tekens_2">De gebruiker bouwt niet een nieuwe versie op maar voert mutaties in. Deze worden geautomatiseerd
+                           doorgevoerd op de aangegeven versie van de waardelijsten.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/41FF7DC3" class="Opsomming_tekens_2">Zoveel mogelijk velden worden gegenereerd door de applicatie om het risico op fouten
+                           klein te houden. Twee velden zijn verplicht: ‘label’ en ‘definitie’. Hieruit worden
+                           andere velden zoals ‘term’ en ‘uri’ afgeleid.</p>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <p id="d2e1/4C9E096B" class="Opsomming_tekens_1">De waardelijsten worden gearchiveerd op GitHub:</p>
+                  <ul>
+                     <li>
+                        <p id="d2e1/3B957FA7" class="Opsomming_tekens_2">We willen altijd de historie kunnen volgen;</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/525F1C88" class="Opsomming_tekens_2">Het webformulier en andere workflows maken gebruik van de waardelijsten in archief.</p>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+            <section id="d2e1/d2e120">
+               <h2 id="d2e1/2EB4DB43" class="heading_2"><span class="number">1.1</span>Benodigde bestanden</h2>
+               <p id="d2e1/5536DC62" class="Standaard">Het webformulier maakt gebruik van jQuery, AJAX en PHP. Een mogelijkheid om het webformulier
+                  lokaal te bouwen en te testen is met de applicatie XAMPP.</p>
+               <figure id="d2e1/d6e143" style="width: 100%;"><img src="media/image2.png" alt="Indeling van het webformulier"><figcaption><span class="number">Figuur 2</span>Indeling van het webformulier</figcaption>
+               </figure>
+               <p id="d2e1/50CD7AE2" class="Standaard">Het webformulier bevat de volgende bestanden:</p>
+               <ul>
+                  <li>
+                     <p id="d2e1/4FB246BE" class="Opsomming_tekens_1">‘index.html’ met bijbehorende bestanden ‘index.css’ en ‘info.svg’,</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/386F50BD" class="Opsomming_tekens_1">PHP-bestanden die zorgen voor de externe communicatie:</p>
+                     <ul>
+                        <li>
+                           <p id="d2e1/0829CC46" class="Opsomming_tekens_2">‘get_filenames.php’ haalt alle bestandsnamen op in de repository ‘DSO_waardelijsten/archief’.</p>
+                        </li>
+                        <li>
+                           <p id="d2e1/099DA0D3" class="Opsomming_tekens_2">‘get_file.php’ haalt een XML-bestand in.</p>
+                        </li>
+                        <li>
+                           <p id="d2e1/346A219A" class="Opsomming_tekens_2">‘save_temp.php’ slaat bestand ‘mutaties.xml’ op in de lokale map ‘temp’.</p>
+                        </li>
+                        <li>
+                           <p id="d2e1/2681510C" class="Opsomming_tekens_2">‘publish_files.php’ slaat bestand ‘mutaties.xml’ op in repository ‘DSO_waardelijsten/invoer’.</p>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <p id="d2e1/2AACEA32" class="Opsomming_tekens_1">‘inlog geonovum.txt’ bevat belangrijke inlog-gegevens.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/099E50A6" class="Opsomming_tekens_1">‘symbolisatie.xml’ en ‘voorwaarden.xml’ zijn configuratie-bestanden die nodig zijn
+                        om suggesties te doen voor de keuze van beschikbare symboolcodes.</p>
+                  </li>
+               </ul>
+            </section>
+            <section id="d2e1/d2e212">
+               <h2 id="d2e1/0FF36BA1" class="heading_2"><span class="number">1.2</span>Opbouw van het webformulier</h2>
+               <p id="d2e1/3839BFBC" class="Standaard">Voor de opbouw van de pagina is gebruik gemaakt van een horizontale grid op ‘div.button’,
+                  ‘div.container’ en ‘div.item’.</p>
+               <figure id="d2e1/d6e231" style="width: 100%;"><img src="media/image3.png" alt="De opbouw is gebaseerd op div’s"><figcaption><span class="number">Figuur 3</span>De opbouw is gebaseerd op div’s</figcaption>
+               </figure>
+               <section id="d2e1/d2e252">
+                  <h3 id="d2e1/1FF45822" class="heading_3"><span class="number">1.2.1</span>div.tab-content</h3>
+                  <p id="d2e1/2A97A4B3" class="Standaard">Het webformulier bestaat uit een vast gedeelte en vier tabbladen: ‘formulier’, ‘mutatie’,
+                     ‘code’ en ‘applicatie’. In de code zijn deze vastgelegd als een div met klasse ‘tab-content’
+                     en de naam van het tabblad als type.</p>
+                  <div class="code">
+                     <p id="d2e1/6484CE37" class="Code" style="margin-left: 0em;">&lt;div type="formulier" class="tab_content"&gt;</p>
+                     <p id="d2e1/55E7F83C" class="Code" style="margin-left: 1em;">&lt;div class="group"&gt;</p>
+                     <p id="d2e1/3F2AF0FC" class="Code" style="margin-left: 2em;">&lt;div class="help" style="display: none"&gt;</p>
+                     <p id="d2e1/6D6BCF8E" class="Code" style="margin-left: 3em;">&lt;p&gt;</p>
+                     <p id="d2e1/482F71F6" class="Code" style="margin-left: 4em;">...</p>
+                     <p id="d2e1/5F33D66A" class="Code" style="margin-left: 3em;">&lt;/p&gt;</p>
+                     <p id="d2e1/62B5777F" class="Code" style="margin-left: 2em;">&lt;/div&gt;</p>
+                     <p id="d2e1/66B63EEB" class="Code" style="margin-left: 2em;">&lt;div class="container"&gt;</p>
+                     <p id="d2e1/789899E8" class="Code" style="margin-left: 3em;">&lt;div class="item"&gt;</p>
+                     <p id="d2e1/11553FA3" class="Code" style="margin-left: 4em;">&lt;div class="label"&gt;</p>
+                     <p id="d2e1/0E77087D" class="Code" style="margin-left: 5em;">&lt;label for="waardelijst"&gt;waardelijst&lt;/label&gt;</p>
+                     <p id="d2e1/078D66B3" class="Code" style="margin-left: 4em;">&lt;/div&gt;</p>
+                     <p id="d2e1/56A998D9" class="Code" style="margin-left: 4em;">&lt;div class="value"&gt;</p>
+                     <p id="d2e1/4359A309" class="Code" style="margin-left: 5em;">&lt;select id="waardelijst" name="waardelijst" multiple="multiple"&gt;&lt;/select&gt;</p>
+                     <p id="d2e1/60D060D1" class="Code" style="margin-left: 4em;">&lt;/div&gt;</p>
+                     <p id="d2e1/25585680" class="Code" style="margin-left: 4em;">...</p>
+                     <p id="d2e1/4A2FC33D" class="Code" style="margin-left: 3em;">&lt;/div&gt;</p>
+                     <p id="d2e1/2561D11B" class="Code" style="margin-left: 3em;">&lt;div class="item"&gt;</p>
+                     <p id="d2e1/349FB966" class="Code" style="margin-left: 4em;">&lt;div class="label"&gt;</p>
+                     <p id="d2e1/6E98478F" class="Code" style="margin-left: 5em;">&lt;label for="waardelijst_label"&gt;label&lt;/label&gt;</p>
+                     <p id="d2e1/62FE1A0E" class="Code" style="margin-left: 4em;">&lt;/div&gt;</p>
+                     <p id="d2e1/493A7483" class="Code" style="margin-left: 4em;">&lt;div class="value"&gt;</p>
+                     <p id="d2e1/62948EDE" class="Code" style="margin-left: 5em;">&lt;input type="text" id="waardelijst_label" name="label" /&gt;</p>
+                     <p id="d2e1/7839CD36" class="Code" style="margin-left: 4em;">&lt;/div&gt;</p>
+                     <p id="d2e1/31B48EAD" class="Code" style="margin-left: 4em;">...</p>
+                     <p id="d2e1/549B0F1C" class="Code" style="margin-left: 3em;">&lt;/div&gt;</p>
+                     <p id="d2e1/5B9F93C4" class="Code" style="margin-left: 2em;">&lt;/div&gt;</p>
+                     <p id="d2e1/13F4A3F1" class="Code" style="margin-left: 2em;">&lt;div class="button"&gt;</p>
+                     <p id="d2e1/2B4210F2" class="Code" style="margin-left: 3em;">&lt;button id="waardelijst_vervang" value="vervang" disabled&gt;vervang&lt;/button&gt;</p>
+                     <p id="d2e1/2090D6D4" class="Code" style="margin-left: 2em;">&lt;/div&gt;</p>
+                     <p id="d2e1/6F8E3E5B" class="Code" style="margin-left: 1em;">&lt;/div&gt;</p>
+                     <p id="d2e1/1C0A315B" class="Code" style="margin-left: 1em;">...</p>
+                     <p id="d2e1/6640A147" class="Code space-after" style="margin-left: 0em;">&lt;/div&gt;</p>
+                  </div>
+                  <figure id="d2e1/d6e543" style="width: 100%;"><img src="media/image4.png" alt="Met de knoppen bovenin het scherm worden de tabbladen geselecteerd"><figcaption><span class="number">Figuur 4</span>Met de knoppen bovenin het scherm worden de tabbladen geselecteerd</figcaption>
+                  </figure>
+                  <p id="d2e1/22DCCFEC" class="Standaard">De tabbladen hebben verschillende functies:</p>
+                  <ul>
+                     <li>
+                        <p id="d2e1/3B8DDF61" class="Opsomming_tekens_1">Tabblad ‘formulier’ bevat alle opties om een mutatie te formuleren.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/35FAFC8A" class="Opsomming_tekens_1">Tabblad ‘mutatie’ biedt de mogelijkheid om opgeslagen mutaties te controleren en eventueel
+                           te wijzigen.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/6C0C5B48" class="Opsomming_tekens_1">Tabblad ‘code’ geeft de bestanden ‘waardelijsten.xml’ en ‘mutaties.xml’ weer.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/42FEFCB0" class="Opsomming_tekens_1">Tabblad ‘applicatie’ geeft de bestanden ‘symbolisatie.xml’ en ‘voorwaarden.xml’ weer.
+                           De applicatie heeft deze bestanden nodig om een voorstel voor symboolcodes te kunnen
+                           doen.</p>
+                     </li>
+                  </ul>
+               </section>
+               <section id="d2e1/d2e596">
+                  <h3 id="d2e1/7207BC80" class="heading_3"><span class="number">1.2.2</span>div.container</h3>
+                  <p id="d2e1/112D7802" class="Standaard">In de tabbladen ‘formulier’ en ‘mutatie’ wordt de div met klasse ‘container’ gebruikt
+                     voor twee doelen:</p>
+                  <ul>
+                     <li>
+                        <p id="d2e1/0D41D103" class="Opsomming_tekens_1">De container bevat een horizontaal grid waardoor het twee kolommen bevat. De linker
+                           kolom bevat altijd de lijst om een versie, waardelijst, domein, waarde, bron, mutatie
+                           te selecteren. De rechter kolom bevat altijd de invoervelden om de eigenschappen ervan
+                           in te voeren.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/548E6F20" class="Opsomming_tekens_1">Op de container worden continu alle gebeurtenissen ‘change’ en ‘input’ afgehandeld
+                           met één enkele procedure, waarin alle condities zijn vastgelegd om knoppen te activeren
+                           of te deactiveren.</p>
+                     </li>
+                  </ul>
+                  <div class="code">
+                     <p id="d2e1/7EDAD1F7" class="Code space-after" style="margin-left: 0em;">// condities</p>
+                     <p id="d2e1/7ED487F6" class="Code" style="margin-left: 0em;">$(".container").on("change input", function (event) {</p>
+                     <p id="d2e1/3A70F66F" class="Code" style="margin-left: 1em;">$("#waardelijsten_bewaar").prop(</p>
+                     <p id="d2e1/1AAAC2CA" class="Code" style="margin-left: 2em;">"disabled",</p>
+                     <p id="d2e1/23FF7748" class="Code" style="margin-left: 2em;">!(</p>
+                     <p id="d2e1/1A8FCBF7" class="Code" style="margin-left: 3em;">$("#waardelijsten").val() &amp;&amp;</p>
+                     <p id="d2e1/0E620418" class="Code" style="margin-left: 3em;">!($("#waardelijsten_versie").val() == waardelijsten_versie || </p>
+                     <p id="d2e1/19908F29" class="Code" style="margin-left: 4em;">$("#waardelijsten_versie").val() == "") &amp;&amp;</p>
+                     <p id="d2e1/59D0D5DC" class="Code" style="margin-left: 3em;">!(</p>
+                     <p id="d2e1/3BA93B14" class="Code" style="margin-left: 4em;">$("#waardelijsten_publicatiedatum").val() == waardelijsten_publicatiedatum ||</p>
+                     <p id="d2e1/664C4628" class="Code" style="margin-left: 4em;">$("#waardelijsten_publicatiedatum").val() == ""</p>
+                     <p id="d2e1/172C48D9" class="Code" style="margin-left: 3em;">)</p>
+                     <p id="d2e1/18F357EB" class="Code" style="margin-left: 2em;">)</p>
+                     <p id="d2e1/4A8096DB" class="Code" style="margin-left: 1em;">);</p>
+                     <p id="d2e1/298FC05B" class="Code" style="margin-left: 1em;">...</p>
+                     <p id="d2e1/118A2C52" class="Code space-after" style="margin-left: 0em;">});</p>
+                  </div>
+                  <p id="d2e1/32217130" class="Standaard">De tabbladen ‘code’ en ‘applicatie’ zijn er voor de ontwikkelaars. Ze geven de XML-bestanden
+                     weer zonder mogelijkheden om hierop wijzigingen aan te brengen. Op deze tabbladen
+                     ontbreekt de div met klasse ‘container’, waardoor er één kolom over de hele breedte
+                     van het scherm ontstaat.</p>
+               </section>
+            </section>
+            <section id="d2e1/d2e735">
+               <h2 id="d2e1/39C52885" class="heading_2"><span class="number">1.3</span>Werking van de scripts</h2>
+               <p id="d2e1/4CEC4A4F" class="Standaard">De opzet van de scripts is als volgt:</p>
+               <ol>
+                  <li>
+                     <p id="d2e1/7287C1F9" class="Opsomming_nummers_1">Controleer of repository ‘DSO_waardelijsten/archief’ beschikbaar is. Zo ja, haal alle
+                        bestandsnamen op en plaats deze in keuzelijst ‘waardelijsten’.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/1A333335" class="Opsomming_nummers_1">Controleer of de bestanden ‘symbolisatie.xml’ en ‘voorwaarden.xml’ beschikbaar zijn.
+                        Deze zijn nodig om een suggestie te doen voor de beschikbare symboolcodes. Zo ja,
+                        lees de bestanden in in variabelen ‘applicatie_symbolisatie’ en ‘applicatie_voorwaarden’.
+                        Geef de bestanden weer in tabblad ‘applicatie’.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/479B83C5" class="Opsomming_nummers_1">Controleer of bestand ‘temp/mutaties.xml’ aanwezig is. Zo ja, lees de mutaties in.
+                        Zo nee, wacht dan tot de gebruiker in keuzelijst ‘waardelijsten’ een versie selecteert.
+                        Als er een nieuw versienummer en een nieuwe publicatiedatum is ingevoerd, worden de
+                        knoppen ‘bewaar’ en ‘publiceer’ actief.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/7B2982B5" class="Opsomming_nummers_1">Als in keuzelijst ‘waardelijsten’ een versie geselecteerd is, voer dan de volgende
+                        stappen uit:</p>
+                     <ol>
+                        <li>
+                           <p id="d2e1/5AD3C157" class="Opsomming_nummers_2">Lees de versie van de waardelijsten in in variabele ‘code_waardelijsten’ en de mutaties
+                              in variabele ‘code_mutaties’.</p>
+                        </li>
+                        <li>
+                           <p id="d2e1/117F3C9A" class="Opsomming_nummers_2">Geef de bestanden weer in tabblad ‘code’.</p>
+                        </li>
+                        <li>
+                           <p id="d2e1/6F3BD6E8" class="Opsomming_nummers_2">Open tabblad ‘formulier’ om de keuzelijsten ‘waardelijst’, ‘domein’ en ‘bron’ te zien.
+                              De code selecteert steeds de eerste optie.</p>
+                        </li>
+                        <li>
+                           <p id="d2e1/16A255E6" class="Opsomming_nummers_2">Open tabblad ‘mutatie’ om de mutaties te zien. De code selecteert steeds de eerste
+                              optie.</p>
+                        </li>
+                     </ol>
+                  </li>
+                  <li>
+                     <p id="d2e1/26D75985" class="Opsomming_nummers_1">Als alle mutaties zijn doorgevoerd, kan de gebruiker kiezen voor ‘bewaar’ en ‘publiceer’:</p>
+                     <ol>
+                        <li>
+                           <p id="d2e1/6C93EB5D" class="Opsomming_nummers_2">Knop ‘bewaar’ slaat bestand ‘mutaties.xml’ op in map ‘temp’.</p>
+                        </li>
+                        <li>
+                           <p id="d2e1/71BBADCD" class="Opsomming_nummers_2">Knop ‘publiceer’ slaat het bestand op in repository ‘DSO_waardelijsten/input’. Nadat
+                              het bestand is opgeslagen start een action op de repository om alle workflows uit
+                              te voeren. Deze opzet zal nog veranderen als het webformulier op het beheerportaal
+                              wordt geplaatst.</p>
+                        </li>
+                     </ol>
+                  </li>
+               </ol>
+               <section id="d2e1/d2e815">
+                  <h3 id="d2e1/7D15AE34" class="heading_3"><span class="number">1.3.1</span>Hoe wordt een mutatie vastgelegd?</h3>
+                  <p id="d2e1/4641F1C5" class="Standaard">In essentie willen we een mutatie machineleesbaar vastleggen. Hiervoor hebben we de
+                     volgende gegevens nodig:</p>
+                  <ul>
+                     <li>
+                        <p id="d2e1/4FD8A8AA" class="Opsomming_tekens_1">Het type wijziging: ‘vervang’, ‘voegtoe’, ‘verwijder’.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/4FC46347" class="Opsomming_tekens_1">Een xpath-expressie die vastlegt over welk object we het hebben.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/333043A5" class="Opsomming_tekens_1 space-after">Eventueel de nieuwe inhoud van het object in XML.</p>
+                     </li>
+                  </ul>
+                  <p id="d2e1/416823B6" class="Standaard">De gegevens ‘type’, ‘xpath’, ‘inhoud’ worden in workflow ‘mutatie’ omgezet naar een
+                     XSL-transformatie.</p>
+                  <figure id="d2e1/d6e863" style="width: 100%;"><img src="media/image5.png" alt="In tabblad ‘mutatie’ zijn de benodigde gegevens goed te onderscheiden"><figcaption><span class="number">Figuur 5</span>In tabblad ‘mutatie’ zijn de benodigde gegevens goed te onderscheiden</figcaption>
+                  </figure>
+                  <p id="d2e1/7CC3585A" class="Standaard">In het webformulier werkt een mutatie op een enkele waarde of een enkele waardelijst.
+                     Het is mogelijk om buiten het webformulier om mutaties toe te voegen die op meer elementen
+                     of andere objecten dan een waarde werken. Een niet-realistisch voorbeeld is om in
+                     element ‘waarde/toelichting’ de tekst ‘Hello world!’ te plaatsen:</p>
+                  <div class="code">
+                     <p id="d2e1/47D75C5D" class="Code" style="margin-left: 0em;">&lt;mutatie type="vervang" xpath="waardelijsten//waarde/toelichting"&gt;</p>
+                     <p id="d2e1/32C1590B" class="Code" style="margin-left: 1em;">...</p>
+                     <p id="d2e1/0B4FB5FF" class="Code" style="margin-left: 1em;">&lt;inhoud&gt;</p>
+                     <p id="d2e1/64A44B03" class="Code" style="margin-left: 2em;">&lt;toelichting&gt;Hello world!&lt;/toelichting&gt;</p>
+                     <p id="d2e1/696F7C95" class="Code" style="margin-left: 1em;">&lt;/inhoud&gt;</p>
+                     <p id="d2e1/60537EB0" class="Code space-after" style="margin-left: 0em;">&lt;/mutatie&gt;</p>
+                  </div>
+                  <p id="d2e1/65A0CB84" class="Standaard">Voor de release notes hebben we een mutatie niet alleen machineleesbaar nodig maar
+                     ook mensleesbaar. In tabblad ‘formulier’ wordt dit weergegeven in veld ‘informatie’.
+                     Dit is een automatische procedure die vastgelegd is in functie ‘maak_informatie’.
+                     Deze heeft drie parameters: ‘type’, ‘xpath’, ‘inhoud’.</p>
+               </section>
+               <section id="d2e1/d2e918">
+                  <h3 id="d2e1/04277CB3" class="heading_3"><span class="number">1.3.2</span>Suggesties voor de symboolcode</h3>
+                  <p id="d2e1/2B340C52" class="Standaard">Bij het toevoegen van een nieuwe waarde moeten ook symboolcodes toegevoegd worden
+                     voor vlak, punt en lijn. De applicatie geeft hiervoor suggesties op basis van twee
+                     bestanden:</p>
+                  <ul>
+                     <li>
+                        <p id="d2e1/4BF09536" class="Opsomming_tekens_1">Voor de verschillende waardelijsten is vastgelegd welke symboolcodes gebruikt mogen
+                           worden in bestand ‘voorwaarden.xml’.</p>
+                     </li>
+                     <li>
+                        <p id="d2e1/76744387" class="Opsomming_tekens_1 space-after">De informatie uit de symbolenbibliotheek is vastgelegd in bestand ‘symbolisatie.xml’.</p>
+                     </li>
+                  </ul>
+                  <p id="d2e1/1B54F863" class="Standaard">Het uitgangspunt bij het opstellen van een suggestie is, dat de symboolcode random
+                     geselecteerd wordt uit alle beschikbare symboolcodes. Als nog niet alle symboolcodes
+                     zijn gebruikt, is dit redelijk eenvoudig maar als alle symboolcodes al een keer gebruikt
+                     zijn, wordt het ingewikkelder omdat je dan ook rekening moet houden met het aantal
+                     keer dat een symboolcode is gebruikt.</p>
+                  <figure id="d2e1/d6e963" style="width: 100%;"><img src="media/image6.png" alt="Code voor de selectie van een beschikbare symboolcode"><figcaption><span class="number">Figuur 6</span>Code voor de selectie van een beschikbare symboolcode</figcaption>
+                  </figure>
+                  <p id="d2e1/3BF93DFD" class="Standaard">De voorgestelde symboolcode wordt als placeholder geplaatst en niet alvast in de velden
+                     ingevuld om te zorgen dat het een bewuste keuze is.</p>
+               </section>
+               <section id="d2e1/d2e975">
+                  <h3 id="d2e1/6E67B32E" class="heading_3"><span class="number">1.3.3</span>Functie van de PHP-scripts</h3>
+                  <p id="d2e1/4E5DA34E" class="Standaard">Het webformulier gebruikt jQuery als XML Document Object Model (DOM). Met jQuery/AJAX
+                     wordt de XML-data uitgewisseld met een viertal PHP-scripts, die de XML-data verwerkt
+                     en doorstuurt naar bestand of plaatst in repository ‘DSO_waardelijsten’.</p>
+                  <div class="code">
+                     <p id="d2e1/089F1DFB" class="Code space-after" style="margin-left: 0em;">&lt;?php</p>
+                     <p id="d2e1/533F8A1A" class="Code" style="margin-left: 1em;">// ajax parameters</p>
+                     <p id="d2e1/47A1ED1F" class="Code" style="margin-left: 1em;">$directory = $_POST["directory"];</p>
+                     <p id="d2e1/2A12AAC2" class="Code space-after" style="margin-left: 1em;">$mutaties = $_POST["mutaties"];</p>
+                     <p id="d2e1/589C2A10" class="Code" style="margin-left: 1em;">// parameters (committer moet uit inlog mutatieformulier komen)</p>
+                     <p id="d2e1/7A068698" class="Code" style="margin-left: 1em;">$path_mutaties = $directory . "/mutaties.xml";</p>
+                     <p id="d2e1/67666CCD" class="Code space-after" style="margin-left: 1em;">$result = array();</p>
+                     <p id="d2e1/57E9E93E" class="Code" style="margin-left: 1em;">// save xml</p>
+                     <p id="d2e1/43A5DF64" class="Code" style="margin-left: 1em;">$xml = new DOMDocument;</p>
+                     <p id="d2e1/4D77E06F" class="Code" style="margin-left: 1em;">$xml-&gt;preserveWhiteSpace = true;</p>
+                     <p id="d2e1/0AE9EBC0" class="Code" style="margin-left: 1em;">$xml-&gt;loadXML("&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n" . $mutaties);</p>
+                     <p id="d2e1/4B05EE08" class="Code" style="margin-left: 1em;">$xml-&gt;save($path_mutaties);</p>
+                     <p id="d2e1/3D89751C" class="Code space-after" style="margin-left: 1em;">array_push($result, $path_mutaties);</p>
+                     <p id="d2e1/0DC4EFBE" class="Code" style="margin-left: 1em;">// return result</p>
+                     <p id="d2e1/572DFC6D" class="Code space-after" style="margin-left: 1em;">echo json_encode($result);</p>
+                     <p id="d2e1/3DEBAC2A" class="Code space-after" style="margin-left: 0em;">?&gt;</p>
+                  </div>
+               </section>
+            </section>
+         </section>
+         <section id="d2e1/d2e1115">
+            <h1 id="d2e1/013E512A" class="heading_1"><span class="number">2</span>Workflow ‘mutatie’</h1>
+            <p id="d2e1/35879817" class="Standaard">Alle XSLT’s voor het verwerken van de mutaties staan in repository ‘DSO_waardelijsten/mutatie’.</p>
+            <figure id="d2e1/d6e1152" style="width: 100%;"><img src="media/image7.png" alt="Overzicht van de bestanden die nodig zijn om mutaties door te voeren op de waardelijsten"><figcaption><span class="number">Figuur 7</span>Overzicht van de bestanden die nodig zijn om mutaties door te voeren op de waardelijsten</figcaption>
+            </figure>
+            <section id="d2e1/d2e1157">
+               <h2 id="d2e1/3C37BAFA" class="heading_2"><span class="number">2.1</span>build.xml</h2>
+               <p id="d2e1/5DEE24C8" class="Standaard">Voor de uitvoering van uitgebreidere workflows gebruiken we een ANT-script. De volgende
+                  stappen worden uitgevoerd:</p>
+               <ol>
+                  <li>
+                     <p id="d2e1/270896BB" class="Opsomming_nummers_1">‘Initialiseer mappen’: Een vast onderdeel in praktisch elk ANT-script is om de benodigde
+                        mappen klaar te zetten. De mapverwijzingen zijn gebaseerd op workflows op GitHub met
+                        behulp van action-scripts. Voor het beheerportaal zullen de verwijzingen naar te gebruiken
+                        mappen anders zijn.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/07151A2E" class="Opsomming_nummers_1">‘Maak mutatie.xsl’: Het resultaat uit het webformulier is bestand ‘mutaties.xml’.
+                        In deze stap wordt ‘mutaties.xml’ omgezet naar een transformatie ‘mutaties.xsl’.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/3D285A7C" class="Opsomming_nummers_1">‘Doe mutatie.xsl’: Deze stap voert de mutatie uit. Het resultaat zijn twee tijdelijke
+                        bestanden.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/691868A1" class="Opsomming_nummers_1">‘Check waardelijsten bestaand’: Van elke waarde waarin iets is vervangen of die volledig
+                        verwijderd is, moet in de bestaande versie de einddatum geldigheid aangepast worden.
+                        Het resultaat wordt geplaatst in repository ‘DSO-waardelijsten/archief’.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/6815126C" class="Opsomming_nummers_1">‘Check waardelijsten nieuw’: Het tijdelijke bestand van de nieuwe versie van de waardelijsten
+                        wordt opnieuw opgebouwd en aangevuld. Het resultaat wordt geplaatst in repository
+                        ‘DSO-waardelijsten/archief’.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/6903BBC7" class="Opsomming_nummers_1">‘Maak waardelijsten.xml’: Voor de volgende workflows wordt het bestand ‘waardelijsten.xml’
+                        klaargezet.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/63C4301F" class="Opsomming_nummers_1 space-after">‘Maak informatie.txt’: De machineleesbare mutaties in bestand ‘mutaties.xml’ worden
+                        omgezet naar mensleesbare release notes in bestand ‘informatie.txt’.</p>
+                  </li>
+               </ol>
+               <p id="d2e1/52440046" class="Standaard">Het ANT-script ‘build.xml’ maakt gebruik van een library die niet standaard in de
+                  ANT-library zit, namelijk xmltask.jar. Deze is toegevoegd in repository ‘DSO_waardelijsten/lib’.</p>
+            </section>
+            <section id="d2e1/d2e1226">
+               <h2 id="d2e1/00C15C50" class="heading_2"><span class="number">2.2</span>maak_mutatie.xsl</h2>
+               <p id="d2e1/3180C7EF" class="Standaard">De transformatie ‘maak_mutatie.xsl’ zet bestand ‘mutaties.xml’ om in transformatie
+                  ‘doe_mutatie.xsl’. Het generieke gedeelte van de transformatie staat in bestand ‘import.xsl’.
+                  Dit wordt met een xsl:import toegevoegd aan de transformatie.</p>
+               <div class="code">
+                  <p id="d2e1/21A5C963" class="Code" style="margin-left: 0em;">&lt;mutatie <span style="background-color: yellow;">type="voegtoe"</span><span style="background-color: yellow;">xpath="waardelijsten/waardelijst[uri='http://standaarden.omgevingswet.overheid.nl/imow/id/waardelijst/Verkeergroep']/waarden"</span>&gt;</p>
+                  <p id="d2e1/702B982E" class="Code" style="margin-left: 1em;">&lt;metadata&gt;</p>
+                  <p id="d2e1/537A05E9" class="Code" style="margin-left: 2em;">&lt;waardelijst uri="http://standaarden.omgevingswet.overheid.nl/imow/id/waardelijst/Verkeergroep"&gt;verkeergroep&lt;/waardelijst&gt;</p>
+                  <p id="d2e1/0B419663" class="Code" style="margin-left: 2em;">&lt;waarde&gt;wandelroute&lt;/waarde&gt;</p>
+                  <p id="d2e1/6E33062A" class="Code" style="margin-left: 2em;">&lt;datum&gt;2025-03-13T08:05:35.109Z&lt;/datum&gt;</p>
+                  <p id="d2e1/36806DEC" class="Code" style="margin-left: 2em;">&lt;review akkoord="false"/&gt;</p>
+                  <p id="d2e1/7805C987" class="Code" style="margin-left: 1em;">&lt;/metadata&gt;</p>
+                  <p id="d2e1/5C33F591" class="Code" style="margin-left: 1em;">&lt;informatie&gt;Voeg aan waardelijst met uri='http://standaarden.omgevingswet.overheid.nl/imow/id/waardelijst/Verkeergroep'
+                     een waarde toe met label is 'wandelroute', definitie is 'Waarde voor attribuut groep
+                     bij het Gebiedsaanwijzingtype Verkeer voor het in regels en beleid aanwijzen, reserveren
+                     en beschermen van gronden voor wandelroutes.', toelichting is '', bron is '', domein
+                     is 'http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Verkeer', lijn is
+                     'ls014', punt is 'pr114', vlak is 'vsg014', deprecated is 'false'.&lt;/informatie&gt;</p>
+                  <p id="d2e1/5060B369" class="Code" style="margin-left: 1em;">&lt;inhoud&gt;</p>
+                  <p id="d2e1/28CFA707" class="Code" style="margin-left: 2em;"><span style="background-color: yellow;">&lt;waarde&gt;</span></p>
+                  <p id="d2e1/41476FE4" class="Code" style="margin-left: 3em;"><span style="background-color: yellow;">&lt;label&gt;wandelroute&lt;/label&gt;</span></p>
+                  <p id="d2e1/6C9C4814" class="Code" style="margin-left: 3em;"><span style="background-color: yellow;">&lt;definitie&gt;Waarde voor attribuut groep bij het Gebiedsaanwijzingtype Verkeer voor
+                        het in regels en beleid aanwijzen, reserveren en beschermen van gronden voor wandelroutes.&lt;/definitie&gt;</span></p>
+                  <p id="d2e1/428627B1" class="Code" style="margin-left: 3em;"><span style="background-color: yellow;">&lt;toelichting/&gt;</span></p>
+                  <p id="d2e1/2FAD9807" class="Code" style="margin-left: 3em;"><span style="background-color: yellow;">&lt;bron/&gt;</span></p>
+                  <p id="d2e1/31AE1F82" class="Code" style="margin-left: 3em;"><span style="background-color: yellow;">&lt;domein&gt;http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Verkeer&lt;/domein&gt;</span></p>
+                  <p id="d2e1/7FFB8554" class="Code" style="margin-left: 3em;"><span style="background-color: yellow;">&lt;symboolcode&gt;</span></p>
+                  <p id="d2e1/6F36F62D" class="Code" style="margin-left: 4em;"><span style="background-color: yellow;">&lt;lijn id="ls014"&gt;ls014&lt;/lijn&gt;</span></p>
+                  <p id="d2e1/2A8F168F" class="Code" style="margin-left: 4em;"><span style="background-color: yellow;">&lt;punt id="pr114"&gt;pr114&lt;/punt&gt;</span></p>
+                  <p id="d2e1/4E612951" class="Code" style="margin-left: 4em;"><span style="background-color: yellow;">&lt;vlak id="vsg014"&gt;vsg014&lt;/vlak&gt;</span></p>
+                  <p id="d2e1/007AD934" class="Code" style="margin-left: 3em;"><span style="background-color: yellow;">&lt;/symboolcode&gt;</span></p>
+                  <p id="d2e1/03EB4C07" class="Code" style="margin-left: 3em;"><span style="background-color: yellow;">&lt;deprecated&gt;false&lt;/deprecated&gt;</span></p>
+                  <p id="d2e1/74D05B7E" class="Code" style="margin-left: 2em;"><span style="background-color: yellow;">&lt;/waarde&gt;</span></p>
+                  <p id="d2e1/7852E9E3" class="Code" style="margin-left: 1em;">&lt;/inhoud&gt;</p>
+                  <p id="d2e1/399F89BE" class="Code space-after" style="margin-left: 0em;">&lt;/mutatie&gt;</p>
+               </div>
+               <p id="d2e1/6A29B1B3" class="Standaard">De gegevens ‘type’, ‘xpath’ en ‘inhoud’ worden in de transformatie omgezet. Daarnaast
+                  wordt ‘publicatiedatum’ gebruikt om de startdatum en einddatum geldigheid vast te
+                  stellen in vervolgstappen.</p>
+            </section>
+            <section id="d2e1/d2e1468">
+               <h2 id="d2e1/73558597" class="heading_2"><span class="number">2.3</span>doe_mutatie.xsl</h2>
+               <p id="d2e1/748BD9EB" class="Standaard">Het resultaat van transformatie ‘maak_mutatie.xsl’ is bestand ‘doe_mutatie.xsl’. Deze
+                  transformatie wordt daarom steeds opnieuw gemaakt. Het generieke deel staat in transformatie
+                  ‘import.xsl’.</p>
+               <div class="code">
+                  <p id="d2e1/178B59BF" class="Code" style="margin-left: 0em;">&lt;xsl:template <span style="background-color: yellow;">match="waardelijsten/waardelijst[uri='http://standaarden.omgevingswet.overheid.nl/imow/id/waardelijst/Verkeergroep']/waarden"</span>&gt;</p>
+                  <p id="d2e1/57FEAD08" class="Code" style="margin-left: 1em;">&lt;xsl:param name="mode"/&gt;</p>
+                  <p id="d2e1/6040F208" class="Code" style="margin-left: 1em;">&lt;xsl:call-template name="doe_mutatie"&gt;</p>
+                  <p id="d2e1/36920CDA" class="Code" style="margin-left: 2em;">&lt;xsl:with-param name="mode" select="$mode"/&gt;</p>
+                  <p id="d2e1/1C03C8E9" class="Code" style="margin-left: 2em;"><span style="background-color: yellow;">&lt;xsl:with-param name="mutatie"&gt;</span></p>
+                  <p id="d2e1/583F5195" class="Code" style="margin-left: 3em;"><span style="background-color: yellow;">&lt;waarde&gt;</span></p>
+                  <p id="d2e1/1029B126" class="Code" style="margin-left: 4em;"><span style="background-color: yellow;">&lt;label&gt;wandelroute&lt;/label&gt;</span></p>
+                  <p id="d2e1/2A7DC77D" class="Code" style="margin-left: 4em;"><span style="background-color: yellow;">&lt;definitie&gt;Waarde voor attribuut groep bij het Gebiedsaanwijzingtype Verkeer voor
+                        het in regels en beleid aanwijzen, reserveren en beschermen van gronden voor wandelroutes.&lt;/definitie&gt;</span></p>
+                  <p id="d2e1/365AC13B" class="Code" style="margin-left: 4em;"><span style="background-color: yellow;">&lt;toelichting/&gt;</span></p>
+                  <p id="d2e1/52B3BE76" class="Code" style="margin-left: 4em;"><span style="background-color: yellow;">&lt;bron/&gt;</span></p>
+                  <p id="d2e1/549EA063" class="Code" style="margin-left: 4em;"><span style="background-color: yellow;">&lt;domein&gt;http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Verkeer&lt;/domein&gt;</span></p>
+                  <p id="d2e1/647BE8E7" class="Code" style="margin-left: 4em;"><span style="background-color: yellow;">&lt;symboolcode&gt;</span></p>
+                  <p id="d2e1/00A2D830" class="Code" style="margin-left: 5em;"><span style="background-color: yellow;">&lt;lijn id="ls014"&gt;ls014&lt;/lijn&gt;</span></p>
+                  <p id="d2e1/024C5CFE" class="Code" style="margin-left: 5em;"><span style="background-color: yellow;">&lt;punt id="pr114"&gt;pr114&lt;/punt&gt;</span></p>
+                  <p id="d2e1/46982E8D" class="Code" style="margin-left: 5em;"><span style="background-color: yellow;">&lt;vlak id="vsg014"&gt;vsg014&lt;/vlak&gt;</span></p>
+                  <p id="d2e1/573EB7FD" class="Code" style="margin-left: 4em;"><span style="background-color: yellow;">&lt;/symboolcode&gt;</span></p>
+                  <p id="d2e1/1C25518F" class="Code" style="margin-left: 4em;"><span style="background-color: yellow;">&lt;deprecated&gt;false&lt;/deprecated&gt;</span></p>
+                  <p id="d2e1/5EB69CF6" class="Code" style="margin-left: 3em;"><span style="background-color: yellow;">&lt;/waarde&gt;</span></p>
+                  <p id="d2e1/35B521DC" class="Code" style="margin-left: 2em;"><span style="background-color: yellow;">&lt;/xsl:with-param&gt;</span></p>
+                  <p id="d2e1/00E0D2D0" class="Code" style="margin-left: 2em;"><span style="background-color: yellow;">&lt;xsl:with-param name="datum"&gt;2025-03-13&lt;/xsl:with-param&gt;</span></p>
+                  <p id="d2e1/4C041987" class="Code" style="margin-left: 2em;"><span style="background-color: yellow;">&lt;xsl:with-param name="type"&gt;voegtoe&lt;/xsl:with-param&gt;</span></p>
+                  <p id="d2e1/54543113" class="Code" style="margin-left: 1em;">&lt;/xsl:call-template&gt;</p>
+                  <p id="d2e1/543BE406" class="Code space-after" style="margin-left: 0em;">&lt;/xsl:template&gt;</p>
+               </div>
+               <p id="d2e1/3CA0D8AF" class="Standaard space-after">Gemarkeerd zijn de gegevens ‘type’, ‘xpath’, ‘inhoud’ en ‘publicatiedatum’ uit bestand
+                  ‘mutaties.xml’.</p>
+               <p id="d2e1/7BB2C3AA" class="Standaard">Transformatie ‘doe_mutatie.xsl’ maakt twee tijdelijke bestanden:</p>
+               <ul>
+                  <li>
+                     <p id="d2e1/311D3B12" class="Opsomming_tekens_1">‘bestaand_stap_1.xml’ bevat de bestaande versie van de waardelijsten aangevuld met
+                        processing instructions om extra informatie toe te voegen ten behoeve van de volgende
+                        stap.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/716B0531" class="Opsomming_tekens_1 space-after">‘nieuw_stap_1.xml’ bevat de nieuwe versie van de waardelijsten, maar nog niet volledig.
+                        Ook in dit bestand worden processing instructions gebruikt om extra informatie toe
+                        te voegen ten behoeve van de volgende stap.</p>
+                  </li>
+               </ul>
+               <p id="d2e1/4E3D3A6D" class="Standaard space-after">De parameter ‘mode’ kan twee waarden hebben: ‘bestaand_stap_1’ en ‘nieuw_stap_1’.
+                  De verwerking van een mutatie is voor beide tijdelijke bestanden anders. Dit wordt
+                  gerealiseerd met attribuut ‘mode’ op xsl:template.</p>
+               <p id="d2e1/15CE0866" class="Standaard">Hieronder is het resultaat van deze mutatie in bestand ‘nieuw_stap_1.xml’ weergegeven.
+                  De waarde wordt voorafgegaan door een processing instruction. Merk op dat de informatie
+                  in element ‘waarde’ niet compleet is. Belangrijke eigenschappen als ‘term’ en ‘uri’
+                  ontbreken.</p>
+               <div class="code">
+                  <p id="d2e1/114EB4BC" class="Code" style="margin-left: 0em;"><span style="color: #FF0000;">&lt;?voegtoe 2025-03-13?&gt;</span></p>
+                  <p id="d2e1/1378462C" class="Code" style="margin-left: 0em;">&lt;waarde&gt;</p>
+                  <p id="d2e1/0828D078" class="Code" style="margin-left: 1em;">&lt;label&gt;wandelroute&lt;/label&gt;</p>
+                  <p id="d2e1/20D22DD7" class="Code" style="margin-left: 1em;">&lt;definitie&gt;Waarde voor attribuut groep bij het Gebiedsaanwijzingtype Verkeer voor
+                     het in regels en beleid aanwijzen, reserveren en beschermen van gronden voor wandelroutes.&lt;/definitie&gt;</p>
+                  <p id="d2e1/3A3544F5" class="Code" style="margin-left: 1em;">&lt;toelichting/&gt;</p>
+                  <p id="d2e1/28A33928" class="Code" style="margin-left: 1em;">&lt;bron/&gt;</p>
+                  <p id="d2e1/18D47851" class="Code" style="margin-left: 1em;">&lt;domein&gt;http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Verkeer&lt;/domein&gt;</p>
+                  <p id="d2e1/2A188B87" class="Code" style="margin-left: 1em;">&lt;symboolcode&gt;</p>
+                  <p id="d2e1/0AAD7431" class="Code" style="margin-left: 2em;">&lt;lijn id="ls014"&gt;ls014&lt;/lijn&gt;</p>
+                  <p id="d2e1/3B4F2D7B" class="Code" style="margin-left: 2em;">&lt;punt id="pr114"&gt;pr114&lt;/punt&gt;</p>
+                  <p id="d2e1/67908B91" class="Code" style="margin-left: 2em;">&lt;vlak id="vsg014"&gt;vsg014&lt;/vlak&gt;</p>
+                  <p id="d2e1/2F47293F" class="Code" style="margin-left: 1em;">&lt;/symboolcode&gt;</p>
+                  <p id="d2e1/58061B1F" class="Code" style="margin-left: 1em;">&lt;deprecated&gt;false&lt;/deprecated&gt;</p>
+                  <p id="d2e1/307A7128" class="Code space-after" style="margin-left: 0em;">&lt;/waarde&gt;</p>
+               </div>
+            </section>
+            <section id="d2e1/d2e1836">
+               <h2 id="d2e1/2C09D5AD" class="heading_2"><span class="number">2.4</span>check_waardelijsten_bestaand.xsl</h2>
+               <p id="d2e1/7CFAD066" class="Standaard">In het tijdelijk bestand ‘bestaand_stap_1.xml’ worden processing instructions geplaatst,
+                  bijvoorbeeld:</p>
+               <div class="code">
+                  <p id="d2e1/19BDE1E4" class="Code space-after" style="margin-left: 0em;"><span style="color: #FF0000;">&lt;?vervang 2025-03-13?&gt;</span></p>
+               </div>
+               <p id="d2e1/18652C91" class="Standaard">Op basis van deze processing instruction zet de transformatie de datum als einddatum
+                  geldigheid in de bijbehorende waarde. Het resultaat is een tijdelijk bestand ‘bestaand_stap_2.xml’,
+                  dat wordt gekopieerd naar repository ‘DSO_waardelijsten/archief’. De huidige versie
+                  van ‘waardelijsten [versie]’ wordt overschreven.</p>
+            </section>
+            <section id="d2e1/d2e1854">
+               <h2 id="d2e1/11477C14" class="heading_2"><span class="number">2.5</span>check_waardelijsten_nieuw.xsl</h2>
+               <p id="d2e1/2599B08D" class="Standaard">In paragraaf <span class="hyperlink" style=""><a href="#d2e1/73558597">2.3</a></span> is aangegeven hoe een nieuw toegevoegde waarde er in bestand ‘nieuw_stap_1.xml’ uit
+                  ziet. Transformatie ‘check_waardelijsten_nieuw.xsl’ voert drie handelingen uit:</p>
+               <ul>
+                  <li>
+                     <p id="d2e1/771FED88" class="Opsomming_tekens_1">De eigenschappen ‘term’ en ‘uri’ worden automatisch afgeleid uit eigenschap ‘label’.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/24ECB0C1" class="Opsomming_tekens_1">Element ‘geldigheid’ wordt toegevoegd met de publicatiedatum als eigenschap ‘startdatum’.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/14C9E5F8" class="Opsomming_tekens_1 space-after">Alle waarden, bronnen en domeinen worden alfabetisch gesorteerd op eigenschap ‘label’.</p>
+                  </li>
+               </ul>
+               <p id="d2e1/26D12FB8" class="Standaard">Het resultaat is tijdelijk bestand ‘nieuw_stap_2.xml’. De nieuwe versie ‘waardelijsten
+                  [versie]’ wordt toegevoegd aan repository ‘DSO_waardelijsten/archief’.</p>
+               <div class="code">
+                  <p id="d2e1/3547A1F2" class="Code" style="margin-left: 0em;">&lt;waarde&gt;</p>
+                  <p id="d2e1/181C845A" class="Code" style="margin-left: 1em;">&lt;label&gt;wandelroute&lt;/label&gt;</p>
+                  <p id="d2e1/190E3675" class="Code" style="margin-left: 1em;"><span style="background-color: yellow;">&lt;term&gt;Wandelroute&lt;/term&gt;</span></p>
+                  <p id="d2e1/514BDE1A" class="Code" style="margin-left: 1em;"><span style="background-color: yellow;">&lt;uri&gt;http://standaarden.omgevingswet.overheid.nl/verkeer/id/concept/Wandelroute&lt;/uri&gt;</span></p>
+                  <p id="d2e1/66945CBE" class="Code" style="margin-left: 1em;">&lt;definitie&gt;Waarde voor attribuut groep bij het Gebiedsaanwijzingtype Verkeer voor
+                     het in regels en beleid aanwijzen, reserveren en beschermen van gronden voor wandelroutes.&lt;/definitie&gt;</p>
+                  <p id="d2e1/64B6C1EF" class="Code" style="margin-left: 1em;">&lt;toelichting/&gt;</p>
+                  <p id="d2e1/523AD0A7" class="Code" style="margin-left: 1em;">&lt;bron/&gt;</p>
+                  <p id="d2e1/356386E9" class="Code" style="margin-left: 1em;">&lt;domein&gt;http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Verkeer&lt;/domein&gt;</p>
+                  <p id="d2e1/463B763B" class="Code" style="margin-left: 1em;">&lt;specialisatie/&gt;</p>
+                  <p id="d2e1/72338A40" class="Code" style="margin-left: 1em;">&lt;symboolcode&gt;</p>
+                  <p id="d2e1/3E4BAAC4" class="Code" style="margin-left: 2em;">&lt;lijn id="ls014"&gt;ls014&lt;/lijn&gt;</p>
+                  <p id="d2e1/77E3023B" class="Code" style="margin-left: 2em;">&lt;punt id="pr114"&gt;pr114&lt;/punt&gt;</p>
+                  <p id="d2e1/5AD99A40" class="Code" style="margin-left: 2em;">&lt;vlak id="vsg014"&gt;vsg014&lt;/vlak&gt;</p>
+                  <p id="d2e1/68FF7D29" class="Code" style="margin-left: 1em;">&lt;/symboolcode&gt;</p>
+                  <p id="d2e1/2C718E06" class="Code" style="margin-left: 1em;"><span style="background-color: yellow;">&lt;geldigheid&gt;</span></p>
+                  <p id="d2e1/1B6246E3" class="Code" style="margin-left: 2em;"><span style="background-color: yellow;">&lt;startdatum&gt;2025-03-13&lt;/startdatum&gt;</span></p>
+                  <p id="d2e1/2446299D" class="Code" style="margin-left: 2em;"><span style="background-color: yellow;">&lt;einddatum/&gt;</span></p>
+                  <p id="d2e1/32B739E3" class="Code" style="margin-left: 1em;"><span style="background-color: yellow;">&lt;/geldigheid&gt;</span></p>
+                  <p id="d2e1/3A3488BD" class="Code" style="margin-left: 1em;">&lt;deprecated&gt;false&lt;/deprecated&gt;</p>
+                  <p id="d2e1/3286AA13" class="Code space-after" style="margin-left: 0em;">&lt;/waarde&gt;</p>
+               </div>
+               <p id="d2e1/4C8ADF88" class="Alineakop">term</p>
+               <p id="d2e1/27C8C834" class="Standaard">Eigenschap ‘term’ is de uri-bestendige variant van eigenschap ‘label’. De gebruikte
+                  notatie is UpperCamelCase. In de transformatie is de omzetting gedefinieerd in functie
+                  ‘my:check_string’. Bijvoorbeeld label ‘milieubelastende activiteit met beperkt effect’
+                  wordt omgezet naar term ‘MilieubelastendeActiviteitMetBeperktEffect’.</p>
+               <p id="d2e1/4ABD4793" class="Alineakop">uri</p>
+               <p id="d2e1/2B56F69B" class="Standaard">Alle uri’s in waardelijsten zijn opgebouwd conform de ‘<span class="hyperlink" style=""><a href="https://iplo.nl/publish/pages/162339/uri-strategie.pdf" target="_blank">URI-strategie 2.0</a></span>’. In de transformatie wordt dit als volgt samengesteld uit ‘domein’ en ‘term’. Merk
+                  op dat niet de naam van de waardelijst wordt gebruikt.</p>
+               <div class="code">
+                  <p id="d2e1/718B46B2" class="Code space-after" style="margin-left: 0em;">uri='http://standaarden.omgevingswet.overheid.nl/',<i>lower-case</i>(<b>$domein</b>),'/id/concept/',<b>$term</b></p>
+               </div>
+               <p id="d2e1/26FEC4F0" class="Alineakop">specialisatie</p>
+               <p id="d2e1/705E07E5" class="Standaard">In de eerste versies van de waardelijsten bestond waardelijst ‘thema’ uit twee niveaus:
+                  ‘thema’ en ‘subthema’. Bijvoorbeeld thema ‘bouwwerken’ kon een subthema ‘asbestverwijdering’
+                  hebben. Hiervoor is eigenschap ‘specialisatie’ toegevoegd.</p>
+               <div class="code">
+                  <p id="d2e1/7490F9EA" class="Code" style="margin-left: 0em;">&lt;waarde&gt;</p>
+                  <p id="d2e1/78D0786C" class="Code" style="margin-left: 1em;">&lt;label&gt;bouwwerken&lt;/label&gt;</p>
+                  <p id="d2e1/70A8AF28" class="Code" style="margin-left: 1em;">&lt;term&gt;Bouwwerken&lt;/term&gt;</p>
+                  <p id="d2e1/12548F57" class="Code" style="margin-left: 1em;">&lt;uri&gt;<span style="background-color: yellow;">http://standaarden.omgevingswet.overheid.nl/bouwwerken/id/concept/Bouwwerken</span>&lt;/uri&gt;</p>
+                  <p id="d2e1/510BAF2E" class="Code" style="margin-left: 1em;">&lt;definitie&gt;Kenmerk dat aangeeft dat de regels of het beleid gaan over bouwwerken.&lt;/definitie&gt;</p>
+                  <p id="d2e1/484C68DA" class="Code" style="margin-left: 1em;">&lt;toelichting&gt;Deze waarde kan gebruikt worden.&lt;/toelichting&gt;</p>
+                  <p id="d2e1/365F57AD" class="Code" style="margin-left: 1em;">&lt;bron/&gt;</p>
+                  <p id="d2e1/02B35195" class="Code" style="margin-left: 1em;">&lt;domein&gt;http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Bouwwerken&lt;/domein&gt;</p>
+                  <p id="d2e1/344D6A6A" class="Code" style="margin-left: 1em;">&lt;specialisatie/&gt;</p>
+                  <p id="d2e1/18F84193" class="Code" style="margin-left: 1em;">&lt;symboolcode id=""/&gt;</p>
+                  <p id="d2e1/06F85F73" class="Code" style="margin-left: 1em;">&lt;geldigheid&gt;</p>
+                  <p id="d2e1/0172775A" class="Code" style="margin-left: 2em;">&lt;startdatum&gt;2020-11-17&lt;/startdatum&gt;</p>
+                  <p id="d2e1/1F59707E" class="Code" style="margin-left: 2em;">&lt;einddatum/&gt;</p>
+                  <p id="d2e1/453D5F7A" class="Code" style="margin-left: 1em;">&lt;/geldigheid&gt;</p>
+                  <p id="d2e1/5E849828" class="Code" style="margin-left: 0em;">&lt;/waarde&gt;</p>
+                  <p id="d2e1/1FCE2DF8" class="Code" style="margin-left: 0em;">&lt;waarde&gt;</p>
+                  <p id="d2e1/43C64B1A" class="Code" style="margin-left: 1em;">&lt;label&gt;asbestverwijdering&lt;/label&gt;</p>
+                  <p id="d2e1/293BED47" class="Code" style="margin-left: 1em;">&lt;term&gt;BouwwerkenAsbestverwijdering&lt;/term&gt;</p>
+                  <p id="d2e1/7B0A858C" class="Code" style="margin-left: 1em;">&lt;uri&gt;http://standaarden.omgevingswet.overheid.nl/bouwwerken/id/concept/BouwwerkenAsbestverwijdering&lt;/uri&gt;</p>
+                  <p id="d2e1/5DB23402" class="Code" style="margin-left: 1em;">&lt;definitie/&gt;</p>
+                  <p id="d2e1/18821D27" class="Code" style="margin-left: 1em;">&lt;toelichting&gt;Deze waarde niet gebruiken.&lt;/toelichting&gt;</p>
+                  <p id="d2e1/52A50E46" class="Code" style="margin-left: 1em;">&lt;bron&gt;http://standaarden.omgevingswet.overheid.nl/id/bibliographicresource/Staatsblad2018291&lt;/bron&gt;</p>
+                  <p id="d2e1/21217A9C" class="Code" style="margin-left: 1em;">&lt;domein&gt;http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Bouwwerken&lt;/domein&gt;</p>
+                  <p id="d2e1/1C696AB9" class="Code" style="margin-left: 1em;">&lt;specialisatie&gt;<span style="background-color: yellow;">http://standaarden.omgevingswet.overheid.nl/bouwwerken/id/concept/Bouwwerken</span>&lt;/specialisatie&gt;</p>
+                  <p id="d2e1/132FE997" class="Code" style="margin-left: 1em;">&lt;symboolcode id=""/&gt;</p>
+                  <p id="d2e1/30210A0B" class="Code" style="margin-left: 1em;">&lt;geldigheid&gt;</p>
+                  <p id="d2e1/7E8B06B5" class="Code" style="margin-left: 2em;">&lt;startdatum&gt;2020-11-17&lt;/startdatum&gt;</p>
+                  <p id="d2e1/368D4F3B" class="Code" style="margin-left: 2em;">&lt;einddatum/&gt;</p>
+                  <p id="d2e1/66255F7A" class="Code" style="margin-left: 1em;">&lt;/geldigheid&gt;</p>
+                  <p id="d2e1/7AF3A925" class="Code space-after" style="margin-left: 0em;">&lt;/waarde&gt;</p>
+               </div>
+               <p id="d2e1/7FD3DBB3" class="Standaard">Deze constructie wordt niet meer gebruikt maar kan in de toekomst wel weer ingevoerd
+                  worden. Daarom gaan alle transformaties nog wel uit van het gebruik van eigenschap
+                  ‘specialisatie’. In het webformulier is geen veld ‘specialisatie’ opgenomen.</p>
+            </section>
+            <section id="d2e1/d2e2284">
+               <h2 id="d2e1/25B351A2" class="heading_2"><span class="number">2.6</span>maak_informatie.xsl</h2>
+               <p id="d2e1/755AA5E6" class="Standaard">In paragraaf <span class="hyperlink" style=""><a href="#d2e1/00C15C50">2.2</a></span> is de XML van een mutatie weergegeven. Een onderliggend element is ‘informatie’.</p>
+               <div class="code">
+                  <p id="d2e1/51F286C9" class="Code space-after" style="margin-left: 0em;">&lt;informatie&gt;Voeg aan waardelijst met uri='http://standaarden.omgevingswet.overheid.nl/imow/id/waardelijst/Verkeergroep'
+                     een waarde toe met label is 'wandelroute', definitie is 'Waarde voor attribuut groep
+                     bij het Gebiedsaanwijzingtype Verkeer voor het in regels en beleid aanwijzen, reserveren
+                     en beschermen van gronden voor wandelroutes.', toelichting is '', bron is '', domein
+                     is 'http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Verkeer', lijn is
+                     'ls014', punt is 'pr114', vlak is 'vsg014', deprecated is 'false'.&lt;/informatie&gt;</p>
+               </div>
+               <p id="d2e1/7095B3C5" class="Standaard">Transformatie ‘maak_informatie.xsl’ plaatst alle elementen ‘informatie’ in bestand
+                  ‘informatie.txt’.</p>
+            </section>
+         </section>
+         <section id="d2e1/d2e2307">
+            <h1 id="d2e1/4DB0438A" class="heading_1"><span class="number">3</span>Workflow ‘export’</h1>
+            <p id="d2e1/765F15B3" class="Standaard space-after">Alle waardelijsten worden gepubliceerd op de <span class="hyperlink" style=""><a href="https://stelselcatalogus.omgevingswet.overheid.nl/waardelijsten/overview" target="_blank">stelselcatalogus</a></span>. In nauwe samenwerking is de opbouw van ons export-bestand vastgesteld en getest.
+               Leveranciers gebruiken de API van de stelselcatalogus om data uit de waardelijsten
+               op te vragen en in te voegen in eigen applicaties.</p>
+            <p id="d2e1/446298EF" class="Standaard">De afgesproken werkwijze is, dat wij bestand ‘export.json’ plaatsen op de harvest-locatie
+               ‘<span class="hyperlink" style=""><a href="https://register.geostandaarden.nl/waardelijst/imow/" target="_blank">https://register.geostandaarden.nl/waardelijst/imow/</a></span>’. Als bestand ‘export.json’ niet beschikbaar is, krijgt de stelselcatalogus een foutmelding
+               en nemen ze contact met ons op. Plaatsen we een nieuwe versie van bestand ‘export.json’,
+               dan wordt deze binnen twee uur ingeladen in de stelselcatalogus.</p>
+            <figure id="d2e1/d6e2379" style="width: 100%;"><img src="media/image8.png" alt="Index van de harvest-locatie"><figcaption><span class="number">Figuur 8</span>Index van de harvest-locatie</figcaption>
+            </figure>
+            <p id="d2e1/64D1A6B3" class="Standaard">De transformaties voor workflow ‘export’ zijn gearchiveerd in repository ‘DSO_waardelijsten/export’.</p>
+            <section id="d2e1/d2e2370">
+               <h2 id="d2e1/5526E789" class="heading_2"><span class="number">3.1</span>build.xml</h2>
+               <p id="d2e1/1B19734C" class="Standaard">Voor de uitvoering van de workflow gebruiken we een ANT-script. De volgende stappen
+                  worden uitgevoerd:</p>
+               <ol>
+                  <li>
+                     <p id="d2e1/39AC5E95" class="Opsomming_nummers_1">‘Initialiseer mappen’: Een vast onderdeel in praktisch elk ANT-script is om de benodigde
+                        mappen klaar te zetten. De mapverwijzingen zijn gebaseerd op workflows op GitHub met
+                        behulp van action-scripts. Voor het beheerportaal zullen de verwijzingen naar te gebruiken
+                        mappen anders zijn.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/328BE33B" class="Opsomming_nummers_1">‘Transformeer waardelijsten’: In deze stap worden alle versies van de waardelijsten
+                        in repository ‘DSO_waardelijsten/archief’ – ook de nieuwe versie – getransformeerd
+                        naar één groot tijdelijk bestand ‘export.xml’. Daarna wordt dit bestand getransformeerd
+                        naar JSON met transformatie ‘json.xsl’. Het bestand ‘json.xsl’ wordt op de harvest-locatie
+                        geplaatst. Omdat dit bestand bij elke nieuwe versie wordt overschreven, is dit eigenlijk
+                        het niet-geversioneerde bestand.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/36D85B2C" class="Opsomming_nummers_1">‘Kopieer overige bestanden’: Voor de volledigheid worden ook de release notes in bestand
+                        ‘informatie.txt’ op de harvest-locatie geplaatst. Voor het archief worden de bestanden
+                        ook geplaatst in een map met de publicatiedatum als naam.</p>
+                  </li>
+               </ol>
+            </section>
+            <section id="d2e1/d2e2402">
+               <h2 id="d2e1/5F715AE6" class="heading_2"><span class="number">3.2</span>export.xsl</h2>
+               <p id="d2e1/12D2EC7D" class="Standaard">Transformatie ‘export.xsl’ zet alle versies van de waardelijsten in repository ‘DSO_waardelijsten/archief’
+                  om naar bestand ‘export.xml’. De opbouw volgt precies de structuur die de stelselcatalogus
+                  nodig heeft om het in hun database in te kunnen laden. Het bestand bestaat uit een
+                  array van diverse typen objecten:</p>
+               <ul>
+                  <li>
+                     <p id="d2e1/02643CF3" class="Opsomming_tekens_1">catalogus:WaardelijstAsset</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/5A82D61F" class="Opsomming_tekens_1">dct:BibliographicResource</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/685D44AB" class="Opsomming_tekens_1">skos:Collection</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/5D204A0F" class="Opsomming_tekens_1">skos:Concept</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/64572260" class="Opsomming_tekens_1 space-after">skos:ConceptScheme</p>
+                  </li>
+               </ul>
+               <p id="d2e1/14D398AA" class="Standaard">De transformatie ‘export.xsl’ volgt de opbouw:</p>
+               <div class="code">
+                  <p id="d2e1/5E58DC0D" class="Code" style="margin-left: 0em;">&lt;xsl:template match="/"&gt;</p>
+                  <p id="d2e1/11FEBEDC" class="Code" style="margin-left: 1em;">&lt;xsl:element name="root"&gt;</p>
+                  <p id="d2e1/74ECB31E" class="Code" style="margin-left: 2em;">&lt;xsl:call-template name="waardelijstasset"/&gt;</p>
+                  <p id="d2e1/37A084C1" class="Code" style="margin-left: 2em;">&lt;xsl:call-template name="bibliographicresource"/&gt;</p>
+                  <p id="d2e1/2411A786" class="Code" style="margin-left: 2em;">&lt;xsl:call-template name="collection"/&gt;</p>
+                  <p id="d2e1/54547720" class="Code" style="margin-left: 2em;">&lt;xsl:call-template name="concept"/&gt;</p>
+                  <p id="d2e1/476AF059" class="Code" style="margin-left: 2em;">&lt;xsl:call-template name="conceptscheme"/&gt;</p>
+                  <p id="d2e1/6C936B7C" class="Code" style="margin-left: 1em;">&lt;/xsl:element&gt;</p>
+                  <p id="d2e1/703C486F" class="Code space-after" style="margin-left: 0em;">&lt;/xsl:template&gt;</p>
+               </div>
+               <section id="d2e1/d2e2499">
+                  <h3 id="d2e1/41E8479A" class="heading_3"><span class="number">3.2.1</span>catalogus:WaardelijstAsset</h3>
+                  <p id="d2e1/5C76BCA4" class="Standaard">Het export-bestand bevat alle versies van de afzonderlijke waardelijsten.</p>
+                  <figure id="d2e1/d6e2559" style="width: 100%;"><img src="media/image9.png" alt="Screendump van alle geversioneerde waardelijsten"><figcaption><span class="number">Figuur 9</span>Screendump van alle geversioneerde waardelijsten</figcaption>
+                  </figure>
+                  <p id="d2e1/02481DBA" class="Standaard">De opbouw van een waardelijst is als volgt:</p>
+                  <div class="code">
+                     <p id="d2e1/2153F76C" class="Code" style="margin-left: 0em;">{</p>
+                     <p id="d2e1/2D479DB6" class="Code" style="margin-left: 1em;">"@type": "catalogus:WaardelijstAsset",</p>
+                     <p id="d2e1/2F7A20CA" class="Code" style="margin-left: 1em;">"uri": "http://standaarden.omgevingswet.overheid.nl/imow/id/waardelijst/Eenheid_4.2.1",</p>
+                     <p id="d2e1/7B48BEC5" class="Code" style="margin-left: 1em;">"naam": "eenheid",</p>
+                     <p id="d2e1/30CB8028" class="Code" style="margin-left: 1em;">"titel": "Eenheid",</p>
+                     <p id="d2e1/0A004A4A" class="Code" style="margin-left: 1em;">"beschrijving": "Waardelijst voor attribuut eenheid, dat aangeeft in welke grootheid
+                        een kwantitatieve waarde wordt uitgedrukt.",</p>
+                     <p id="d2e1/482E9E7F" class="Code" style="margin-left: 1em;">"versie": "4.2.1",</p>
+                     <p id="d2e1/3F834F05" class="Code" style="margin-left: 1em;"><span style="background-color: yellow;">"versienotities": "Aangepast zijn 'aantal per hectare'."</span>,</p>
+                     <p id="d2e1/2B7B4756" class="Code" style="margin-left: 1em;">"versieVan": "http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Eenheid",</p>
+                     <p id="d2e1/336C83E3" class="Code" style="margin-left: 1em;"><span style="background-color: yellow;">"set": "IMOW"</span>,</p>
+                     <p id="d2e1/650C668B" class="Code" style="margin-left: 1em;">"vervangt": "http://standaarden.omgevingswet.overheid.nl/imow/id/waardelijst/Eenheid_4.2.0",</p>
+                     <p id="d2e1/27C6BC7D" class="Code" style="margin-left: 1em;">"metadata": {</p>
+                     <p id="d2e1/0E39C0A9" class="Code" style="margin-left: 2em;">"uri": "http://standaarden.omgevingswet.overheid.nl/imow/doc/20241014000000/waardelijst/Eenheid_4.2.1",</p>
+                     <p id="d2e1/58A0BE2D" class="Code" style="margin-left: 2em;">"startdatumGeldigheid": "2024-10-14",</p>
+                     <p id="d2e1/29ACB9B0" class="Code" style="margin-left: 2em;">"revisieVan": "http://standaarden.omgevingswet.overheid.nl/imow/doc/20241014000000/waardelijst/Eenheid_4.2.0"</p>
+                     <p id="d2e1/625C59A5" class="Code" style="margin-left: 1em;">},</p>
+                     <p id="d2e1/0BE7FE70" class="Code" style="margin-left: 1em;">"waardes": [</p>
+                     <p id="d2e1/5E18CCF4" class="Code" style="margin-left: 2em;">{</p>
+                     <p id="d2e1/787B844E" class="Code" style="margin-left: 3em;">"uri": "http://standaarden.omgevingswet.overheid.nl/eenheid/id/concept/AGewogenGemiddeldeGeluidsniveau",</p>
+                     <p id="d2e1/358F921B" class="Code" style="margin-left: 3em;">"naam": "a-gewogen gemiddelde geluidsniveau",</p>
+                     <p id="d2e1/5FE4F3B1" class="Code" style="margin-left: 3em;">"term": "AGewogenGemiddeldeGeluidsniveau",</p>
+                     <p id="d2e1/6D65BDFE" class="Code" style="margin-left: 3em;">"definitie": "",</p>
+                     <p id="d2e1/73369A4E" class="Code" style="margin-left: 3em;">"uitleg": "",</p>
+                     <p id="d2e1/10CA84DF" class="Code" style="margin-left: 3em;">"isSpecialisatieVan": [</p>
+                     <p id="d2e1/44580D18" class="Code" style="margin-left: 3em;">],</p>
+                     <p id="d2e1/00FB2066" class="Code" style="margin-left: 3em;">"bronnen": [</p>
+                     <p id="d2e1/3D1691E4" class="Code" style="margin-left: 3em;">],</p>
+                     <p id="d2e1/25E7B172" class="Code" style="margin-left: 3em;">"gerelateerd": [</p>
+                     <p id="d2e1/448F2AA5" class="Code" style="margin-left: 3em;">],</p>
+                     <p id="d2e1/4363D9AD" class="Code" style="margin-left: 3em;">"domein": "http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Eenheid",</p>
+                     <p id="d2e1/68A2A49A" class="Code" style="margin-left: 3em;">"metadata": {</p>
+                     <p id="d2e1/42919138" class="Code" style="margin-left: 4em;">"uri": "http://standaarden.omgevingswet.overheid.nl/eenheid/doc/20241014000000/concept/AGewogenGemiddeldeGeluidsniveau",</p>
+                     <p id="d2e1/657CF30C" class="Code" style="margin-left: 4em;">"startdatumGeldigheid": "2024-10-14"</p>
+                     <p id="d2e1/05850E2C" class="Code" style="margin-left: 3em;">},</p>
+                     <p id="d2e1/5C7D564B" class="Code" style="margin-left: 3em;"><span style="background-color: yellow;">"deprecated": "false"</span></p>
+                     <p id="d2e1/1FEF0E59" class="Code" style="margin-left: 2em;">},</p>
+                     <p id="d2e1/099BA4B2" class="Code space-after" style="margin-left: 0em;">...</p>
+                  </div>
+                  <p id="d2e1/17B1CA34" class="Standaard">In latere versie zijn de eigenschappen ‘versienotities’, ‘set’ en ‘deprecated’ toegevoegd.</p>
+               </section>
+               <section id="d2e1/d2e2824">
+                  <h3 id="d2e1/4376DD73" class="heading_3"><span class="number">3.2.2</span>dct:BibliographicResource</h3>
+                  <p id="d2e1/3766AE72" class="Standaard">Het export-bestand bevat alle bronnen.</p>
+                  <figure id="d2e1/d6e2887" style="width: 100%;"><img src="media/image10.png" alt="Screendump van alle bronnen"><figcaption><span class="number">Figuur 10</span>Screendump van alle bronnen</figcaption>
+                  </figure>
+                  <p id="d2e1/2BA4FD27" class="Standaard">De opbouw van een bron is als volgt:</p>
+                  <div class="code">
+                     <p id="d2e1/09CF2298" class="Code" style="margin-left: 0em;">{</p>
+                     <p id="d2e1/6A6ECBA0" class="Code" style="margin-left: 1em;">"@type": "dct:BibliographicResource",</p>
+                     <p id="d2e1/3786B1FC" class="Code" style="margin-left: 1em;">"uri": "http://standaarden.omgevingswet.overheid.nl/id/bibliographicresource/BesluitActiviteitenLeefomgeving",</p>
+                     <p id="d2e1/4566E9DD" class="Code" style="margin-left: 1em;">"titel": "Besluit activiteiten leefomgeving",</p>
+                     <p id="d2e1/18268A8B" class="Code" style="margin-left: 1em;">"webpagina": "https://wetten.overheid.nl/BWBR0041330",</p>
+                     <p id="d2e1/199DC65F" class="Code" style="margin-left: 1em;">"metadata": {</p>
+                     <p id="d2e1/54CFF61D" class="Code" style="margin-left: 2em;">"uri": "http://standaarden.omgevingswet.overheid.nl/doc/20240214000000/bibliographicresource/BesluitActiviteitenLeefomgeving",</p>
+                     <p id="d2e1/49219AF0" class="Code" style="margin-left: 2em;">"startdatumGeldigheid": "2024-02-14"</p>
+                     <p id="d2e1/2941D250" class="Code" style="margin-left: 1em;">}</p>
+                     <p id="d2e1/27634A67" class="Code space-after" style="margin-left: 0em;">}</p>
+                  </div>
+               </section>
+               <section id="d2e1/d2e2929">
+                  <h3 id="d2e1/03B5F716" class="heading_3"><span class="number">3.2.3</span>skos:Collection</h3>
+                  <p id="d2e1/4BAC0ECF" class="Standaard">Het object met type ‘skos:Collection’ wordt gebruikt voor de symboolcodes.</p>
+                  <div class="code">
+                     <p id="d2e1/38ABA7EE" class="Code" style="margin-left: 0em;">{</p>
+                     <p id="d2e1/2C562C4F" class="Code" style="margin-left: 1em;">"@type": "skos:Collection",</p>
+                     <p id="d2e1/00EE8AD3" class="Code" style="margin-left: 1em;">"uri": "http://standaarden.omgevingswet.overheid.nl/id/collection/Vlak",</p>
+                     <p id="d2e1/5A507600" class="Code" style="margin-left: 1em;">"naam": "vlak",</p>
+                     <p id="d2e1/5BCBC46D" class="Code" style="margin-left: 1em;">"term": "Vlak",</p>
+                     <p id="d2e1/333B7A84" class="Code" style="margin-left: 1em;">"domein": "http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Symboolcode",</p>
+                     <p id="d2e1/0BD7E988" class="Code" style="margin-left: 1em;">"metadata": {</p>
+                     <p id="d2e1/7526B622" class="Code" style="margin-left: 2em;">"uri": "http://standaarden.omgevingswet.overheid.nl/doc/20220614000000/collection/Vlak",</p>
+                     <p id="d2e1/69262B3D" class="Code" style="margin-left: 2em;">"startdatumGeldigheid": "2022-06-14"</p>
+                     <p id="d2e1/7855AAC8" class="Code" style="margin-left: 1em;">},</p>
+                     <p id="d2e1/0985C2E1" class="Code" style="margin-left: 1em;">"leden": [</p>
+                     <p id="d2e1/6B91EDE7" class="Code" style="margin-left: 2em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vag145",</p>
+                     <p id="d2e1/5860B1A6" class="Code" style="margin-left: 2em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vag118",</p>
+                     <p id="d2e1/108C1B87" class="Code" style="margin-left: 2em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vag122",</p>
+                     <p id="d2e1/6A08C4EF" class="Code" style="margin-left: 2em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vag225",</p>
+                     <p id="d2e1/6D77FC2F" class="Code" style="margin-left: 2em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vag237",</p>
+                     <p id="d2e1/2F127E7A" class="Code" style="margin-left: 2em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vag247",</p>
+                     <p id="d2e1/738ADB45" class="Code" style="margin-left: 2em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vag200",</p>
+                     <p id="d2e1/310AD4D0" class="Code" style="margin-left: 2em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vag221",</p>
+                     <p id="d2e1/0792F506" class="Code" style="margin-left: 2em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vag241",</p>
+                     <p id="d2e1/2BCEA945" class="Code" style="margin-left: 2em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vag254",</p>
+                     <p id="d2e1/3240777C" class="Code" style="margin-left: 2em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vag244",</p>
+                     <p id="d2e1/26E3840D" class="Code" style="margin-left: 2em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vag207",</p>
+                     <p id="d2e1/79BE36E1" class="Code space-after" style="margin-left: 0em;">...</p>
+                  </div>
+                  <p id="d2e1/6FCFA5A5" class="Standaard">De afzonderlijke symboolcodes worden gedefinieerd als objecten van het type ‘skos:Concept’.</p>
+               </section>
+               <section id="d2e1/d2e3100">
+                  <h3 id="d2e1/23F58BD9" class="heading_3"><span class="number">3.2.4</span>skos:Concept</h3>
+                  <p id="d2e1/208033F2" class="Standaard">Het type ‘skos:Concept’ wordt gebruikt voor alle symboolcodes en alle unieke waarden.
+                     Daarbij wordt niet gekeken naar de uri van de waarde, maar naar de geversioneerde
+                     uri. Hierin is de startdatum geldigheid opgenomen.</p>
+                  <div class="code">
+                     <p id="d2e1/6D757825" class="Code" style="margin-left: 1em;">{</p>
+                     <p id="d2e1/4E8F1029" class="Code" style="margin-left: 2em;">"@type": "skos:Concept",</p>
+                     <p id="d2e1/616BE450" class="Code" style="margin-left: 2em;">"uri": "http://standaarden.omgevingswet.overheid.nl/verkeer/id/concept/Wandelroute",</p>
+                     <p id="d2e1/0322AEBA" class="Code" style="margin-left: 2em;">"naam": "wandelroute",</p>
+                     <p id="d2e1/6495CAFE" class="Code" style="margin-left: 2em;">"term": "Wandelroute",</p>
+                     <p id="d2e1/61995FAB" class="Code" style="margin-left: 2em;">"definitie": "Waarde voor attribuut groep bij het Gebiedsaanwijzingtype Verkeer voor
+                        het in regels en beleid aanwijzen, reserveren en beschermen van gronden voor wandelroutes.",</p>
+                     <p id="d2e1/53F81B74" class="Code" style="margin-left: 2em;">"uitleg": "",</p>
+                     <p id="d2e1/70422667" class="Code" style="margin-left: 2em;">"isSpecialisatieVan": [</p>
+                     <p id="d2e1/34C82186" class="Code" style="margin-left: 2em;">],</p>
+                     <p id="d2e1/7CBADEED" class="Code" style="margin-left: 2em;">"bronnen": [</p>
+                     <p id="d2e1/280734B7" class="Code" style="margin-left: 2em;">],</p>
+                     <p id="d2e1/377E2BD2" class="Code" style="margin-left: 2em;">"gerelateerd": [</p>
+                     <p id="d2e1/7E63DADF" class="Code" style="margin-left: 3em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/ls014",</p>
+                     <p id="d2e1/57D09712" class="Code" style="margin-left: 3em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/pr114",</p>
+                     <p id="d2e1/78406354" class="Code" style="margin-left: 3em;">"http://standaarden.omgevingswet.overheid.nl/symboolcode/id/concept/vsg014"</p>
+                     <p id="d2e1/592F8CE4" class="Code" style="margin-left: 2em;">],</p>
+                     <p id="d2e1/103CFEF1" class="Code" style="margin-left: 2em;">"domein": "http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Verkeer",</p>
+                     <p id="d2e1/0F0D1D8C" class="Code" style="margin-left: 2em;">"metadata": {</p>
+                     <p id="d2e1/05334DF8" class="Code" style="margin-left: 3em;">"uri": "<span style="background-color: yellow;">http://standaarden.omgevingswet.overheid.nl/verkeer/doc/20250313000000/concept/Wandelroute</span>",</p>
+                     <p id="d2e1/1C42C8DC" class="Code" style="margin-left: 3em;">"startdatumGeldigheid": "2025-03-13"</p>
+                     <p id="d2e1/49206861" class="Code" style="margin-left: 2em;">}</p>
+                     <p id="d2e1/1B8EBD1B" class="Code space-after" style="margin-left: 1em;">}</p>
+                  </div>
+                  <p id="d2e1/1A0AF206" class="Standaard">Veel informatie staat dubbel in het export-bestand omdat de invulling van een waarde
+                     is opgenomen als waarde in de objecten met type ‘catalogus:WaardelijstAsset’ en als
+                     object met type ‘skos:Concept’.</p>
+               </section>
+               <section id="d2e1/d2e3276">
+                  <h3 id="d2e1/16C7C3F8" class="heading_3"><span class="number">3.2.5</span>skos:ConceptScheme</h3>
+                  <p id="d2e1/20A1A7FF" class="Standaard">In het export-bestand worden domeinen gedefinieerd als objecten met type ‘skos:ConceptScheme’.
+                     Let erop dat ook symboolcodes een eigenschap domein hebben.</p>
+                  <div class="code">
+                     <p id="d2e1/3A84C243" class="Code" style="margin-left: 0em;">{</p>
+                     <p id="d2e1/121D6A05" class="Code" style="margin-left: 1em;">"@type": "skos:ConceptScheme",</p>
+                     <p id="d2e1/0D7907F4" class="Code" style="margin-left: 1em;">"uri": "http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Symboolcode",</p>
+                     <p id="d2e1/7732CFB6" class="Code" style="margin-left: 1em;">"naam": "symboolcode",</p>
+                     <p id="d2e1/73578288" class="Code" style="margin-left: 1em;">"uitleg": "Symboolcode",</p>
+                     <p id="d2e1/7F37A0B3" class="Code" style="margin-left: 1em;">"metadata": {</p>
+                     <p id="d2e1/141CF8A1" class="Code" style="margin-left: 2em;">"uri": "http://standaarden.omgevingswet.overheid.nl/doc/20201117000000/conceptscheme/Symboolcode",</p>
+                     <p id="d2e1/367AE6DF" class="Code" style="margin-left: 2em;">"startdatumGeldigheid": "2020-11-17"</p>
+                     <p id="d2e1/23F7BD33" class="Code" style="margin-left: 1em;">}</p>
+                     <p id="d2e1/72220C3D" class="Code" style="margin-left: 0em;">},</p>
+                     <p id="d2e1/1F3C81A3" class="Code" style="margin-left: 0em;">{</p>
+                     <p id="d2e1/6F461F42" class="Code" style="margin-left: 1em;">"@type": "skos:ConceptScheme",</p>
+                     <p id="d2e1/702A0708" class="Code" style="margin-left: 1em;">"uri": "http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Activiteit",</p>
+                     <p id="d2e1/175CB904" class="Code" style="margin-left: 1em;">"naam": "activiteit",</p>
+                     <p id="d2e1/5B3292B6" class="Code" style="margin-left: 1em;">"uitleg": "Betreft begrippen gerelateerd aan de menselijke handelingssfeer.",</p>
+                     <p id="d2e1/3E333C2A" class="Code" style="margin-left: 1em;">"metadata": {</p>
+                     <p id="d2e1/4E97EE40" class="Code" style="margin-left: 2em;">"uri": "http://standaarden.omgevingswet.overheid.nl/doc/20201117000000/conceptscheme/Activiteit",</p>
+                     <p id="d2e1/359BE2AB" class="Code" style="margin-left: 2em;">"startdatumGeldigheid": "2020-11-17"</p>
+                     <p id="d2e1/385396A9" class="Code" style="margin-left: 1em;">}</p>
+                     <p id="d2e1/67F54921" class="Code" style="margin-left: 0em;">},</p>
+                     <p id="d2e1/2DE496C8" class="Code space-after" style="margin-left: 0em;">...</p>
+                  </div>
+               </section>
+            </section>
+            <section id="d2e1/d2e3412">
+               <h2 id="d2e1/317FD6B4" class="heading_2"><span class="number">3.3</span>json.xsl</h2>
+               <p id="d2e1/7817B222" class="Standaard">In JSON bestaat de constructie ‘unnamed array’, een array van naamloze items. Deze
+                  constructie bestaat niet in XML. Daarom wordt in het tijdelijk bestand ‘export.xml’
+                  element ‘element’ gebruikt om een naamloos item in een array vast te leggen. De transformatie
+                  ‘json.xsl’ transformeert bestand ‘export.xml’ naar het uiteindelijke bestand ‘export.json’.</p>
+            </section>
+         </section>
+         <section id="d2e1/d2e3420">
+            <h1 id="d2e1/093BCDB0" class="heading_1"><span class="number">4</span>Workflow ‘publicatie’</h1>
+            <p id="d2e1/39C917D5" class="Standaard">Geonovum publiceert de waardelijsten ook als serviceproduct op de website. Leveranciers
+               gebruiken het download-pakket om de waardelijsten te importeren in hun software. Het
+               ZIP-bestand bevat de nieuwe versie van de waardelijsten in diverse bestandsformaten,
+               als XML-, JSON- en Excel-bestand. Daarnaast zijn de release notes opgenomen.</p>
+            <figure id="d2e1/d6e3496" style="width: 100%;"><img src="media/image11.png" alt="Overzicht van de serviceproducten"><figcaption><span class="number">Figuur 11</span>Overzicht van de serviceproducten</figcaption>
+            </figure>
+            <section id="d2e1/d2e3462">
+               <h2 id="d2e1/4958F249" class="heading_2"><span class="number">4.1</span>build.xml</h2>
+               <p id="d2e1/7A40BE63" class="Standaard">Voor de uitvoering van de workflow gebruiken we een ANT-script. De volgende stappen
+                  worden uitgevoerd:</p>
+               <ol>
+                  <li>
+                     <p id="d2e1/477A3495" class="Opsomming_nummers_1">‘Initialiseer mappen’: Een vast onderdeel in praktisch elk ANT-script is om de benodigde
+                        mappen klaar te zetten. De mapverwijzingen zijn gebaseerd op workflows op GitHub met
+                        behulp van action-scripts. Voor het beheerportaal zullen de verwijzingen naar te gebruiken
+                        mappen anders zijn.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/43B2FDEE" class="Opsomming_nummers_1">‘Transformeer indeling’: Leveranciers gebruiken een oudere indeling van de waardelijsten.
+                        Deze stap zet het bestand ‘waardelijsten.xml’ om.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/7757B9AC" class="Opsomming_nummers_1">‘Zet om naar json’: Voor het geval leveranciers de waardelijsten liever als JSON-bestand
+                        importeren, zet deze stap het XML-bestand om naar JSON.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/17297546" class="Opsomming_nummers_1">‘Stel excel samen’: Oorspronkelijk werden de waardelijsten gepubliceerd als Excel-bestand.
+                        Deze stap gebruikt een bestand ‘template.xlsx’ als template.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/2C10FBBB" class="Opsomming_nummers_1">‘Kopieer release notes’: Het bestand ‘informatie.txt’ wordt toegevoegd.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/0880F27B" class="Opsomming_nummers_1 space-after">‘Publiceer waardelijsten’: Voeg alle bestanden toe als ZIP-bestand.</p>
+                  </li>
+               </ol>
+               <p id="d2e1/36FE42DB" class="Standaard">De workflow plaatst de nieuwe versie van de waardelijsten in repository ‘TPOD-waardelijsten’.</p>
+            </section>
+            <section id="d2e1/d2e3523">
+               <h2 id="d2e1/5DD5B7E9" class="heading_2"><span class="number">4.2</span>indeling.xsl</h2>
+               <p id="d2e1/7C6824F7" class="Standaard">Om te voorkomen dat leveranciers hun import moeten aanpassen, zet transformatie ‘indeling.xsl’
+                  de waardelijsten terug naar een oudere indeling. Op verzoek worden toevoegingen als
+                  symboolcodes, eigenschappen ‘set’ en ‘deprecated’ meegenomen in de transformatie.</p>
+            </section>
+            <section id="d2e1/d2e3531">
+               <h2 id="d2e1/0B4783DE" class="heading_2"><span class="number">4.3</span>json.xsl</h2>
+               <p id="d2e1/12F14ACE" class="Standaard">Transformatie ‘json.xsl’ zet bestand ‘waardelijsten.xml’ om naar bestand ‘waardelijsten.json’.
+                  Deze versie is in de oude indeling.</p>
+               <div class="code">
+                  <p id="d2e1/43BBABBC" class="Code" style="margin-left: 0em;">{</p>
+                  <p id="d2e1/11B81687" class="Code" style="margin-left: 1em;">"waardelijsten": {</p>
+                  <p id="d2e1/5E44FA9B" class="Code" style="margin-left: 2em;">"versie": "4.2.1",</p>
+                  <p id="d2e1/174EE3AE" class="Code" style="margin-left: 2em;">"set": "IMOW",</p>
+                  <p id="d2e1/488135BE" class="Code" style="margin-left: 2em;">"waardelijst": [</p>
+                  <p id="d2e1/1FF7A852" class="Code" style="margin-left: 3em;">{</p>
+                  <p id="d2e1/7B0113A6" class="Code" style="margin-left: 4em;">"label": "activiteitengroep",</p>
+                  <p id="d2e1/735BBA8B" class="Code" style="margin-left: 4em;">"titel": "Activiteitengroep",</p>
+                  <p id="d2e1/21104E6D" class="Code" style="margin-left: 4em;">"uri": "http://standaarden.omgevingswet.overheid.nl/imow/id/waardelijst/Activiteitengroep",</p>
+                  <p id="d2e1/099D5CAE" class="Code" style="margin-left: 4em;">"type": "limitatief",</p>
+                  <p id="d2e1/74F931B6" class="Code" style="margin-left: 4em;">"omschrijving": "Waardelijst voor attribuut groep bij Activiteit, dat zorgt voor filteren
+                     en weergave van de symbolisatie van Activiteit op de kaart.",</p>
+                  <p id="d2e1/16F4FD4B" class="Code" style="margin-left: 4em;">"toelichting": "",</p>
+                  <p id="d2e1/4FA5E88F" class="Code" style="margin-left: 4em;">"waarden": {</p>
+                  <p id="d2e1/2AD78646" class="Code" style="margin-left: 5em;">"waarde": [</p>
+                  <p id="d2e1/2946FA7B" class="Code" style="margin-left: 6em;">{</p>
+                  <p id="d2e1/23040C5D" class="Code" style="margin-left: 7em;">"label": "aansluitactiviteit",</p>
+                  <p id="d2e1/6D5B10CB" class="Code" style="margin-left: 7em;">"term": "Aansluitactiviteit",</p>
+                  <p id="d2e1/59A020C0" class="Code" style="margin-left: 7em;">"uri": "http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/Aansluitactiviteit",</p>
+                  <p id="d2e1/6F1539E4" class="Code" style="margin-left: 7em;">"definitie": "Waarde voor attribuut groep bij het object Activiteit voor het vastleggen
+                     van een gebied waar regels gelden over de aansluitactiviteit: het verbinden van de
+                     kabels en/of leidingen van een netwerk met een netwerkaansluitpunt ten behoeve van
+                     een onroerende zaak.",</p>
+                  <p id="d2e1/1C5ADF5C" class="Code" style="margin-left: 7em;">"toelichting": "",</p>
+                  <p id="d2e1/653785E4" class="Code" style="margin-left: 7em;">"bron": "",</p>
+                  <p id="d2e1/1E1861E2" class="Code" style="margin-left: 7em;">"domein": "http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Activiteit",</p>
+                  <p id="d2e1/286FDDB7" class="Code" style="margin-left: 7em;">"specialisatie": "",</p>
+                  <p id="d2e1/66997B50" class="Code" style="margin-left: 7em;">"symboolcode": {</p>
+                  <p id="d2e1/291C90FE" class="Code" style="margin-left: 8em;">"lijn": {</p>
+                  <p id="d2e1/47F32D73" class="Code" style="margin-left: 9em;">"id": "ls021",</p>
+                  <p id="d2e1/57237210" class="Code" style="margin-left: 9em;">"content": "ls021"</p>
+                  <p id="d2e1/05DBAF20" class="Code" style="margin-left: 8em;">},</p>
+                  <p id="d2e1/57DA13E6" class="Code" style="margin-left: 8em;">"punt": {</p>
+                  <p id="d2e1/643A3E03" class="Code" style="margin-left: 9em;">"id": "pc221",</p>
+                  <p id="d2e1/2969E2AA" class="Code" style="margin-left: 9em;">"content": "pc221"</p>
+                  <p id="d2e1/5E296AF9" class="Code" style="margin-left: 8em;">},</p>
+                  <p id="d2e1/75F9BCC7" class="Code" style="margin-left: 8em;">"vlak": {</p>
+                  <p id="d2e1/08CC14D5" class="Code" style="margin-left: 9em;">"id": "vag145",</p>
+                  <p id="d2e1/1847F0A5" class="Code" style="margin-left: 9em;">"content": "vag145"</p>
+                  <p id="d2e1/1AE7A570" class="Code" style="margin-left: 8em;">}</p>
+                  <p id="d2e1/43C275B5" class="Code" style="margin-left: 7em;">},</p>
+                  <p id="d2e1/162A6730" class="Code" style="margin-left: 7em;">"deprecated": "false"</p>
+                  <p id="d2e1/08BCF853" class="Code" style="margin-left: 6em;">},</p>
+                  <p id="d2e1/666E6E79" class="Code space-after" style="margin-left: 0em;">...</p>
+               </div>
+            </section>
+            <section id="d2e1/d2e4016">
+               <h2 id="d2e1/39399773" class="heading_2"><span class="number">4.4</span>excel.xsl</h2>
+               <p id="d2e1/1665C221" class="Standaard">Excel-bestanden zijn in feite XML-bestanden in een ZIP-bestand. Verander je van Excel-bestand
+                  ‘template.xlsx’ de extensie ‘xlsx’ in ‘zip’, dan kun je deze uitpakken.</p>
+               <figure id="d2e1/d6e4101" style="width: 100%;"><img src="media/image12.png" alt="Indeling van een Excel-bestand"><figcaption><span class="number">Figuur 12</span>Indeling van een Excel-bestand</figcaption>
+               </figure>
+               <p id="d2e1/4D1D57D8" class="Standaard">De transformatie past de volgende bestanden aan:</p>
+               <ul>
+                  <li>
+                     <p id="d2e1/01F89741" class="Opsomming_tekens_1">‘sharedStrings.xml’ bevat alle teksten.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/31DB6610" class="Opsomming_tekens_1">‘sheet1’ bevat de indeling van de tabel.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/57F08E7A" class="Opsomming_tekens_1 space-after">‘table1’ bevat de opmaak van de tabel.</p>
+                  </li>
+               </ul>
+               <p id="d2e1/129663EE" class="Standaard">De transformatie bevat voor elk bestand een xsl:template:</p>
+               <div class="code">
+                  <p id="d2e1/048CD0D9" class="Code space-after" style="margin-left: 0em;">&lt;!-- verwerk waardelijsten.xml --&gt;</p>
+                  <p id="d2e1/69D86627" class="Code" style="margin-left: 0em;">&lt;xsl:template match="/"&gt;</p>
+                  <p id="d2e1/2DD3D344" class="Code" style="margin-left: 1em;">&lt;xsl:variable name="test" select="$waardelijsten"/&gt;</p>
+                  <p id="d2e1/325C9D2A" class="Code" style="margin-left: 1em;">&lt;xsl:call-template name="sharedStrings"/&gt;</p>
+                  <p id="d2e1/26061659" class="Code" style="margin-left: 1em;">&lt;xsl:call-template name="sheet1"/&gt;</p>
+                  <p id="d2e1/52940FC0" class="Code" style="margin-left: 1em;">&lt;xsl:call-template name="table1"/&gt;</p>
+                  <p id="d2e1/32BC4FB5" class="Code space-after" style="margin-left: 0em;">&lt;/xsl:template&gt;</p>
+               </div>
+               <p id="d2e1/7B6E6C19" class="Standaard">De opbouw van een tabel in Excel werkt met rijen en kolommen. Parameter ‘waardelijsten’
+                  zet de data alvast zo klaar dat het omgezet kan worden naar de bestanden ‘sharedStrings’,
+                  ‘sheet1’ en ‘table1’.</p>
+               <div class="code">
+                  <p id="d2e1/65E30ED6" class="Code" style="margin-left: 0em;">&lt;waardelijsten versie="4.2.1"&gt;</p>
+                  <p id="d2e1/52BD03AE" class="Code" style="margin-left: 1em;">&lt;item&gt;Waardelijst&lt;/item&gt;</p>
+                  <p id="d2e1/3842FF2E" class="Code" style="margin-left: 1em;">&lt;item&gt;Waarde&lt;/item&gt;</p>
+                  <p id="d2e1/7D4460CC" class="Code" style="margin-left: 1em;">&lt;item&gt;Label&lt;/item&gt;</p>
+                  <p id="d2e1/43427130" class="Code" style="margin-left: 1em;">&lt;item&gt;URI&lt;/item&gt;</p>
+                  <p id="d2e1/66FD1AAC" class="Code" style="margin-left: 1em;">&lt;item&gt;Deprecated&lt;/item&gt;</p>
+                  <p id="d2e1/16F52954" class="Code" style="margin-left: 1em;">&lt;item&gt;Omschrijving&lt;/item&gt;</p>
+                  <p id="d2e1/563F441F" class="Code" style="margin-left: 1em;">&lt;item&gt;Definitie&lt;/item&gt;</p>
+                  <p id="d2e1/54253379" class="Code" style="margin-left: 1em;">&lt;item&gt;Toelichting&lt;/item&gt;</p>
+                  <p id="d2e1/32349D79" class="Code" style="margin-left: 1em;">&lt;item&gt;Bron&lt;/item&gt;</p>
+                  <p id="d2e1/2789EFBE" class="Code" style="margin-left: 1em;">&lt;item&gt;Domein&lt;/item&gt;</p>
+                  <p id="d2e1/71BF1C1E" class="Code" style="margin-left: 1em;">&lt;item&gt;Specialisatie van&lt;/item&gt;</p>
+                  <p id="d2e1/4BA6B1C5" class="Code" style="margin-left: 1em;">&lt;item&gt;Symboolcode&lt;/item&gt;</p>
+                  <p id="d2e1/54FEAA9B" class="Code" style="margin-left: 0em;">&lt;/waardelijsten&gt;</p>
+                  <p id="d2e1/48E3E68F" class="Code" style="margin-left: 0em;">&lt;waardelijst&gt;</p>
+                  <p id="d2e1/6A10C527" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/206854C4" class="Code" style="margin-left: 1em;">&lt;item&gt;activiteitengroep&lt;/item&gt;</p>
+                  <p id="d2e1/5D88B6BF" class="Code" style="margin-left: 1em;">&lt;item&gt;http://standaarden.omgevingswet.overheid.nl/imow/id/waardelijst/Activiteitengroep&lt;/item&gt;</p>
+                  <p id="d2e1/60D7AB88" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/4CDC5AB2" class="Code" style="margin-left: 1em;">&lt;item&gt;Waardelijst voor attribuut groep bij Activiteit, dat zorgt voor filteren en
+                     weergave van de symbolisatie van Activiteit op de kaart.&lt;/item&gt;</p>
+                  <p id="d2e1/3C9033C8" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/031F66B0" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/66B3180C" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/7FAE6158" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/5FD96DC5" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/335501B3" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/5F2EEF6A" class="Code" style="margin-left: 0em;">&lt;/waardelijst&gt;</p>
+                  <p id="d2e1/26A3A8F9" class="Code" style="margin-left: 0em;">&lt;waarde&gt;</p>
+                  <p id="d2e1/6F962EC6" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/6F8D455B" class="Code" style="margin-left: 1em;">&lt;item&gt;Aansluitactiviteit&lt;/item&gt;</p>
+                  <p id="d2e1/19AAB5C3" class="Code" style="margin-left: 1em;">&lt;item&gt;aansluitactiviteit&lt;/item&gt;</p>
+                  <p id="d2e1/450BBD80" class="Code" style="margin-left: 1em;">&lt;item&gt;http://standaarden.omgevingswet.overheid.nl/activiteit/id/concept/Aansluitactiviteit&lt;/item&gt;</p>
+                  <p id="d2e1/6E71B229" class="Code" style="margin-left: 1em;">&lt;item&gt;false&lt;/item&gt;</p>
+                  <p id="d2e1/1ACCC6DB" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/3CF5920E" class="Code" style="margin-left: 1em;">&lt;item&gt;Waarde voor attribuut groep bij het object Activiteit voor het vastleggen van
+                     een gebied waar regels gelden over de aansluitactiviteit: het verbinden van de kabels
+                     en/of leidingen van een netwerk met een netwerkaansluitpunt ten behoeve van een onroerende
+                     zaak.&lt;/item&gt;</p>
+                  <p id="d2e1/33F0FC67" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/3F0FC2AD" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/5AAC36B8" class="Code" style="margin-left: 1em;">&lt;item&gt;http://standaarden.omgevingswet.overheid.nl/id/conceptscheme/Activiteit&lt;/item&gt;</p>
+                  <p id="d2e1/1BBC22D0" class="Code" style="margin-left: 1em;">&lt;item/&gt;</p>
+                  <p id="d2e1/1B90439B" class="Code" style="margin-left: 1em;">&lt;item&gt;ls021, pc221, vag145&lt;/item&gt;</p>
+                  <p id="d2e1/0DD575A0" class="Code" style="margin-left: 0em;">&lt;/waarde&gt;</p>
+                  <p id="d2e1/149CB8F0" class="Code space-after" style="margin-left: 0em;">...</p>
+               </div>
+               <p id="d2e1/6747A53F" class="Standaard">In de code staat elk element ‘waardelijsten’, ‘waardelijst’, ‘waarde’, ... voor een
+                  rij in de tabel. Elk element ‘item’ staat voor cel in de rij. Een leeg element ‘item’
+                  staat voor een lege cel in de rij.</p>
+               <p id="d2e1/1A615024" class="Alineakop">sharedStrings</p>
+               <p id="d2e1/3E66EF34" class="Standaard">Bestand ‘sharedStrings’ is eigenlijk niets anders dan een array met alle unieke teksten.
+                  Op basis van parameter ‘waardelijsten’ worden alle teksten en unieke teksten opgeslagen.</p>
+               <p id="d2e1/3B5A1478" class="Alineakop">sheet1</p>
+               <p id="d2e1/01D9ECE6" class="Standaard">Bestand ‘sheet1’ is wat complexer opgebouwd. Het bevat de hele tabel met alle rijen
+                  en kolommen. Elke tekstcel verwijst naar de bijbehorende tekst in bestand ‘sharedStrings’.</p>
+               <p id="d2e1/48E6EC15" class="Alineakop">table1</p>
+               <p id="d2e1/3A30DC6E" class="Standaard">Bestand ‘table1’ bevat de opmaak van de tabel. Het zorgt ervoor dat je kunt filteren
+                  op de kolommen. Een aandachtspunt is, dat SpreadsheetML gebruik maakt van guid’s.
+                  Hiervoor moet nog een goede xslt-routine komen. Daarom is het nog nodig om het bestand
+                  te testen. Excel herstelt na het openen het bestand ‘table1’. Uiteraard is hier een
+                  betere oplossing voor nodig.</p>
+               <figure id="d2e1/d6e4529" style="width: 100%;"><img src="media/image13.png" alt="Het is nog nodig om bestand ‘waardelijsten.xlsx’ te testen"><figcaption><span class="number">Figuur 13</span>Het is nog nodig om bestand ‘waardelijsten.xlsx’ te testen</figcaption>
+               </figure>
+            </section>
+         </section>
+         <section id="d2e1/d2e4485">
+            <h1 id="d2e1/0DE81975" class="heading_1"><span class="number">5</span>Workflow ‘symbolisatie’</h1>
+            <p id="d2e1/5C3EC4EA" class="Standaard">Aanpassingen aan de waardelijsten hebben ook consequenties voor andere serviceproducten
+               van Geonovum, voornamelijk de weergave van de symbolenbibliotheek. Daarom is deze
+               laatste workflow toegevoegd aan het hele werkproces.</p>
+            <section id="d2e1/d2e4494">
+               <h2 id="d2e1/37BF43DF" class="heading_2"><span class="number">5.1</span>build.xml</h2>
+               <p id="d2e1/35D03644" class="Standaard">Voor de uitvoering van de workflow gebruiken we een ANT-script. De volgende stappen
+                  worden uitgevoerd:</p>
+               <ol>
+                  <li>
+                     <p id="d2e1/2782BBAA" class="Opsomming_nummers_1">‘Initialiseer mappen’: Een vast onderdeel in praktisch elk ANT-script is om de benodigde
+                        mappen klaar te zetten. De mapverwijzingen zijn gebaseerd op workflows op GitHub met
+                        behulp van action-scripts. Voor het beheerportaal zullen de verwijzingen naar te gebruiken
+                        mappen anders zijn.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/0810841D" class="Opsomming_nummers_1">‘Maak applicatie’: Deze stap maakt de bestanden ‘symbolisatie.xml’ en ‘voorwaarden.xml’
+                        en plaatst deze in map ‘applicatie’.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/72BFAEE6" class="Opsomming_nummers_1">‘Maak weergave’: Deze stap maakt de bestanden ‘symbolisatie.xhtml’ en ‘waardelijsten.xhtml’
+                        en plaatst deze in map ‘weergave’.</p>
+                  </li>
+               </ol>
+            </section>
+            <section id="d2e1/d2e4527">
+               <h2 id="d2e1/3FF5BE85" class="heading_2"><span class="number">5.2</span>applicatie.xsl</h2>
+               <p id="d2e1/7D962895" class="Standaard">Het webformulier ‘Muteren waardelijsten’ heeft twee bestanden nodig om suggesties
+                  voor symboolcodes te genereren. Beide bestanden worden weergegeven in tabblad ‘applicatie’.
+                  Transformatie ‘applicatie.xsl’ transformeert alle symboolcodes in de symbolenbibliotheek
+                  naar bestand ‘symbolisatie.xml’. De symbolenbibliotheek bestaat uit vier SLD-bestanden.
+                  SLD staat voor ‘Styled Layer Descriptor’, een XML-formaat voor het definiëren van
+                  de weergave van kaartlagen.</p>
+               <figure id="d2e1/d6e4619" style="width: 100%;"><img src="media/image14.png" alt="Screendump van tabblad ‘applicatie’"><figcaption><span class="number">Figuur 14</span>Screendump van tabblad ‘applicatie’</figcaption>
+               </figure>
+               <p id="d2e1/2ECF151F" class="Standaard">Het is niet nodig om bij elke versie van de waardelijsten de bestanden ‘symbolisatie.xml’
+                  en ‘voorwaarden.xml’ te vervangen. Het is alleen nodig als er wijzigingen in de symbolenbibliotheek
+                  zijn.</p>
+            </section>
+            <section id="d2e1/d2e4571">
+               <h2 id="d2e1/3D2CF5A6" class="heading_2"><span class="number">5.3</span>symbolisatie.xsl</h2>
+               <p id="d2e1/2E422FDD" class="Standaard">Transformatie ‘symbolisatie.xsl’ transformeert alle symboolcodes in de symbolenbibliotheek
+                  naar bestand ‘symbolisatie.xhtml’. De transformatie heeft de volgende bestanden nodig
+                  om er een weergave van te maken:</p>
+               <ul>
+                  <li>
+                     <p id="d2e1/602D7013" class="Opsomming_tekens_1">Map ‘sld’ bevat de symbolenbibliotheek.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/51146D89" class="Opsomming_tekens_1">Map ‘png’ bevat 1485 PNG-bestanden.</p>
+                  </li>
+                  <li>
+                     <p id="d2e1/2A1DFC37" class="Opsomming_tekens_1">Stylesheet ‘symbolisatie.css’ bevat de verwijzingen naar alle PNG-bestanden.</p>
+                  </li>
+               </ul>
+               <figure id="d2e1/d6e4681" style="width: 100%;"><img src="media/image15.png" alt="Map ‘png’ bevat de weergave van de symboolcodes"><figcaption><span class="number">Figuur 15</span>Map ‘png’ bevat de weergave van de symboolcodes</figcaption>
+               </figure>
+               <p id="d2e1/275D06E4" class="Alineakop">Symbolenbibliotheek 1.3.1</p>
+               <p id="d2e1/2A1629B6" class="Standaard">De symbolenbibliotheek bevat SLD-bestanden voor lijnen, punten, vlakken en normwaarden.
+                  Toekennen van symboolcodes voor lijnen, punten en vlakken is goed geregeld zowel in
+                  het webformulier ‘Muteren waardelijsten’ als in transformatie ‘symbolisatie.xsl’.
+                  Aan waardelijst ‘TypeNorm’ worden geen symboolcodes toegekend. Dit is een punt van
+                  aandacht.</p>
+               <p id="d2e1/53B5DCA5" class="Alineakop">Stylesheet ‘symbolisatie.css’</p>
+               <p id="d2e1/7DCB2D8A" class="Standaard">Bestand ‘symbolisatie.xhtml’ legt symboolcode ‘vag401’ als volgt vast:</p>
+               <div class="code">
+                  <p id="d2e1/0AEB04C1" class="Code" style="margin-left: 0em;">&lt;vlak id="vag4"&gt;</p>
+                  <p id="d2e1/270D87E8" class="Code" style="margin-left: 1em;">...</p>
+                  <p id="d2e1/6778B158" class="Code" style="margin-left: 1em;">&lt;code <span style="background-color: yellow;">id="vag401"</span>&gt;</p>
+                  <p id="d2e1/3A6F5D77" class="Code" style="margin-left: 2em;">&lt;popup&gt;</p>
+                  <p id="d2e1/7CAA5A57" class="Code" style="margin-left: 3em;">&lt;parameter name="waarden"&gt;Geen&lt;/parameter&gt;</p>
+                  <p id="d2e1/1D43A4B6" class="Code" style="margin-left: 3em;">&lt;parameter name="stroke"&gt;#ebf0d2&lt;/parameter&gt;</p>
+                  <p id="d2e1/2DEE7078" class="Code" style="margin-left: 3em;">&lt;parameter name="stroke-opacity"&gt;1&lt;/parameter&gt;</p>
+                  <p id="d2e1/30B831CD" class="Code" style="margin-left: 3em;">&lt;parameter name="stroke-width"&gt;2&lt;/parameter&gt;</p>
+                  <p id="d2e1/3B398AB2" class="Code" style="margin-left: 3em;">&lt;parameter name="stroke-linejoin"&gt;round&lt;/parameter&gt;</p>
+                  <p id="d2e1/45D42107" class="Code" style="margin-left: 2em;">&lt;/popup&gt;</p>
+                  <p id="d2e1/232E5358" class="Code" style="margin-left: 1em;">&lt;/code&gt;</p>
+                  <p id="d2e1/10398121" class="Code" style="margin-left: 1em;">...</p>
+                  <p id="d2e1/7F08C7A3" class="Code space-after" style="margin-left: 0em;">&lt;/vlak&gt;</p>
+               </div>
+               <p id="d2e1/3FAEEB9B" class="Standaard">De stylesheet speelt een belangrijke rol bij de grafische weergave van de symboolcode.
+                  Het koppelt element ‘code’ met id ‘vag401’ aan afbeelding ‘png/va401.png’:</p>
+               <div class="code">
+                  <p id="d2e1/2BF2394E" class="Code" style="margin-left: 0em;">vlak code[id='vag401']::after{</p>
+                  <p id="d2e1/73BA9EA6" class="Code" style="margin-left: 1em;">content:'\00A0';</p>
+                  <p id="d2e1/1A4DCD88" class="Code" style="margin-left: 1em;">line-height: 30px;</p>
+                  <p id="d2e1/6E4892D8" class="Code" style="margin-left: 1em;"><span style="background-color: yellow;">background-image:url('png/va401.png')</span>;</p>
+                  <p id="d2e1/4AB735B8" class="Code" style="margin-left: 1em;">border-width:2px;</p>
+                  <p id="d2e1/6E39F6DE" class="Code" style="margin-left: 1em;">border-color: rgba(235,240,210,1);</p>
+                  <p id="d2e1/361AFAA3" class="Code" style="margin-left: 1em;">border-style: solid;</p>
+                  <p id="d2e1/6AD8ABC8" class="Code space-after" style="margin-left: 0em;">}</p>
+               </div>
+            </section>
+            <section id="d2e1/d2e4794">
+               <h2 id="d2e1/5C66049F" class="heading_2"><span class="number">5.4</span>waardelijsten.xsl</h2>
+               <p id="d2e1/008D7179" class="Standaard">Transformatie ‘waardelijsten.xsl’ transformeert de nieuwe versie van de waardelijsten
+                  naar bestand ‘waardelijsten.xhtml’. Een punt van aandacht is, dat aan waardelijst
+                  ‘TypeNorm’ geen symboolcodes worden toegekend, terwijl deze wel gedefinieerd zijn
+                  in de symbolenbibliotheek. Een complicatie is dat voor normwaarden de weergave gedefinieerd
+                  is als reeks. Dit is omdat de normwaarde vaak verschillende gradaties kent. Bijvoorbeeld
+                  normwaarde ‘aandeel sociale woningbouw’ zal een procentuele gradatie hebben met elk
+                  een symboolcode uit de reeks.</p>
+               <figure id="d2e1/d6e4892" style="width: 100%;"><img src="media/image16.png" alt="De detailinformatie wordt weergegeven met een popup"><figcaption><span class="number">Figuur 16</span>De detailinformatie wordt weergegeven met een popup</figcaption>
+               </figure>
+            </section>
+         </section>
+      </main>
+   </body>
+</html>
