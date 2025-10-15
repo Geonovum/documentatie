@@ -13,12 +13,12 @@
       "foaf": "http://xmlns.com/foaf/0.1"
     }
   ],
-  "@id": "https://https://geonovum.github.io/documentatie/d8e06e9a63dfd64fe7c42cfdd1b33f84/",
+  "@id": "https://https://geonovum.github.io/documentatie/99e6114ec892ee3eabc0572ad6568c15/",
   "@type": "TechArticle",
   "headline": "Opzet van het publicatieproces",
   "inLanguage": "nl",
   "license": "https://creativecommons.org/licenses/by-nd/4.0/",
-  "datePublished": "2025-10-15T14:44:03.1093154+02:00",
+  "datePublished": "2025-10-15T15:30:05.0388094+02:00",
   "copyrightHolder": {
     "@type": "Organization",
     "name": "Geonovum",
@@ -91,14 +91,10 @@
                   </li>
                </ol>
             </li>
-            <li class="tocline"><a class="tocxref" href="#d2e1/6F8D2A32"><span class="tocnumber">3</span>Opslaan</a><ol class="toc"></ol>
-            </li>
-            <li class="tocline"><a class="tocxref" href="#d2e1/1440EA9F"><span class="tocnumber">4</span>Samenvoegen</a><ol class="toc"></ol>
-            </li>
-            <li class="tocline"><a class="tocxref" href="#d2e1/31729DB5"><span class="tocnumber">5</span>Publiceren</a><ol class="toc">
-                  <li class="tocline"><a class="tocxref" href="#d2e1/5651B2C6"><span class="tocnumber">5.1</span>Het Word-sjabloon ‘TPOD publicatie.dotm’</a><ol class="toc"></ol>
+            <li class="tocline"><a class="tocxref" href="#d2e1/31729DB5"><span class="tocnumber">3</span>Publiceren</a><ol class="toc">
+                  <li class="tocline"><a class="tocxref" href="#d2e1/5651B2C6"><span class="tocnumber">3.1</span>Het Word-sjabloon ‘TPOD publicatie.dotm’</a><ol class="toc"></ol>
                   </li>
-                  <li class="tocline"><a class="tocxref" href="#d2e1/3CC3F368"><span class="tocnumber">5.2</span>De rhino-transformatie</a><ol class="toc"></ol>
+                  <li class="tocline"><a class="tocxref" href="#d2e1/3CC3F368"><span class="tocnumber">3.2</span>De rhino-transformatie</a><ol class="toc"></ol>
                   </li>
                </ol>
             </li>
@@ -139,15 +135,15 @@
             <p id="d2e1/2932ED02" class="Standaard">Twee kanttekeningen:</p>
             <ul>
                <li>
-                  <p id="d2e1/77FB97C2" class="Opsomming_tekens_1">Word is niet de ideale omgeving om een strak beheer op de toepassingsprofielen te
-                     voeren. Daarvoor zou je eigenlijk toe willen naar een inhoudelijke XML-structuur.
-                     Om XML-bestanden gebruikersvriendelijk te kunnen bewerken is een XML-editor nodig
-                     met alle nodige complicaties.</p>
+                  <p id="d2e1/77FB97C2" class="Opsomming_tekens_1">Op dit moment zijn niet alle workflows opgenomen in het beheerportaal. De workflows
+                     ‘opslaan’ en ‘samenvoegen’, samen met het gebruik van het web-formulier vragen specifieke
+                     kennis. Deze workflows worden alleen gebruikt bij uitgebreide aanpassingen van de
+                     basistekst.</p>
                </li>
                <li>
                   <p id="d2e1/14E1D126" class="Opsomming_tekens_1">Het is gebleken dat niet alles automatisch kan worden opgelost. Met name dynamische
-                     verwijzingen binnen het document zullen altijd nagelopen moeten worden. Het kan zijn
-                     dat tekstfragmenten waarnaar verwezen wordt, niet meer in het toepassingsprofiel zijn
+                     verwijzingen binnen het document moeten altijd nagelopen worden. Het kan zijn dat
+                     tekstfragmenten waarnaar verwezen wordt, niet meer in het toepassingsprofiel zijn
                      opgenomen waardoor er een ‘dode link’ ontstaat.</p>
                </li>
             </ul>
@@ -355,64 +351,9 @@
             </section>
          </section>
          <section id="d2e1/d2e811">
-            <h1 id="d2e1/6F8D2A32" class="heading_1"><span class="number">3</span>Opslaan</h1>
-            <p id="d2e1/12661C26" class="Standaard">De workflow ‘opslaan’ splitst het toepassingsprofiel in tekstfragmenten en legt de
-               opbouw vast in bestand ‘manifest.xml’. Zowel de teksfragmenten als het manifest-bestand
-               worden opgeslagen in repository ‘tpod-archief’.</p>
-            <figure id="d2e1/d6e869" style="width: 100%;"><img src="media/image16.png" alt="Afbeelding met tekst, diagram, nummer"><figcaption><span class="number">Figuur 16</span>Indeling van repository ‘tpod-archief’</figcaption>
-            </figure>
-            <p id="d2e1/768D69D8" class="Standaard">Het manifest-bestand legt de opbouw van het toepassingsprofiel vast.</p>
-            <div class="code">
-               <p id="d2e1/5F181B1B" class="Code" style="margin-left: 0em;">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</p>
-               <p id="d2e1/3AD4CE20" class="Code" style="margin-left: 0em;">&lt;manifest&gt;</p>
-               <p id="d2e1/10F46A02" class="Code" style="margin-left: 1em;">&lt;naam&gt;TPOD Omgevingsverordening_werkversie.docx&lt;/naam&gt;</p>
-               <p id="d2e1/0B93940A" class="Code" style="margin-left: 1em;">&lt;datum&gt;2021-06-04T08:45:42.78+02:00&lt;/datum&gt;</p>
-               <p id="d2e1/37A2F7C9" class="Code" style="margin-left: 1em;">&lt;colofon index="0"&gt;</p>
-               <p id="d2e1/02089DAF" class="Code" style="margin-left: 2em;">&lt;naam&gt;000_Colofon.docx&lt;/naam&gt;</p>
-               <p id="d2e1/1F95F6E0" class="Code" style="margin-left: 2em;">&lt;omgevingswetbesluit id="ov"&gt;omgevingsverordening&lt;/omgevingswetbesluit&gt;</p>
-               <p id="d2e1/572CC0F9" class="Code" style="margin-left: 2em;">&lt;afbeelding index="1"&gt;</p>
-               <p id="d2e1/6AF3F9E1" class="Code" style="margin-left: 3em;">&lt;naam&gt;image_e698d2f4d0e67fbbb74cf02ac2d7a011.png&lt;/naam&gt;</p>
-               <p id="d2e1/2CC61C62" class="Code" style="margin-left: 3em;">&lt;omgevingswetbesluit id="bt"&gt;basistekst&lt;/omgevingswetbesluit&gt;</p>
-               <p id="d2e1/473BA7F4" class="Code" style="margin-left: 3em;">&lt;type&gt;png&lt;/type&gt;</p>
-               <p id="d2e1/56A71900" class="Code" style="margin-left: 3em;">&lt;checksum&gt;e698d2f4d0e67fbbb74cf02ac2d7a011&lt;/checksum&gt;</p>
-               <p id="d2e1/6376FB46" class="Code" style="margin-left: 2em;">&lt;/afbeelding&gt;</p>
-               <p id="d2e1/6692AA4F" class="Code" style="margin-left: 2em;">&lt;metadata&gt;</p>
-               <p id="d2e1/239C7889" class="Code" style="margin-left: 3em;">...</p>
-               <p id="d2e1/44C8DF75" class="Code" style="margin-left: 2em;">&lt;/metadata&gt;</p>
-               <p id="d2e1/6931747A" class="Code" style="margin-left: 2em;">&lt;versiehistorie&gt;</p>
-               <p id="d2e1/294E5885" class="Code" style="margin-left: 3em;">...</p>
-               <p id="d2e1/3DA6A4E2" class="Code" style="margin-left: 2em;">&lt;/versiehistorie&gt;</p>
-               <p id="d2e1/3D103F47" class="Code" style="margin-left: 1em;">&lt;/colofon&gt;</p>
-               <p id="d2e1/33586414" class="Code" style="margin-left: 1em;">&lt;document index="1"&gt;</p>
-               <p id="d2e1/61043293" class="Code" style="margin-left: 2em;">&lt;naam&gt;001_Uitgangspunten_voor_de_modellering.docx&lt;/naam&gt;</p>
-               <p id="d2e1/79150D09" class="Code" style="margin-left: 2em;">&lt;omgevingswetbesluit id="bt"&gt;basistekst&lt;/omgevingswetbesluit&gt;</p>
-               <p id="d2e1/37A21818" class="Code" style="margin-left: 2em;">&lt;versie&gt;2.0.0-rc&lt;/versie&gt;</p>
-               <p id="d2e1/60831414" class="Code" style="margin-left: 2em;">&lt;titel&gt;Uitgangspunten voor de modellering&lt;/titel&gt;</p>
-               <p id="d2e1/1FA6286C" class="Code" style="margin-left: 2em;">&lt;niveau&gt;1&lt;/niveau&gt;</p>
-               <p id="d2e1/446972F4" class="Code" style="margin-left: 2em;">&lt;checksum&gt;70b07588f5bcccc211add9f1c3903d72&lt;/checksum&gt;</p>
-               <p id="d2e1/1C6BCB91" class="Code" style="margin-left: 1em;">&lt;/document&gt;</p>
-               <p id="d2e1/6E6D33BE" class="Code" style="margin-left: 2em;">...</p>
-               <p id="d2e1/6E66F775" class="Code" style="margin-left: 1em;">&lt;document index="8"&gt;</p>
-               <p id="d2e1/7F303205" class="Code" style="margin-left: 2em;">&lt;naam&gt;008_Inhoudelijke_aspecten_van_DOCVARIABLE_ID01.docx&lt;/naam&gt;</p>
-               <p id="d2e1/76FBE705" class="Code" style="margin-left: 2em;">&lt;omgevingswetbesluit id="ov"&gt;omgevingsverordening&lt;/omgevingswetbesluit&gt;</p>
-               <p id="d2e1/38DA98BD" class="Code" style="margin-left: 2em;">&lt;versie&gt;2.0.0-rc&lt;/versie&gt;</p>
-               <p id="d2e1/3522501F" class="Code" style="margin-left: 2em;">&lt;titel&gt;Inhoudelijke aspecten van de omgevingsverordening&lt;/titel&gt;</p>
-               <p id="d2e1/0068775A" class="Code" style="margin-left: 2em;">&lt;niveau&gt;2&lt;/niveau&gt;</p>
-               <p id="d2e1/42B7731D" class="Code" style="margin-left: 2em;">&lt;checksum&gt;6a8401dc4f8da8deeff859a796c6846a&lt;/checksum&gt;</p>
-               <p id="d2e1/12C7FAF4" class="Code" style="margin-left: 1em;">&lt;/document&gt;</p>
-               <p id="d2e1/1CF31538" class="Code" style="margin-left: 2em;">...</p>
-               <p id="d2e1/24E48693" class="Code space-after" style="margin-left: 0em;">&lt;/manifest&gt;</p>
-            </div>
-         </section>
-         <section id="d2e1/d2e1125">
-            <h1 id="d2e1/1440EA9F" class="heading_1"><span class="number">4</span>Samenvoegen</h1>
-            <figure id="d2e1/d6e1182" style="width: 100%;"><img src="media/image17.png" alt="Afbeelding met tekst, schermopname, software, Computerpictogram"><figcaption><span class="number">Figuur 17</span>Na het aanmaken van een nieuwe versie van het toepassingsprofiel is veld ‘nieuw’ leeg</figcaption>
-            </figure>
-         </section>
-         <section id="d2e1/d2e1165">
-            <h1 id="d2e1/31729DB5" class="heading_1"><span class="number">5</span>Publiceren</h1>
-            <section id="d2e1/d2e1171">
-               <h2 id="d2e1/5651B2C6" class="heading_2"><span class="number">5.1</span>Het Word-sjabloon ‘TPOD publicatie.dotm’</h2>
+            <h1 id="d2e1/31729DB5" class="heading_1"><span class="number">3</span>Publiceren</h1>
+            <section id="d2e1/d2e817">
+               <h2 id="d2e1/5651B2C6" class="heading_2"><span class="number">3.1</span>Het Word-sjabloon ‘TPOD publicatie.dotm’</h2>
                <p id="d2e1/174428E1" class="Standaard">Voor publicatie van de toepassingsprofielen moet er nog extra informatie aan de Word-documenten
                   toegevoegd worden. Het gaat dan vooral om informatie in het voorwerk en in het zogenaamde
                   json-ld blok. Hiervoor zijn de volgende stappen nodig:</p>
@@ -426,7 +367,7 @@
                         opgeven van extra metadata.</p>
                   </li>
                </ol>
-               <figure id="d2e1/d6e1250" style="width: 68.74898547504074%;"><img src="media/image18.png" alt="Afbeelding met tekst, schermopname, nummer, Lettertype"><figcaption><span class="number">Figuur 18</span>Tabblad ‘Publicatie’ bevat alle benodigde informatie</figcaption>
+               <figure id="d2e1/d6e892" style="width: 68.74898547504074%;"><img src="media/image16.png" alt="Afbeelding met tekst, schermopname, nummer, Lettertype"><figcaption><span class="number">Figuur 16</span>Tabblad ‘Publicatie’ bevat alle benodigde informatie</figcaption>
                </figure>
                <p id="d2e1/72B6CF10" class="Standaard">Voor de publicatie zijn onderstaande gegevens van belang:</p>
                <ul>
@@ -469,12 +410,12 @@
                   </li>
                </ul>
             </section>
-            <section id="d2e1/d2e1286">
-               <h2 id="d2e1/3CC3F368" class="heading_2"><span class="number">5.2</span>De rhino-transformatie</h2>
+            <section id="d2e1/d2e933">
+               <h2 id="d2e1/3CC3F368" class="heading_2"><span class="number">3.2</span>De rhino-transformatie</h2>
                <p id="d2e1/58949D68" class="Standaard space-after">De afkorting ‘rhino’ staat voor ‘ReSpec-HTML in name only’. De transformatie volgt
                   zoveel mogelijk de opzet van ReSpec-documenten, maar het heeft belangrijke verschillen,
                   met name in de koppenstructuur en de opsommingen.</p>
-               <p id="d2e1/4785A9AB" class="Standaard space-after">[Verder beschrijven als deze op het beheerportaal staat.]</p>
+               <p id="d2e1/4785A9AB" class="Standaard space-after"><span style="background-color: yellow;">[Verder beschrijven als deze op het beheerportaal staat.]</span></p>
             </section>
          </section>
       </main>
