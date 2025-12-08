@@ -300,7 +300,7 @@ nav span.tocnumber {
 
 /* issue, note, example, blockquote, important */
 
-div.issue, div.note, div.example, div.blockquote, div.important {
+div.issue, div.note, div.example, div.blockquote, div.belangrijk, div.voorbeeld {
   margin: 1em auto;
   padding: .5em;
   border: .5em;
@@ -346,9 +346,13 @@ div.note::before {
 div.blockquote {
   border-color: #C0C0C0;
 }
-div.important {
+div.belangrijk {
   border-color: #FF0000;
   color: #FF0000;
+}
+div.voorbeeld {
+  border-color: #5B9BD5;
+  color: #5B9BD5;
 }
 
 /* code */
