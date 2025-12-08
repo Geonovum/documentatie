@@ -298,7 +298,7 @@ nav span.tocnumber {
   white-space: nowrap;
 }
 
-/* issue, note, example, blockquote, important */
+/* issue, note, example, blockquote, belangrijk, voorbeeld */
 
 div.issue, div.note, div.example, div.blockquote, div.belangrijk, div.voorbeeld {
   margin: 1em auto;
