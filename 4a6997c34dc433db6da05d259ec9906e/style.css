@@ -141,7 +141,7 @@ ol,ul {
 /* inline */
 
 a {
-  color: black;
+  color: inherit;
   font-weight: bold;
 }
 

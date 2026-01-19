@@ -18,7 +18,7 @@
   "headline": "Opbouw van een BOPA GML-bestand",
   "inLanguage": "nl",
   "license": "https://creativecommons.org/licenses/by-nd/4.0/",
-  "datePublished": "2025-12-10T11:51:21.2979877+01:00",
+  "datePublished": "2026-01-19T07:45:10.1304834+01:00",
   "copyrightHolder": {
     "@type": "Organization",
     "name": "Geonovum",
@@ -114,7 +114,7 @@
                   via de omgeving van het omgevingsplan. Na aanlevering zorgt DROP automatisch voor
                   het zichtbaar worden van de kennisgeving in het Omgevingsloket én voor de publicatie
                   van de kennisgeving van de BOPA op officielebekendmakingen.nl. </p>
-               <p id="d2e1/439ABB86" class="Standaard space-after">Het <span class="hyperlink" style=""><a href="https://geonovum.github.io/TPOD/TPOD%20Kennisgeving%20omgevingsvergunning%20buitenplanse%20omgevingsplanactiviteit/TPOD%20Kennisgeving%20omgevingsvergunning%20buitenplanse%20omgevingsplanactiviteit%20v1.0.0.pdf" target="_blank">Toepassingsprofiel kennisgeving BOPA</a></span> beschrijft de procedure en aan te leveren bestanden voor de kennisgeving met behulp
+               <p id="d2e1/439ABB86" class="Standaard space-after">Het <span class="hyperlink"><a href="https://geonovum.github.io/TPOD/TPOD%20Kennisgeving%20omgevingsvergunning%20buitenplanse%20omgevingsplanactiviteit/TPOD%20Kennisgeving%20omgevingsvergunning%20buitenplanse%20omgevingsplanactiviteit%20v1.0.0.pdf" target="_blank">Toepassingsprofiel kennisgeving BOPA</a></span> beschrijft de procedure en aan te leveren bestanden voor de kennisgeving met behulp
                   van DROP. </p>
                <p id="d2e1/2CC0C278" class="Standaard">U kunt direct inloggen op DROP of (indien beschikbaar) gebruikmaken van de koppeling
                   naar DROP in uw VTH-software. In DROP of in uw software selecteert u dat het een BOPA
@@ -153,7 +153,7 @@
                de basisgeometrie.xsd voor het maken van een kennisgeving omgevingsvergunning BOPA
                GML-bestand en gebruik geen XSD-bestand uit IMRO of QGIS. Deze basisgeometrie.xsd
                is te vinden op:</p>
-            <p id="d2e1/3FD57ADC" class="Standaard space-after"><span class="hyperlink" style=""><a href="https://register.geostandaarden.nl/gmlapplicatieschema/basisgeometrie/1.0.0/basisgeometrie.xsd" target="_blank"><span style="background-color: #clear;">https://register.geostandaarden.nl/gmlapplicatieschema/basisgeometrie/1.0.0/basisgeometrie.xsd</span></a></span></p>
+            <p id="d2e1/3FD57ADC" class="Standaard space-after"><span class="hyperlink"><a href="https://register.geostandaarden.nl/gmlapplicatieschema/basisgeometrie/1.0.0/basisgeometrie.xsd" target="_blank"><span style="background-color: #clear;">https://register.geostandaarden.nl/gmlapplicatieschema/basisgeometrie/1.0.0/basisgeometrie.xsd</span></a></span></p>
             <p id="d2e1/0481642D" class="Standaard space-after">De eerste regel van het GML-bestand bevat een referentie naar de basisgeometrie.xsd:</p>
             <div class="code">
                <p id="d2e1/72ECBD6E" class="Standaard" style="margin-left: 0em;">&lt;FeatureCollectionGeometrie xsi:schemaLocation="http://www.geostandaarden.nl/basisgeometrie/1.0
@@ -171,13 +171,13 @@
                <h2 id="d2e1/194B2F49" class="heading_2"><span class="number">3.1</span>ID genereren en invullen</h2>
                <p id="d2e1/7461D21E" class="Standaard">Elke Geometrie bevat een element ‘id’ en ‘geometrie’ (regel 30 van de template). Het
                   is nodig om één of meer geldige GUID te genereren. Hiervoor kunt u gebruik maken van
-                  een online tool, bijvoorbeeld <span class="hyperlink" style=""><a href="https://guidgenerator.com/" target="_blank">https://guidgenerator.com/</a></span>. Laat de weergave met streepjes aanstaan (<span class="hyperlink" style=""><a href="#d2e1/d6e180">Figuur 1</a></span>).</p>
+                  een online tool, bijvoorbeeld <span class="hyperlink"><a href="https://guidgenerator.com/" target="_blank">https://guidgenerator.com/</a></span>. Laat de weergave met streepjes aanstaan (<span class="hyperlink"><a href="#d2e1/d6e180">Figuur 1</a></span>).</p>
                <figure id="d2e1/d6e180" style="width: 100%;"><img src="media/image1.png" alt="Afbeelding met tekst, schermopname, software, Webpagina"><figcaption><span class="number">Figuur 1</span>Voorbeeld van het genereren van een ID door een GUID generator</figcaption>
                </figure>
-               <p id="d2e1/0817677E" class="Standaard">Voeg de ID uit de GUID-generator in de GML (regel 30 in de template), zoals in <span class="hyperlink" style=""><a href="#d2e1/d6e226">Figuur 2</a></span>.</p>
+               <p id="d2e1/0817677E" class="Standaard">Voeg de ID uit de GUID-generator in de GML (regel 30 in de template), zoals in <span class="hyperlink"><a href="#d2e1/d6e226">Figuur 2</a></span>.</p>
                <figure id="d2e1/d6e226" style="width: 100%;"><img src="media/image2.png" alt="Afbeelding met tekst, schermopname, software, nummer"><figcaption><span class="number">Figuur 2</span>Voorbeeld invullen element ‘id’</figcaption>
                </figure>
-               <p id="d2e1/4440CC8D" class="Standaard space-after">Code uit <span class="hyperlink" style=""><a href="#d2e1/d6e226">Figuur 2</a></span> als tekst:</p>
+               <p id="d2e1/4440CC8D" class="Standaard space-after">Code uit <span class="hyperlink"><a href="#d2e1/d6e226">Figuur 2</a></span> als tekst:</p>
                <div class="code">
                   <p id="d2e1/08A197C4" class="Standaard" style="margin-left: 0em;">&lt;featureMember&gt;</p>
                   <p id="d2e1/744DBFB1" class="Standaard" style="margin-left: 1em;">&lt;Geometrie&gt;</p>
@@ -194,10 +194,10 @@
                   De attributen ‘gml:id’ en ‘srsName’ zijn verplicht. U kunt het ID kopiëren van stap
                   2.1 en plakken bij gml:id (regel 40 in de template). </p>
                <p id="d2e1/6F7C8A9F" class="Standaard">De srsName verwijst naar een CoordinateReferenceSystemType (CRS) in de gml. Deze is
-                  altijd ‘EPSG:28992’, namelijk het Nederlands Rijksdriehoekscoördinaten, zie <span class="hyperlink" style=""><a href="#d2e1/d6e345">Figuur 3</a></span>.</p>
+                  altijd ‘EPSG:28992’, namelijk het Nederlands Rijksdriehoekscoördinaten, zie <span class="hyperlink"><a href="#d2e1/d6e345">Figuur 3</a></span>.</p>
                <figure id="d2e1/d6e345" style="width: 100%;"><img src="media/image3.png" alt="Afbeelding met tekst, schermopname, software, nummer"><figcaption><span class="number">Figuur 3</span>Invullen van gml:id en srsName</figcaption>
                </figure>
-               <p id="d2e1/588D42FA" class="Standaard space-after">Relevante code uit <span class="hyperlink" style=""><a href="#d2e1/d6e345">Figuur 3</a></span> als tekst:</p>
+               <p id="d2e1/588D42FA" class="Standaard space-after">Relevante code uit <span class="hyperlink"><a href="#d2e1/d6e345">Figuur 3</a></span> als tekst:</p>
                <div class="code">
                   <p id="d2e1/3E4F49E9" class="Standaard" style="margin-left: 0em;">&lt;gml:MultiSurface gml:id="id-6009ae06-d459-41d8-b21c-fccfb27d527f-0" srsName="EPSG:28992"&gt;</p>
                </div>
@@ -225,10 +225,10 @@
                <p id="d2e1/2571EF0F" class="Standaard">Als laatste voegen we de coördinaten toe. Deze horen in element gml:posList (regel
                   48 in de template). Deze bevat XY-coördinaatparen en deze moeten ‘gesnapt’ zijn naar
                   drie decimalen. De coördinaatparen kunt u kopiëren vanuit een andere GML (IMRO-GML,
-                  QGIS-GML, enzovoorts). <span class="hyperlink" style=""><a href="#d2e1/d6e467">Figuur 4</a></span> geeft een voorbeeld.</p>
+                  QGIS-GML, enzovoorts). <span class="hyperlink"><a href="#d2e1/d6e467">Figuur 4</a></span> geeft een voorbeeld.</p>
                <figure id="d2e1/d6e467" style="width: 100%;"><img src="media/image4.png" alt="Geen alternatieve tekst beschikbaar"><figcaption><span class="number">Figuur 4</span>Voorbeeld van een gml:posList met XY-coördinaten</figcaption>
                </figure>
-               <p id="d2e1/389FBAA1" class="Standaard space-after">Code van de tweede gml:posList uit <span class="hyperlink" style=""><a href="#d2e1/d6e467">Figuur 4</a></span> als tekst:</p>
+               <p id="d2e1/389FBAA1" class="Standaard space-after">Code van de tweede gml:posList uit <span class="hyperlink"><a href="#d2e1/d6e467">Figuur 4</a></span> als tekst:</p>
                <div class="code">
                   <p id="d2e1/4DEA1ECD" class="Standaard space-after" style="margin-left: 0em;">&lt;gml:posList&gt;248273.954 575424.132 248287.967 575424.964 248287.97 575424.918 248288.045
                      575424.923 248295.162 575303.624 248301.823 575191.287 248301.807 575191.286 248301.81
@@ -237,7 +237,7 @@
                <p id="d2e1/6886D44E" class="Standaard">Mochten de coördinaatparen meer dan drie decimalen bevatten, dan is het handig om
                   eerst deze in de gml:posList te plaatsen en als laatste stap het definitieve GML-bestand
                   in bijvoorbeeld QGIS de bewerking ‘snap to grid’ uit te voeren. Dit is aangegeven
-                  in hoofdstuk <span class="hyperlink" style=""><a href="#d2e1/4B0A99A6">5</a></span> ‘BOPA-GML gereed’.</p>
+                  in hoofdstuk <span class="hyperlink"><a href="#d2e1/4B0A99A6">5</a></span> ‘BOPA-GML gereed’.</p>
                <div class="belangrijk">
                   <p id="d2e1/44719A89" class="Standaard"><span style="color: #FF0000;">Twee belangrijke aandachtspunten:</span></p>
                   <ul>

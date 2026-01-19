@@ -18,7 +18,7 @@
   "headline": "Technische aspecten",
   "inLanguage": "nl",
   "license": "https://creativecommons.org/licenses/by-nd/4.0/",
-  "datePublished": "2025-12-10T11:52:18.4612394+01:00",
+  "datePublished": "2026-01-19T07:46:08.1840541+01:00",
   "copyrightHolder": {
     "@type": "Organization",
     "name": "Geonovum",
@@ -664,7 +664,7 @@
             </section>
             <section id="d2e1/d2e1854">
                <h2 id="d2e1/11477C14" class="heading_2"><span class="number">2.5</span>check_waardelijsten_nieuw.xsl</h2>
-               <p id="d2e1/2599B08D" class="Standaard">In paragraaf <span class="hyperlink" style=""><a href="#d2e1/73558597">2.3</a></span> is aangegeven hoe een nieuw toegevoegde waarde er in bestand ‘nieuw_stap_1.xml’ uit
+               <p id="d2e1/2599B08D" class="Standaard">In paragraaf <span class="hyperlink"><a href="#d2e1/73558597">2.3</a></span> is aangegeven hoe een nieuw toegevoegde waarde er in bestand ‘nieuw_stap_1.xml’ uit
                   ziet. Transformatie ‘check_waardelijsten_nieuw.xsl’ voert drie handelingen uit:</p>
                <ul>
                   <li>
@@ -708,7 +708,7 @@
                   ‘my:check_string’. Bijvoorbeeld label ‘milieubelastende activiteit met beperkt effect’
                   wordt omgezet naar term ‘MilieubelastendeActiviteitMetBeperktEffect’.</p>
                <p id="d2e1/4ABD4793" class="Alineakop">uri</p>
-               <p id="d2e1/2B56F69B" class="Standaard">Alle uri’s in waardelijsten zijn opgebouwd conform de ‘<span class="hyperlink" style=""><a href="https://iplo.nl/publish/pages/162339/uri-strategie.pdf" target="_blank">URI-strategie 2.0</a></span>’. In de transformatie wordt dit als volgt samengesteld uit ‘domein’ en ‘term’. Merk
+               <p id="d2e1/2B56F69B" class="Standaard">Alle uri’s in waardelijsten zijn opgebouwd conform de ‘<span class="hyperlink"><a href="https://iplo.nl/publish/pages/162339/uri-strategie.pdf" target="_blank">URI-strategie 2.0</a></span>’. In de transformatie wordt dit als volgt samengesteld uit ‘domein’ en ‘term’. Merk
                   op dat niet de naam van de waardelijst wordt gebruikt.</p>
                <div class="code">
                   <p id="d2e1/718B46B2" class="Code space-after" style="margin-left: 0em;">uri='http://standaarden.omgevingswet.overheid.nl/',<i>lower-case</i>(<b>$domein</b>),'/id/concept/',<b>$term</b></p>
@@ -755,7 +755,7 @@
             </section>
             <section id="d2e1/d2e2284">
                <h2 id="d2e1/25B351A2" class="heading_2"><span class="number">2.6</span>maak_informatie.xsl</h2>
-               <p id="d2e1/755AA5E6" class="Standaard">In paragraaf <span class="hyperlink" style=""><a href="#d2e1/00C15C50">2.2</a></span> is de XML van een mutatie weergegeven. Een onderliggend element is ‘informatie’.</p>
+               <p id="d2e1/755AA5E6" class="Standaard">In paragraaf <span class="hyperlink"><a href="#d2e1/00C15C50">2.2</a></span> is de XML van een mutatie weergegeven. Een onderliggend element is ‘informatie’.</p>
                <div class="code">
                   <p id="d2e1/51F286C9" class="Code space-after" style="margin-left: 0em;">&lt;informatie&gt;Voeg aan waardelijst met uri='http://standaarden.omgevingswet.overheid.nl/imow/id/waardelijst/Verkeergroep'
                      een waarde toe met label is 'wandelroute', definitie is 'Waarde voor attribuut groep
@@ -770,11 +770,11 @@
          </section>
          <section id="d2e1/d2e2307">
             <h1 id="d2e1/4DB0438A" class="heading_1"><span class="number">3</span>Workflow ‘export’</h1>
-            <p id="d2e1/765F15B3" class="Standaard space-after">Alle waardelijsten worden gepubliceerd op de <span class="hyperlink" style=""><a href="https://stelselcatalogus.omgevingswet.overheid.nl/waardelijsten/overview" target="_blank">stelselcatalogus</a></span>. In nauwe samenwerking is de opbouw van ons export-bestand vastgesteld en getest.
+            <p id="d2e1/765F15B3" class="Standaard space-after">Alle waardelijsten worden gepubliceerd op de <span class="hyperlink"><a href="https://stelselcatalogus.omgevingswet.overheid.nl/waardelijsten/overview" target="_blank">stelselcatalogus</a></span>. In nauwe samenwerking is de opbouw van ons export-bestand vastgesteld en getest.
                Leveranciers gebruiken de API van de stelselcatalogus om data uit de waardelijsten
                op te vragen en in te voegen in eigen applicaties.</p>
             <p id="d2e1/446298EF" class="Standaard">De afgesproken werkwijze is, dat wij bestand ‘export.json’ plaatsen op de harvest-locatie
-               ‘<span class="hyperlink" style=""><a href="https://register.geostandaarden.nl/waardelijst/imow/" target="_blank">https://register.geostandaarden.nl/waardelijst/imow/</a></span>’. Als bestand ‘export.json’ niet beschikbaar is, krijgt de stelselcatalogus een foutmelding
+               ‘<span class="hyperlink"><a href="https://register.geostandaarden.nl/waardelijst/imow/" target="_blank">https://register.geostandaarden.nl/waardelijst/imow/</a></span>’. Als bestand ‘export.json’ niet beschikbaar is, krijgt de stelselcatalogus een foutmelding
                en nemen ze contact met ons op. Plaatsen we een nieuwe versie van bestand ‘export.json’,
                dan wordt deze binnen twee uur ingeladen in de stelselcatalogus.</p>
             <figure id="d2e1/d6e2379" style="width: 100%;"><img src="media/image8.png" alt="Index van de harvest-locatie"><figcaption><span class="number">Figuur 8</span>Index van de harvest-locatie</figcaption>
