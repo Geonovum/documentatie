@@ -13,12 +13,12 @@
       "foaf": "http://xmlns.com/foaf/0.1"
     }
   ],
-  "@id": "https://https://geonovum.github.io/documentatie/623160de1200193b30a0458463e09817/",
+  "@id": "https://https://geonovum.github.io/documentatie/9131b0dd87fbe98f5e7e90463bda5af2/",
   "@type": "TechArticle",
   "headline": "Opbouw van een BOPA GML-bestand",
   "inLanguage": "nl",
   "license": "https://creativecommons.org/licenses/by-nd/4.0/",
-  "datePublished": "2026-01-28T16:29:08.9836593+01:00",
+  "datePublished": "2026-02-17T15:58:14.3537735+01:00",
   "copyrightHolder": {
     "@type": "Organization",
     "name": "Geonovum",
@@ -175,7 +175,7 @@
                <figure id="d2e1/d6e180" style="width: 100%;"><img src="media/image1.png" alt="Afbeelding met tekst, schermopname, software, Webpagina"><figcaption><span class="number">Figuur 1</span>Voorbeeld van het genereren van een ID door een GUID generator</figcaption>
                </figure>
                <p id="d2e1/0817677E" class="Standaard">Voeg de ID uit de GUID-generator in de GML (regel 30 in de template), zoals in <span class="hyperlink"><a href="#d2e1/d6e226">Figuur 2</a></span>.</p>
-               <figure id="d2e1/d6e226" style="width: 100%;"><img src="media/image2.png" alt="Afbeelding met tekst, schermopname, software, nummer"><figcaption><span class="number">Figuur 2</span>Voorbeeld invullen element ‘id’</figcaption>
+               <figure id="d2e1/d6e226" style="width: 100%;"><img src="media/image2.png" alt="Picture 2"><figcaption><span class="number">Figuur 2</span>Voorbeeld invullen element ‘id’</figcaption>
                </figure>
                <p id="d2e1/4440CC8D" class="Standaard space-after">Code uit <span class="hyperlink"><a href="#d2e1/d6e226">Figuur 2</a></span> als tekst:</p>
                <div class="code">
@@ -187,17 +187,17 @@
                   <p id="d2e1/54681C2F" class="Standaard" style="margin-left: 2em;">&lt;geometrie&gt;</p>
                </div>
             </section>
-            <section id="d2e1/d2e303">
+            <section id="d2e1/d2e309">
                <h2 id="d2e1/65334255" class="heading_2"><span class="number">3.2</span>Invullen attributen gml:id en srsName</h2>
                <p id="d2e1/7F132035" class="Standaard">Elk element ‘geometrie’ bevat een element ‘gml:MultiSurface’. Dit zal het meest voorkomende
                   type zijn, maar het kan ook een ander type zijn, bijvoorbeeld gml:MultiPoint of gml:MultiCurve.
                   De attributen ‘gml:id’ en ‘srsName’ zijn verplicht. U kunt het ID kopiëren van stap
                   2.1 en plakken bij gml:id (regel 40 in de template). </p>
                <p id="d2e1/6F7C8A9F" class="Standaard">De srsName verwijst naar een CoordinateReferenceSystemType (CRS) in de gml. Deze is
-                  altijd ‘EPSG:28992’, namelijk het Nederlands Rijksdriehoekscoördinaten, zie <span class="hyperlink"><a href="#d2e1/d6e345">Figuur 3</a></span>.</p>
-               <figure id="d2e1/d6e345" style="width: 100%;"><img src="media/image3.png" alt="Afbeelding met tekst, schermopname, software, nummer"><figcaption><span class="number">Figuur 3</span>Invullen van gml:id en srsName</figcaption>
+                  altijd ‘EPSG:28992’, namelijk het Nederlands Rijksdriehoekscoördinaten, zie <span class="hyperlink"><a href="#d2e1/d6e351">Figuur 3</a></span>.</p>
+               <figure id="d2e1/d6e351" style="width: 100%;"><img src="media/image3.png" alt="Picture 3"><figcaption><span class="number">Figuur 3</span>Invullen van gml:id en srsName</figcaption>
                </figure>
-               <p id="d2e1/588D42FA" class="Standaard space-after">Relevante code uit <span class="hyperlink"><a href="#d2e1/d6e345">Figuur 3</a></span> als tekst:</p>
+               <p id="d2e1/588D42FA" class="Standaard space-after">Relevante code uit <span class="hyperlink"><a href="#d2e1/d6e351">Figuur 3</a></span> als tekst:</p>
                <div class="code">
                   <p id="d2e1/3E4F49E9" class="Standaard" style="margin-left: 0em;">&lt;gml:MultiSurface gml:id="id-6009ae06-d459-41d8-b21c-fccfb27d527f-0" srsName="EPSG:28992"&gt;</p>
                </div>
@@ -220,19 +220,18 @@
                   </ul>
                </div>
             </section>
-            <section id="d2e1/d2e428">
+            <section id="d2e1/d2e440">
                <h2 id="d2e1/545D96E0" class="heading_2"><span class="number">3.3</span>Invullen element gml:posList (XY-coördinaten)</h2>
-               <p id="d2e1/2571EF0F" class="Standaard">Als laatste voegen we de coördinaten toe. Deze horen in element gml:posList (regel
+               <p id="d2e1/2571EF0F" class="Standaard space-after">Als laatste voegen we de coördinaten toe. Deze horen in element gml:posList (regel
                   48 in de template). Deze bevat XY-coördinaatparen en deze moeten ‘gesnapt’ zijn naar
                   drie decimalen. De coördinaatparen kunt u kopiëren vanuit een andere GML (IMRO-GML,
-                  QGIS-GML, enzovoorts). <span class="hyperlink"><a href="#d2e1/d6e467">Figuur 4</a></span> geeft een voorbeeld.</p>
-               <figure id="d2e1/d6e467" style="width: 100%;"><img src="media/image4.png" alt="Geen alternatieve tekst beschikbaar"><figcaption><span class="number">Figuur 4</span>Voorbeeld van een gml:posList met XY-coördinaten</figcaption>
+                  QGIS-GML, enzovoorts). <span class="hyperlink"><a href="#d2e1/d6e487">Figuur 4</a></span> geeft een voorbeeld.</p>
+               <figure id="d2e1/d6e487" style="width: 100%;"><img src="media/image4.png" alt="Picture 2"><figcaption><span class="number">Figuur 4</span>Voorbeeld van een gml:posList met XY-coördinaten</figcaption>
                </figure>
-               <p id="d2e1/389FBAA1" class="Standaard space-after">Code van de tweede gml:posList uit <span class="hyperlink"><a href="#d2e1/d6e467">Figuur 4</a></span> als tekst:</p>
+               <p id="d2e1/389FBAA1" class="Standaard space-after">Code van de eerste gml:posList uit <span class="hyperlink"><a href="#d2e1/d6e487">Figuur 4</a></span> als tekst:</p>
                <div class="code">
-                  <p id="d2e1/4DEA1ECD" class="Standaard space-after" style="margin-left: 0em;">&lt;gml:posList&gt;248273.954 575424.132 248287.967 575424.964 248287.97 575424.918 248288.045
-                     575424.923 248295.162 575303.624 248301.823 575191.287 248301.807 575191.286 248301.81
-                     575191.234 248286.077 575190.317 248272.944 575424.075 248273.954 575424.132&lt;/gml:posList&gt;</p>
+                  <p id="d2e1/4DEA1ECD" class="Standaard space-after" style="margin-left: 0em;">&lt;gml:posList&gt;248252.359 575448.997 248244.134 575584.344 248279.516 575586.534 248288.277
+                     575451.528 248252.359 575448.997&lt;/gml:posList&gt;</p>
                </div>
                <p id="d2e1/6886D44E" class="Standaard">Mochten de coördinaatparen meer dan drie decimalen bevatten, dan is het handig om
                   eerst deze in de gml:posList te plaatsen en als laatste stap het definitieve GML-bestand
@@ -251,27 +250,27 @@
                </div>
             </section>
          </section>
-         <section id="d2e1/d2e546">
+         <section id="d2e1/d2e572">
             <h1 id="d2e1/23AC7463" class="heading_1"><span class="number">4</span>Uitbreiden aantal polygonen</h1>
             <p id="d2e1/29F9C019" class="Standaard">Wanneer de GML meerdere polygonen zou moeten bevatten, herhaalt u de stappen in een
                nieuw element gml:surfaceMember. Dit element voegt u toe door regels 39 tot en met
                52 (in de template) te kopiëren en te plakken in regel 53 (in de template). Na het
                toevoegen van een nieuw surfacemember herhaalt u de stappen beschreven in 2.2 en 2.3.</p>
-            <figure id="d2e1/d6e580" style="width: 100%;"><img src="media/image5.png" alt="Geen alternatieve tekst beschikbaar"><figcaption><span class="number">Figuur 5</span>Voorbeeld uit de template</figcaption>
+            <figure id="d2e1/d6e607" style="width: 100%;"><img src="media/image5.png" alt="Geen alternatieve tekst beschikbaar"><figcaption><span class="number">Figuur 5</span>Voorbeeld uit de template</figcaption>
             </figure>
          </section>
-         <section id="d2e1/d2e588">
+         <section id="d2e1/d2e614">
             <h1 id="d2e1/4B0A99A6" class="heading_1"><span class="number">5</span>BOPA-GML gereed</h1>
             <p id="d2e1/44EFE87E" class="Standaard">Als alles is ingevuld, sla dan de GML op met een duidelijke naam. Mochten de coördinaatparen
                nog niet op drie decimalen zijn afgerond, dan kunt u dit nu in QGIS doen met de toolbox
                (Ctrl-Alt-T), ‘snap to grid’. Let erop, dat de invoerlaag op ‘EPSG:28992’ staat en
                X-rasterafstand en Y-rasterafstand op 0,001 meter (drie decimalen).</p>
-            <figure id="d2e1/d6e627" style="width: 100%;"><img src="media/image6.png" alt="Afbeelding met tekst, schermopname, software, Computerpictogram"><figcaption><span class="number">Figuur 6</span>Afronden op drie decimalen in QGIS met ‘snap to grid’</figcaption>
+            <figure id="d2e1/d6e654" style="width: 100%;"><img src="media/image6.png" alt="Picture 2"><figcaption><span class="number">Figuur 6</span>Afronden op drie decimalen in QGIS met ‘snap to grid’</figcaption>
             </figure>
             <p id="d2e1/4216699E" class="Standaard">De BOPA-GML is nu gereed en kan gepubliceerd worden via DROP (of de testomgeving van
                DROP). Bevoegd gezagen hebben hiervoor een licentie.</p>
          </section>
-         <section id="d2e1/d2e636">
+         <section id="d2e1/d2e668">
             <h1 id="d2e1/25BE08B2" class="heading_1"><span class="number">6</span>BOPA-template</h1>
             <p id="d2e1/13F58811" class="Standaard space-after">Bijgevoegd is de BOPA-template als bijlage.</p>
             <div class="code">
