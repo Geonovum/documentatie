@@ -13,12 +13,12 @@
       "foaf": "http://xmlns.com/foaf/0.1"
     }
   ],
-  "@id": "https://https://geonovum.github.io/documentatie/bb5f8cc46b18945d0f102d1dd74e14cf/",
+  "@id": "https://https://geonovum.github.io/documentatie/adcdcda331a68d670f9f4ccf425de31e/",
   "@type": "TechArticle",
   "headline": "Waardelijsten muteren",
   "inLanguage": "nl",
   "license": "https://creativecommons.org/licenses/by-nd/4.0/",
-  "datePublished": "2026-02-19T15:02:43.0271868+01:00",
+  "datePublished": "2026-02-23T17:51:56.087664+01:00",
   "copyrightHolder": {
     "@type": "Organization",
     "name": "Geonovum",
@@ -77,13 +77,15 @@
                         </li>
                         <li class="tocline"><a class="tocxref" href="#d2e1/26608A03"><span class="tocnumber">1.7.2</span>Muteren</a><ol class="toc"></ol>
                         </li>
-                        <li class="tocline"><a class="tocxref" href="#d2e1/5087EC67"><span class="tocnumber">1.7.3</span>Exporteren</a><ol class="toc"></ol>
+                        <li class="tocline"><a class="tocxref" href="#d2e1/3E0ADAC0"><span class="tocnumber">1.7.3</span>Testen</a><ol class="toc"></ol>
                         </li>
-                        <li class="tocline"><a class="tocxref" href="#d2e1/5F69436C"><span class="tocnumber">1.7.4</span>Publiceren</a><ol class="toc">
-                              <li class="tocline"><a class="tocxref" href="#d2e1/1BBBA018"><span class="tocnumber">1.7.4.1</span>Aanpassingen op de  Geonovum-website</a></li>
+                        <li class="tocline"><a class="tocxref" href="#d2e1/5087EC67"><span class="tocnumber">1.7.4</span>Exporteren</a><ol class="toc"></ol>
+                        </li>
+                        <li class="tocline"><a class="tocxref" href="#d2e1/5F69436C"><span class="tocnumber">1.7.5</span>Publiceren</a><ol class="toc">
+                              <li class="tocline"><a class="tocxref" href="#d2e1/1BBBA018"><span class="tocnumber">1.7.5.1</span>Aanpassingen op de  Geonovum-website</a></li>
                            </ol>
                         </li>
-                        <li class="tocline"><a class="tocxref" href="#d2e1/3760394B"><span class="tocnumber">1.7.5</span>Weergeven</a><ol class="toc"></ol>
+                        <li class="tocline"><a class="tocxref" href="#d2e1/3760394B"><span class="tocnumber">1.7.6</span>Weergeven</a><ol class="toc"></ol>
                         </li>
                      </ol>
                   </li>
@@ -178,7 +180,7 @@
                de software kunnen gebruiken, terwijl OZON de nieuwe waarden nog niet geïmplementeerd
                heeft. Omdat de waarden nog niet in de landelijke voorzieningen gebruikt kunnen worden,
                kan dit vragen oproepen. Vandaar dat de attenderingsmail pas wordt gestuurd na de
-               implementatie door OZON. Zie ook subparagraaf <span class="hyperlink"><a href="#d2e1/5F69436C">1.7.4</a></span>.</p>
+               implementatie door OZON. Zie ook subparagraaf <span class="hyperlink"><a href="#d2e1/5F69436C">1.7.5</a></span>.</p>
             <section id="d2e1/d2e138">
                <h2 id="d2e1/242BCCF4" class="heading_2"><span class="number">1.1</span>Aanvraagformulier</h2>
                <p id="d2e1/2AB3A341" class="Standaard space-after">Wanneer een gewenste waarde niet in een waardelijst voorkomt, kan iedereen (doorgaans
@@ -470,7 +472,27 @@
                   </figure>
                </section>
                <section id="d2e1/d2e1117">
-                  <h3 id="d2e1/5087EC67" class="heading_3"><span class="number">1.7.3</span>Exporteren</h3>
+                  <h3 id="d2e1/3E0ADAC0" class="heading_3"><span class="number">1.7.3</span>Testen</h3>
+                  <p id="d2e1/79758236" class="Standaard">Een belangrijke stap in de procedure voor het wijzigen van de waardelijsten is de
+                     publicatie op de stelselcatalogus. Dit kan leiden tot ernstige storingen in de DSO-keten.
+                     Daarom testen we eerst of de import slaagt op de pre-omgeving van de stelselcatalogus
+                     (<span class="hyperlink"><a href="https://stelselcatalogus.pre.omgevingswet.overheid.nl/home" target="_blank">https://stelselcatalogus.pre.omgevingswet.overheid.nl/home</a></span>). Deze workflow genereert het testbestand ‘export-pre.json’ en plaatst het op de
+                     harvest-locatie ‘<span class="hyperlink"><a href="https://register.geostandaarden.nl/waardelijst/imow/" target="_blank">https://register.geostandaarden.nl/waardelijst/imow/</a></span>’. De stelselcatalogus controleert voortdurend of er een nieuwe versie van het testbestand
+                     is geplaatst. Het inladen door de stelselcatalogus heeft een doorlooptijd van ongeveer
+                     twee uur. Als de nieuwe versie van de waardelijsten correct weergegeven wordt op de
+                     stelselcatalogus kan workflow ‘Exporteren’ uitgevoerd worden. Zijn er problemen, stuur
+                     dan een mail naar <span class="hyperlink"><a href="mailto:beheerdso@kadaster.nl" target="_blank">beheerdso@kadaster.nl</a></span>.</p>
+                  <div class="voorbeeld">
+                     <p id="d2e1/730CC07C" class="Standaard space-after"><span style="color: #5B9BD5;">Beste collega van de stelselcatalogus,</span></p>
+                     <p id="d2e1/2E428FA9" class="Standaard space-after"><span style="color: #5B9BD5;">Geonovum heeft op </span><b><span style="color: #5B9BD5;">[datum]</span></b><span style="color: #5B9BD5;"> een nieuw testbestand ‘export-pre.json’ op de harvest-locatie ‘</span><span class="hyperlink"><a href="https://register.geostandaarden.nl/waardelijst/imow/" target="_blank"><b>https://register.geostandaarden.nl/waardelijst/imow/</b></a></span><span style="color: #5B9BD5;">’ geplaatst. Helaas is deze niet correct ingeladen in de pre-omgeving van de stelselcatalogus.
+                           Het probleem is </span><b><span style="color: #5B9BD5;">[omschrijving]</span></b><span style="color: #5B9BD5;">. Daarom vragen we je te kijken naar de mogelijke oorzaak.</span></p>
+                     <p id="d2e1/261024E8" class="Standaard"><span style="color: #5B9BD5;">Met vriendelijke groet,</span></p>
+                  </div>
+                  <p id="d2e1/4BF85628" class="Standaard">De workflow ‘Testen’ gebruikt alleen de waardelijsten in de archiefmap op repository
+                     ‘Geonovum/DSO_waardelijsten’. Er is daarom geen upload van bestanden nodig.</p>
+               </section>
+               <section id="d2e1/d2e1215">
+                  <h3 id="d2e1/5087EC67" class="heading_3"><span class="number">1.7.4</span>Exporteren</h3>
                   <p id="d2e1/09850290" class="Standaard">De workflow ‘Exporteren’ heeft de volgende bestanden als invoer nodig:</p>
                   <ul>
                      <li>
@@ -499,19 +521,19 @@
                            door aan de link de publicatiedatum toe te voegen: ‘<span class="hyperlink"><a href="https://register.geostandaarden.nl/waardelijst/imow/2025-10-10/overzicht/index.html" target="_blank">https://register.geostandaarden.nl/waardelijst/imow/2025-10-10/overzicht/index.html</a></span>’.</p>
                      </li>
                   </ol>
-                  <figure id="d2e1/d6e1217" style="width: 100%;"><img src="media/image10.png" alt="Picture 3"><figcaption><span class="number">Figuur 10</span>De stelselcatalogus controleert of er een nieuw export-bestand is geplaatst</figcaption>
+                  <figure id="d2e1/d6e1317" style="width: 100%;"><img src="media/image10.png" alt="Picture 3"><figcaption><span class="number">Figuur 10</span>De stelselcatalogus controleert of er een nieuw export-bestand is geplaatst</figcaption>
                   </figure>
                   <p id="d2e1/534A6854" class="Standaard">Omdat bestand ‘export.json’ alle versies van de waardelijsten bevat, zal dit bestand
                      steeds verder groeien. Het zal onvermijdelijk zijn om op termijn oudere versies van
                      de waardelijsten weg te laten. Dit kan door deze versies in repository ‘Geonovum/DSO_waardelijsten’
                      uit de map ‘archief’ te verwijderen.</p>
-                  <figure id="d2e1/d6e1260" style="width: 100%;"><img src="media/image11.png" alt="Afbeelding met tekst, schermopname, software, Webpagina"><figcaption><span class="number">Figuur 11</span>De nieuwe waardelijst is direct zichtbaar op de stelselcatalogus</figcaption>
+                  <figure id="d2e1/d6e1359" style="width: 100%;"><img src="media/image11.png" alt="Afbeelding met tekst, schermopname, software, Webpagina"><figcaption><span class="number">Figuur 11</span>De nieuwe waardelijst is direct zichtbaar op de stelselcatalogus</figcaption>
                   </figure>
-                  <figure id="d2e1/d6e1292" style="width: 100%;"><img src="media/image12.png" alt="Picture 4"><figcaption><span class="number">Figuur 12</span>Op de Wegwijzer TPOD komt een overzicht van alle wijzigingen</figcaption>
+                  <figure id="d2e1/d6e1392" style="width: 100%;"><img src="media/image12.png" alt="Picture 4"><figcaption><span class="number">Figuur 12</span>Op de Wegwijzer TPOD komt een overzicht van alle wijzigingen</figcaption>
                   </figure>
                </section>
-               <section id="d2e1/d2e1292">
-                  <h3 id="d2e1/5F69436C" class="heading_3"><span class="number">1.7.4</span>Publiceren</h3>
+               <section id="d2e1/d2e1390">
+                  <h3 id="d2e1/5F69436C" class="heading_3"><span class="number">1.7.5</span>Publiceren</h3>
                   <p id="d2e1/644C7247" class="Standaard">De input van workflow ‘Publiceren’ is ook het resultaat ‘output.zip’ uit de workflow
                      ‘Muteren’. Deze zip bevat vier bestanden: ‘index.html’, ‘informatie.txt’, ‘overzicht.css’
                      en ‘waardelijsten.xml’. Workflow ‘Publiceren’ levert verschillende bestanden op die
@@ -520,13 +542,13 @@
                      wordt opgeslagen in repository ‘Geonovum/TPOD-waardelijsten/[publicatiedatum]’. Binnen
                      deze map wordt ook een map ‘overzicht IMOW [versie]’ gemaakt met de bestanden ten
                      behoeve van de Wegwijzer TPOD.</p>
-                  <figure id="d2e1/d6e1347" style="width: 100%;"><img src="media/image13.png" alt="Picture 3"><figcaption><span class="number">Figuur 13</span>De waardelijsten worden als service-product op de Geonovum-website gebubliceerd.</figcaption>
+                  <figure id="d2e1/d6e1445" style="width: 100%;"><img src="media/image13.png" alt="Picture 3"><figcaption><span class="number">Figuur 13</span>De waardelijsten worden als service-product op de Geonovum-website gebubliceerd.</figcaption>
                   </figure>
                   <p id="d2e1/4C032926" class="Standaard">De output-bestanden zet je ook in de interne map ‘Waardelijsten_IMOW_v[Versienummer]’
                      in ‘DSO PR04 Standaarden\Waardelijsten\Proces voorstellen nieuwe waarde’ (subparagraaf
                      <span class="hyperlink"><a href="#d2e1/6CFA759D">1.7.1</a></span>), zodat bij een volgende wijziging de bestanden als basis gebruikt kunnen worden.</p>
-                  <section id="d2e1/d2e1354">
-                     <h4 id="d2e1/1BBBA018" class="heading_4"><span class="number">1.7.4.1</span>Aanpassingen op de  Geonovum-website</h4>
+                  <section id="d2e1/d2e1451">
+                     <h4 id="d2e1/1BBBA018" class="heading_4"><span class="number">1.7.5.1</span>Aanpassingen op de  Geonovum-website</h4>
                      <p id="d2e1/07F98C31" class="Standaard">Op de Geonovum-website staan twee verwijzingen naar de nieuwe versie van de waardelijsten:</p>
                      <ul>
                         <li>
@@ -545,12 +567,12 @@
                      <p id="d2e1/5B04FC14" class="Standaard">https://github.com/Geonovum/TPOD-waardelijsten/raw/main/<span style="color: #FF0000;">[publicatiedatum]</span>/ waardelijsten_IMOW_<span style="color: #FF0000;">[versie]</span>.zip</p>
                   </section>
                </section>
-               <section id="d2e1/d2e1391">
-                  <h3 id="d2e1/3760394B" class="heading_3"><span class="number">1.7.5</span>Weergeven</h3>
+               <section id="d2e1/d2e1488">
+                  <h3 id="d2e1/3760394B" class="heading_3"><span class="number">1.7.6</span>Weergeven</h3>
                   <p id="d2e1/0182B337" class="Standaard">Op de Geonovum-website worden ook weergaven van de symbolenbibliotheek als service-product
                      gepubliceerd. Omdat mutaties op waardelijsten invloed hebben op de weergaven van de
                      symbolenbibliotheek, is de workflow ‘Weergeven’ toegevoegd aan de workflow.</p>
-                  <figure id="d2e1/d6e1446" style="width: 100%;"><img src="media/image14.png" alt="Afbeelding met tekst, schermopname, software, Webpagina"><figcaption><span class="number">Figuur 14</span>Het is voldoende om bestand ‘waardelijsten.xml’ te uploaden</figcaption>
+                  <figure id="d2e1/d6e1544" style="width: 100%;"><img src="media/image14.png" alt="Afbeelding met tekst, schermopname, software, Webpagina"><figcaption><span class="number">Figuur 14</span>Het is voldoende om bestand ‘waardelijsten.xml’ te uploaden</figcaption>
                   </figure>
                   <p id="d2e1/04567038" class="Standaard">De workflow voert twee taken uit:</p>
                   <ul>
@@ -564,13 +586,13 @@
                            Door de cursor over de symboolcodes te bewegen wordt de detailinformatie zichtbaar.</p>
                      </li>
                   </ul>
-                  <figure id="d2e1/d6e1492" style="width: 100%;"><img src="media/image15.png" alt="Afbeelding met tekst, schermopname, software, nummer"><figcaption><span class="number">Figuur 15</span>Bestand ‘symbolisatie.xhtml’ geeft alle gebruikte symboolcodes weer</figcaption>
+                  <figure id="d2e1/d6e1590" style="width: 100%;"><img src="media/image15.png" alt="Afbeelding met tekst, schermopname, software, nummer"><figcaption><span class="number">Figuur 15</span>Bestand ‘symbolisatie.xhtml’ geeft alle gebruikte symboolcodes weer</figcaption>
                   </figure>
                </section>
             </section>
-            <section id="d2e1/d2e1479">
+            <section id="d2e1/d2e1574">
                <h2 id="d2e1/2C1ED422" class="heading_2"><span class="number">1.8</span>Het sturen van attenderingen na publicatie en implementatie (stap 7)</h2>
-               <section id="d2e1/d2e1484">
+               <section id="d2e1/d2e1579">
                   <h3 id="d2e1/7C77D251" class="heading_3"><span class="number">1.8.1</span>Attendering na publicatie</h3>
                   <p id="d2e1/1D72BEC5" class="Standaard">Nadat de nieuwe versie van de waardelijsten zijn gepubliceerd, moeten diverse partijen
                      op de hoogte worden gebracht:</p>
@@ -651,7 +673,7 @@
                      <p id="d2e1/5E58BCA7" class="Standaard space-after"><span style="color: #5B9BD5;">Dit zijn de wijzigingen: </span></p>
                      <p id="d2e1/7526A007" class="Standaard"><b><span style="color: #5B9BD5;">[Voorbeeld overzicht in tabelvorm]</span></b></p>
                   </div>
-                  <table id="d2e1/d6e1902" class="Tabel" style="width: 100%;">
+                  <table id="d2e1/d6e1998" class="Tabel" style="width: 100%;">
                      <colgroup>
                         <col style="width: 50%;">
                         <col style="width: 50%;">
@@ -692,7 +714,7 @@
                            maken van het </span><span class="hyperlink"><a href="https://geonovum.atlassian.net/servicedesk/customer/portal/4/group/6/create/213" target="_blank">online formulier</a></span><span style="color: #5B9BD5;">.</span></p>
                   </div>
                </section>
-               <section id="d2e1/d2e1974">
+               <section id="d2e1/d2e2068">
                   <h3 id="d2e1/4E83CCD3" class="heading_3"><span class="number">1.8.2</span>Attendering na implementatie in het stelsel</h3>
                   <p id="d2e1/31559338" class="Standaard">Als de nieuwe versie van de waardelijsten daadwerkelijk door OZON zijn geïmplementeerd
                      en beschikbaar zijn in de viewer volgt een tweede mail naar de softwareleveranciers.</p>
@@ -715,7 +737,7 @@
                   </div>
                </section>
             </section>
-            <section id="d2e1/d2e2078">
+            <section id="d2e1/d2e2172">
                <h2 id="d2e1/40E594BE" class="heading_2"><span class="number">1.9</span>Verwerken van de wijziging op configuratiemanagement en in JIRA (stap 8)</h2>
                <p id="d2e1/047AE078" class="Standaard space-after">Als alle stappen doorlopen zijn en de nieuwe versie van de waardelijsten is gepubliceerd
                   en geïmplementeerd, verwerk je de nieuwe versie administratief in configuratiemanagement
@@ -735,7 +757,7 @@
                </ul>
             </section>
          </section>
-         <section id="d2e1/d2e2125">
+         <section id="d2e1/d2e2219">
             <h1 id="d2e1/63607D3A" class="heading_1"><span class="number">2</span>Webformulier ‘Muteren waardelijsten’</h1>
             <p id="d2e1/3492FBFA" class="Standaard space-after">Voor het invoeren van mutaties is een webformulier ontwikkeld. Deze kan alleen gebruikt
                worden met een VPN-verbinding. Hiervoor dient de FortiClient geïnstalleerd te zijn.</p>
@@ -746,9 +768,9 @@
             <p id="d2e1/337EB10D" class="Alineakop">Knop ‘help’</p>
             <p id="d2e1/6E8EC9E6" class="Standaard">In het webformulier kun je op twee manieren extra informatie vinden, namelijk met
                knop ‘help’ en met de i-tjes bij belangrijke velden.</p>
-            <figure id="d2e1/d6e2212" style="width: 100%;"><img src="media/image16.png" alt="Afbeelding met tekst, Lettertype, nummer, schermopname"><figcaption><span class="number">Figuur 16</span>Knop ‘help’ toont meer gedetailleerde informatie</figcaption>
+            <figure id="d2e1/d6e2308" style="width: 100%;"><img src="media/image16.png" alt="Afbeelding met tekst, Lettertype, nummer, schermopname"><figcaption><span class="number">Figuur 16</span>Knop ‘help’ toont meer gedetailleerde informatie</figcaption>
             </figure>
-            <section id="d2e1/d2e2187">
+            <section id="d2e1/d2e2281">
                <h2 id="d2e1/00A44469" class="heading_2"><span class="number">2.1</span>Mutaties invoeren met het webformulier</h2>
                <p id="d2e1/25D12256" class="Standaard space-after">Er komen periodiek verzoeken binnen om waarden aan te passen of toe te voegen. Deze
                   zullen niet afzonderlijk worden doorgevoerd maar vaak worden opgespaard, zodat er
@@ -761,7 +783,7 @@
                   je wijzigingen wilt aanbrengen. Dit zal eigenlijk altijd de huidige versie zijn. In
                   de rechterkolom moeten versie en publicatiedatum ingevuld worden. Pas daarna worden
                   de knoppen ‘bewaar’ en ‘publiceer’ geactiveerd.</p>
-               <figure id="d2e1/d6e2260" style="width: 100%;"><img src="media/image17.png" alt="Afbeelding met tekst, software, Multimediasoftware, Computerpictogram"><figcaption><span class="number">Figuur 17</span>Starten met een nieuwe versie van de waardelijsten</figcaption>
+               <figure id="d2e1/d6e2356" style="width: 100%;"><img src="media/image17.png" alt="Afbeelding met tekst, software, Multimediasoftware, Computerpictogram"><figcaption><span class="number">Figuur 17</span>Starten met een nieuwe versie van de waardelijsten</figcaption>
                </figure>
                <p id="d2e1/0C039DA7" class="Alineakop">Knop ‘bewaar’</p>
                <p id="d2e1/7D6CE259" class="Standaard">Wijzigingen worden niet automatisch opgeslagen in bestand ‘mutaties.xml’. Het is daarom
@@ -771,7 +793,7 @@
                <p id="d2e1/2A07A648" class="Standaard">De knop ‘publiceer’ werkt op dit moment niet. Als het webformulier onderdeel is van
                   de workflow, zal deze knop de verwerking van de volgende stappen starten.</p>
             </section>
-            <section id="d2e1/d2e2249">
+            <section id="d2e1/d2e2343">
                <h2 id="d2e1/2194477B" class="heading_2"><span class="number">2.2</span>Tabblad ‘formulier’</h2>
                <p id="d2e1/010541BC" class="Standaard">In tabblad ‘formulier’ worden de daadwerkelijke mutaties ingevoerd. Het tabblad is
                   opgebouwd in rijen:</p>
@@ -805,19 +827,19 @@
                   waardelijst ‘thema’ werd een verdeling in domeinen gebruikt om een extra onderverdeling
                   van thema’s aan te brengen. In latere versies is deze onderverdeling vervallen. Daardoor
                   is de keuzelijst ‘domein’ niet meer relevant.</p>
-               <section id="d2e1/d2e2304">
+               <section id="d2e1/d2e2398">
                   <h3 id="d2e1/2D9C8A2B" class="heading_3"><span class="number">2.2.1</span>Vervangen van een waarde</h3>
                   <p id="d2e1/21328878" class="Standaard">De linkerkolom bevat altijd de selectie, de rechterkolom bevat de bijbehorende informatie.
                      Voor de meeste mutaties is het voldoende om een waardelijst en een waarde te selecteren,
                      waarna definitie, toelichting, bron, symboolcode en deprecated kan worden gewijzigd.</p>
-                  <figure id="d2e1/d6e2378" style="width: 100%;"><img src="media/image18.png" alt="Afbeelding met tekst, schermopname, software, nummer"><figcaption><span class="number">Figuur 18</span>Vervangen van een waarde</figcaption>
+                  <figure id="d2e1/d6e2474" style="width: 100%;"><img src="media/image18.png" alt="Afbeelding met tekst, schermopname, software, nummer"><figcaption><span class="number">Figuur 18</span>Vervangen van een waarde</figcaption>
                   </figure>
                </section>
-               <section id="d2e1/d2e2346">
+               <section id="d2e1/d2e2439">
                   <h3 id="d2e1/37D827C4" class="heading_3"><span class="number">2.2.2</span>Toevoegen van een waarde</h3>
                   <p id="d2e1/45F524C4" class="Standaard">Om een waarde toe te voegen is het nodig om in keuzelijst ‘waarde’ de waarde te deselecteren.
                      Dit gebeurt door de Ctrl-toets in te drukken en op de geselecteerde waarde te klikken.</p>
-                  <figure id="d2e1/d6e2421" style="width: 100%;"><img src="media/image19.png" alt="Afbeelding met tekst, schermopname, software, nummer"><figcaption><span class="number">Figuur 19</span>Toevoegen van een waarde</figcaption>
+                  <figure id="d2e1/d6e2517" style="width: 100%;"><img src="media/image19.png" alt="Afbeelding met tekst, schermopname, software, nummer"><figcaption><span class="number">Figuur 19</span>Toevoegen van een waarde</figcaption>
                   </figure>
                   <p id="d2e1/713AAB38" class="Standaard">De knop ‘voeg toe’ wordt pas geactiveerd als de verplichte velden ‘label’ en ‘definitie’
                      zijn ingevuld. De velden ‘toelichting’ en ‘bron’ zijn optioneel. De eigenschap ‘deprecated’
@@ -835,13 +857,13 @@
                      ingetypt worden. Als er bij een waarde geen symboolcode voorgesteld wordt, dan moet
                      er geen symboolcode ingevuld worden.</p>
                </section>
-               <section id="d2e1/d2e2398">
+               <section id="d2e1/d2e2492">
                   <h3 id="d2e1/4310ACAA" class="heading_3"><span class="number">2.2.3</span>Verwijderen van een waarde</h3>
                   <p id="d2e1/4E4A90E5" class="Standaard">Het webformulier bevat de mogelijkheid om een waarde te verwijderen. Dit is een riskante
                      actie omdat het niet backward compatible is. Het zal daarom alleen bij een x-wijziging
                      gebruikt worden. De waarde zal eerder als deprecated aangemerkt moeten zijn.</p>
                </section>
-               <section id="d2e1/d2e2406">
+               <section id="d2e1/d2e2500">
                   <h3 id="d2e1/0BDB0DD6" class="heading_3"><span class="number">2.2.4</span>Toevoegen van een bron</h3>
                   <p id="d2e1/5D86A168" class="Standaard">Er zijn een aantal bronnen die je kan gebruiken bij het toevoegen of wijzingen van
                      waarden. Het toevoegen van een nieuwe bron aan de waardelijsten is ook een mutatie.
@@ -851,13 +873,13 @@
                      om bronnen te verwijderen.</p>
                </section>
             </section>
-            <section id="d2e1/d2e2415">
+            <section id="d2e1/d2e2508">
                <h2 id="d2e1/51C7E15B" class="heading_2"><span class="number">2.3</span>Tabblad ‘mutatie’</h2>
                <p id="d2e1/2302E014" class="Standaard">In tabblad ‘mutatie’ kun je zien welke mutaties zijn ingevoerd en eventueel wijzigingen
                   doorvoeren. Je kunt de onderliggende velden van mutaties vervangen en je kunt mutaties
                   volledig verwijderen. Het is in dit tabblad niet mogelijk om mutaties toe te voegen.
                   Hiervoor is tabblad ‘formulier’.</p>
-               <figure id="d2e1/d6e2503" style="width: 100%;"><img src="media/image20.png" alt="Afbeelding met tekst, schermopname, software, Computerpictogram"><figcaption><span class="number">Figuur 20</span>Veld ‘informatie’ bevat de release notes</figcaption>
+               <figure id="d2e1/d6e2599" style="width: 100%;"><img src="media/image20.png" alt="Afbeelding met tekst, schermopname, software, Computerpictogram"><figcaption><span class="number">Figuur 20</span>Veld ‘informatie’ bevat de release notes</figcaption>
                </figure>
                <p id="d2e1/216DA05A" class="Standaard">Een mutatie bevat de volgende velden:</p>
                <ul>
@@ -891,22 +913,22 @@
                   of er typefouten zijn gemaakt. Je kunt in veld ‘inhoud’ de fout corrigeren. Is het
                   een uitgebreide correctie kies er dan voor om de mutatie te verwijderen en deze opnieuw
                   in te voeren in tabblad ‘formulier’.</p>
-               <figure id="d2e1/d6e2579" style="width: 100%;"><img src="media/image21.png" alt="Picture 2"><figcaption><span class="number">Figuur 21</span>Alle browsers hebben de mogelijkheid om een spellingchecker in te stellen</figcaption>
+               <figure id="d2e1/d6e2675" style="width: 100%;"><img src="media/image21.png" alt="Picture 2"><figcaption><span class="number">Figuur 21</span>Alle browsers hebben de mogelijkheid om een spellingchecker in te stellen</figcaption>
                </figure>
             </section>
-            <section id="d2e1/d2e2542">
+            <section id="d2e1/d2e2636">
                <h2 id="d2e1/525FA57C" class="heading_2"><span class="number">2.4</span>Tabblad ‘code’</h2>
                <p id="d2e1/3C894CDF" class="Standaard">Het tabblad ‘code’ is bedoeld voor de ontwikkelaar. Het geeft de xml-code van de gebruikte
                   versie van de waardelijsten en het bestand ‘mutaties.xml’.</p>
-               <figure id="d2e1/d6e2629" style="width: 100%;"><img src="media/image22.png" alt="Afbeelding met tekst, schermopname, software, Webpagina"><figcaption><span class="number">Figuur 22</span>Met tabblad ‘code’ kun je ‘onder water’ de waardelijsten en mutaties bekijken</figcaption>
+               <figure id="d2e1/d6e2725" style="width: 100%;"><img src="media/image22.png" alt="Afbeelding met tekst, schermopname, software, Webpagina"><figcaption><span class="number">Figuur 22</span>Met tabblad ‘code’ kun je ‘onder water’ de waardelijsten en mutaties bekijken</figcaption>
                </figure>
             </section>
-            <section id="d2e1/d2e2583">
+            <section id="d2e1/d2e2677">
                <h2 id="d2e1/5F02F63D" class="heading_2"><span class="number">2.5</span>Tabblad ‘applicatie’</h2>
                <p id="d2e1/4CDFFF19" class="Standaard">Voor het genereren van de beschikbare symboolcodes zijn twee bestanden nodig, namelijk
                   ‘voorwaarden.xml’ en ‘symbolisatie.xml’. Het tabblad ‘applicatie’ geeft beide bestanden
                   weer.</p>
-               <figure id="d2e1/d6e2673" style="width: 100%;"><img src="media/image23.png" alt="Afbeelding met tekst, schermopname, software, scherm"><figcaption><span class="number">Figuur 23</span>Tabblad ‘applicatie’ geeft de bestanden weer die nodig zijn voor symbolisatie</figcaption>
+               <figure id="d2e1/d6e2769" style="width: 100%;"><img src="media/image23.png" alt="Afbeelding met tekst, schermopname, software, scherm"><figcaption><span class="number">Figuur 23</span>Tabblad ‘applicatie’ geeft de bestanden weer die nodig zijn voor symbolisatie</figcaption>
                </figure>
                <p id="d2e1/2DDAE6E5" class="Alineakop">Symbolisatie</p>
                <p id="d2e1/4CA35FB0" class="Standaard">In bestand ‘symbolisatie.xml’ is vastgelegd welke symboolcodes beschikbaar zijn in
@@ -989,15 +1011,15 @@
                   </li>
                </ol>
             </section>
-            <section id="d2e1/d2e2902">
+            <section id="d2e1/d2e2995">
                <h2 id="d2e1/5C6C7406" class="heading_2"><span class="number">2.6</span>Bestand ‘mutaties.xml’</h2>
                <p id="d2e1/1844EC5D" class="Standaard">Het webformulier staat nu nog op de Synology NAS. Het is de bedoeling dat dit onderdeel
                   wordt van de workflow ‘Waardelijsten’. Tot die tijd is het nog noodzakelijk om het
                   bestand ‘mutaties.xml’ zelf te downloaden. downloaden. Dit bestand bevat alle wijzigingen
                   die zijn doorgevoerd in het webformulier. Het bestand wordt aangepast als je de mutaties
                   opslaat met de knop ‘bewaar’. Je vindt het bestand op locatie ‘GNMDC02/web/DSO/waardelijsten/formulier/temp/mutaties.xml’,
-                  zie <span class="hyperlink"><a href="#d2e1/d6e3005">Figuur 24</a></span>.</p>
-               <figure id="d2e1/d6e3005" style="width: 100%;"><img src="media/image24.png" alt="Afbeelding met tekst, schermopname, software, Computerpictogram"><figcaption><span class="number">Figuur 24</span>De locatie van bestand ‘mutaties.xml’</figcaption>
+                  zie <span class="hyperlink"><a href="#d2e1/d6e3101">Figuur 24</a></span>.</p>
+               <figure id="d2e1/d6e3101" style="width: 100%;"><img src="media/image24.png" alt="Afbeelding met tekst, schermopname, software, Computerpictogram"><figcaption><span class="number">Figuur 24</span>De locatie van bestand ‘mutaties.xml’</figcaption>
                </figure>
                <p id="d2e1/41388925" class="Standaard space-after">Het bestand ‘mutaties.xml’ bevat alle informatie die nodig is voor de verdere verwerking
                   van een mutatie. Hierbij een voorbeeld:</p>
@@ -1030,11 +1052,11 @@
                </div>
             </section>
          </section>
-         <section id="d2e1/d2e3214">
+         <section id="d2e1/d2e3308">
             <h1 id="d2e1/19E3AC2D" class="heading_1"><span class="number">3</span>Publicatie met Oxygen</h1>
             <p id="d2e1/4BA11ADC" class="Standaard"><span style="color: #FF0000;">[In dit hoofdstuk volgt een beschrijving van de installatie en verwerking met Oxygen]</span></p>
          </section>
-         <section id="d2e1/d2e3226">
+         <section id="d2e1/d2e3319">
             <h1 id="d2e1/61746432" class="heading_1"><span class="number">4</span>Belangrijke adressen</h1>
             <p id="d2e1/03DEDBBA" class="Alineakop">Stelselcatalogus Omgevingswet</p>
             <p id="d2e1/24AED057" class="Standaard">Brigitte Meier: brigitte.meijer-kolenbrander@kadaster.nl </p>
